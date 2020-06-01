@@ -1,0 +1,26 @@
+//margins
+
+.u-margin-bottom-xl {
+    margin-bottom: 10rem;
+}
+.u-margin-bottom-lg {
+    margin-bottom:8rem;
+}
+
+.u-margin-bottom-m {
+    margin-bottom:5rem;
+}
+
+.u-margin-bottom-sm {
+    margin-bottom:3rem;
+}
+
+.u-margin-bottom-xs {
+    margin-bottom: 1rem;
+}
+
+
+//centers element vertically and horizontally
+.center-v-h {
+    @include center-element;
+}

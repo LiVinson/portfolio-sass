@@ -1,0 +1,9 @@
+.heading-secondary {
+    @include heading-base($color-secondary);   
+    
+
+    &--light {
+      @include heading-base($color-white);       
+    }
+
+  }
