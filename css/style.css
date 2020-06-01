@@ -72,10 +72,13 @@ body {
     text-align: justify; }
 
 .contact {
-  background-color: #9D3956; }
+  grid-column: 1/-1;
+  height: 50rem; }
 
 .footer {
-  background-color: #60B5C2; }
+  background-color: #60B5C2;
+  grid-column: 1/-1;
+  height: 10rem; }
 
 .header {
   color: #F5F5ED;
@@ -128,11 +131,11 @@ body {
 
 .work {
   grid-column: col-start 1 / col-end 12;
-  height: 30rem;
   position: relative; }
 
 .skills {
-  background-color: #b8b8b8; }
+  grid-column: 1/-1;
+  height: 50rem; }
 
 .section-header {
   width: 100%;
@@ -151,3 +154,7 @@ body {
     z-index: 2;
     border: solid 0.8rem #F5F5ED;
     border-left: none; }
+
+.section-content {
+  font-size: 3rem;
+  padding-bottom: 30rem; }
