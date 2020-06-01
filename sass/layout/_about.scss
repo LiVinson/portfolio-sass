@@ -1,3 +1,24 @@
 .about {
-    background-color: green;
+
+    grid-column:3/11;
+    padding: 5rem 0 8rem 0;
+
+    &__img {
+      max-width: 100%;
+      max-height: auto;
+    }
+
+    &__text {
+      font-family:$font-title;
+      font-size: 2rem; 
+      font-weight: 300;  
+      column-count: 2; 
+    }
+
+    .paragraph {
+      line-height:1.2;
+      margin-bottom: 1.5rem;
+      text-align: justify;
+    }
   }
+
