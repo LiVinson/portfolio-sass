@@ -1,5 +1,9 @@
 .container {
-    min-height: 100vh;
-    width: 100%;
+    // max-width:140rem;
+    margin: 0 auto;
     background-color: $color-accent-1;
+    display: grid;
+    grid-template-rows: 90vh repeat(5, min-content);
+    grid-template-columns: repeat(12, [col-start] minmax(min-content,  1fr) [col-end]);
+    grid-gap: 1rem;
 }

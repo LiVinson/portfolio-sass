@@ -1,0 +1,119 @@
+.header {
+
+    color: $color-accent-1;
+    grid-column: col-start 1/ col-end 12;
+    grid-row: 1/2;
+
+    display: grid;
+    grid-template-columns: repeat(12, [header-col-start] minmax(min-content,  1fr) [header-col-end]);
+    grid-template-rows: repeat(8, 1fr);
+    gap: 1rem;
+  
+    &__role {
+      background-color: $color-primary;      
+      grid-column: header-col-start 6/ header-col-end 11;
+      grid-row: 1/2;
+      font-size: 2.5rem;
+      padding-left: 2rem;
+    }
+  
+    &__img-container {
+      grid-row: 1/6;
+      grid-column: header-col-start 1 / header-col-end 5;
+      background-image: url("../assets/img/header-img-1000.jpg");
+      background-size: cover;
+    }
+  
+    &__name {
+      background-color: $color-primary;
+      grid-row: 2/7;
+      grid-column: header-col-start 6/ header-col-end 11;
+      padding: 5rem;
+      font-size: 10rem;
+    }
+  
+    &__block-right {
+      background-color: $color-primary;
+      grid-column: header-col-start 12/ header-col-end 12;
+      grid-row: 1/7;
+    }
+  }
+  
+  .nav {
+    &__container-left {
+        background-color: $color-secondary;
+        grid-column:header-col-start 1/ header-col-end 5;
+        grid-row: 6/-1
+    }
+
+    &__container-right {
+        background-color: $color-tertiary;
+        grid-column:header-col-start 6/ header-col-end 12;
+        grid-row: 7/-1;
+    }
+
+        &__list {
+      //pickle - need to work on spacing
+      padding: 3rem;
+    //   display: flex;
+    //   justify-content: space-between;
+    }
+  
+    &__item {
+      font-size: 2rem;
+      display: inline-block;
+      &:not(:last-child) {
+        margin-right: 3rem;
+      }
+    }
+  }
+  //grid item
+//   .nav {
+//     background-color: $color-tertiary;
+//     position: relative;
+//     //position based on bottom of header left and right nav are always aligned
+//     &-left-container,
+//     &-right-container {
+//       position: absolute;
+//       bottom: 8rem;
+//     }
+  
+//     &-left {
+//       background-color: $color-secondary;
+//       grid-column: 1/2;
+//       grid-row: 3/5;
+//       position: relative;
+//     }
+  
+//     &-right {
+//       position: relative;
+//       background-color: $color-tertiary;
+//       grid-column: 2/4;
+//       grid-row: 4/-1;
+//     }
+  
+//     //aligned to right edge of grid item
+//     //width:half of first column width
+//     //calculation: viewport - padding = header width. * .4 = width of first column * .5 =
+  
+//     &-left-container {
+//       right: 0;
+//       width: calc(((100vw - 10rem) * 0.4) * 0.5);
+//       background-color: $color-accent-1;
+//       color: $color-secondary;
+//       outline: 1.5rem solid $color-accent-1;
+//       outline-offset: 2rem;
+//     }
+  
+//     //aligned to left edge of container
+//     //width: 75% of column 3
+//     //calculation: viewport - padding = header width. * .475 = width of second column * .75
+//     &-right-container {
+//       left: 0;
+//       width: calc(((100vw - 10rem) * 0.475) * 0.75);
+//       outline: 1rem solid $color-accent-1;
+//     }
+  
+
+//     }
+//   }
