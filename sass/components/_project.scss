@@ -1,0 +1,91 @@
+.project {     
+    display: grid;
+    //outer columns to allow spacing on either side of center elements
+    grid-template-columns: 6rem repeat(2, 1fr) 6rem;
+    grid-template-rows: repeat(2, 1fr); 
+    //Every element start at top of row
+    align-items: start;
+    gap: 2rem;
+
+    //Contains title and skills list
+    &__header {
+        font-family: $font-title;
+        color: $color-white;
+        grid-column: 1/ -1;
+        grid-row: 1/ span 1;
+        background-color: $color-tertiary;        
+        padding: 1.4rem 0 1.5rem 0rem;  
+        //above accent block, below image
+        z-index: 5;
+        //Allows spacking at top of row so layered block extends beyond top of header
+        margin-top:2rem;
+        border: 4px solid $color-accent-1;     
+    }
+
+        //Moves content inside 2 column element to the second column
+    &__title,
+    &__skills-list {
+        margin-left: 52%;
+    }
+    
+
+    &__skills-list {
+        list-style: none;
+        //Removes extra padding from list item so border element is centered between list items
+        font-size: 0rem;  
+        margin-top: .4rem;
+  
+    }
+
+    &__skill {
+        display: inline-block;
+        font-size: 2rem;  
+        text-align:center;
+        border-right: solid 2px $color-accent-1;
+        padding: 0 1.2rem;
+        &:first-child {
+            padding-left:0;
+        }      
+
+    }
+
+    //container used so image can be set to fit inside figure
+    &__img-container {
+        grid-row: 1/span 2;
+        grid-column: 2/ span 1;
+        justify-self:end;
+        z-index:10;
+    }
+    
+    &__image {
+        width: 90%;
+        height: 100%;
+        //image 'snaps' to grid lines
+        object-fit: cover;
+        //avoids white space after image as if it were text
+        display: block;
+        //right aligns image in the figure
+        margin-left: 10%;
+        box-shadow: 0 .5rem .5rem rgba(0,0,0,.1);
+    }
+
+    //solid color below title
+    &__block {
+        background-color: $color-secondary;
+        grid-column: 3 / span 1;
+        grid-row: 1/ span 1;
+        z-index: 1;
+        padding: 12.5rem 1rem .8rem 1.5rem;        
+        align-self: stretch;
+    }
+
+
+    &__text {
+        font-size: 1.6rem;
+        grid-column: 3/ span 1;
+        padding: 0 1.5rem;
+        text-align: justify;
+
+    }
+
+}

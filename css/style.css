@@ -11,7 +11,11 @@ html {
 
 body {
   padding: 2rem 5rem;
-  font-family: "Lato", "sans-serif"; }
+  font-family: "Lato", "sans-serif";
+  background-color: #F7F9F9;
+  color: #5C5C5C;
+  line-height: 1.3;
+  font-weight: 400; }
 
 .heading-secondary {
   font-family: "Yantramanav", "sans-serif";
@@ -25,6 +29,17 @@ body {
     text-align: center;
     text-transform: lowercase;
     color: #F7F9F9; }
+
+.btn-link {
+  font-family: "Lato", "sans-serif";
+  font-size: 1.5rem;
+  text-decoration: none;
+  color: #F7F9F9;
+  margin-right: 1.4rem;
+  transition: all .2s; }
+  .btn-link:hover {
+    text-decoration: underline;
+    color: #F5F5ED; }
 
 .u-margin-bottom-xl {
   margin-bottom: 10rem; }
@@ -48,6 +63,7 @@ body {
   transform: translate(-50%, -50%); }
 
 .container {
+  max-width: 140rem;
   margin: 0 auto;
   background-color: #F5F5ED;
   display: grid;
@@ -139,7 +155,8 @@ body {
 
 .section-header {
   width: 100%;
-  position: relative; }
+  position: relative;
+  margin-bottom: 8rem; }
   .section-header__bottom {
     width: 65%;
     z-index: -2;
@@ -158,3 +175,58 @@ body {
 .section-content {
   font-size: 3rem;
   padding-bottom: 30rem; }
+
+.project {
+  display: grid;
+  grid-template-columns: 6rem repeat(2, 1fr) 6rem;
+  grid-template-rows: repeat(2, 1fr);
+  align-items: start;
+  gap: 2rem; }
+  .project__header {
+    font-family: "Yantramanav", "sans-serif";
+    color: #F7F9F9;
+    grid-column: 1/ -1;
+    grid-row: 1/ span 1;
+    background-color: #60B5C2;
+    padding: 1.4rem 0 1.5rem 0rem;
+    z-index: 5;
+    margin-top: 2rem;
+    border: 4px solid #F5F5ED; }
+  .project__title, .project__skills-list {
+    margin-left: 52%; }
+  .project__skills-list {
+    list-style: none;
+    font-size: 0rem;
+    margin-top: .4rem; }
+  .project__skill {
+    display: inline-block;
+    font-size: 2rem;
+    text-align: center;
+    border-right: solid 2px #F5F5ED;
+    padding: 0 1.2rem; }
+    .project__skill:first-child {
+      padding-left: 0; }
+  .project__img-container {
+    grid-row: 1/span 2;
+    grid-column: 2/ span 1;
+    justify-self: end;
+    z-index: 10; }
+  .project__image {
+    width: 90%;
+    height: 100%;
+    object-fit: cover;
+    display: block;
+    margin-left: 10%;
+    box-shadow: 0 0.5rem 0.5rem rgba(0, 0, 0, 0.1); }
+  .project__block {
+    background-color: #9D3956;
+    grid-column: 3 / span 1;
+    grid-row: 1/ span 1;
+    z-index: 1;
+    padding: 12.5rem 1rem .8rem 1.5rem;
+    align-self: stretch; }
+  .project__text {
+    font-size: 1.6rem;
+    grid-column: 3/ span 1;
+    padding: 0 1.5rem;
+    text-align: justify; }
