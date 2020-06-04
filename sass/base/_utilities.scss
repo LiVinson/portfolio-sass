@@ -1,4 +1,4 @@
-//margins
+//MARGINS
 
 .u-margin-bottom-xl {
     margin-bottom: 10rem;
@@ -23,4 +23,12 @@
 //centers element vertically and horizontally
 .center-v-h {
     @include center-element;
+}
+
+.center-text {
+    text-align:center;
+}
+
+.justify-text {
+    text-align:justify;
 }

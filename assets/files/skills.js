@@ -17,7 +17,11 @@ const skills = [
         details: ["asynchronous programming", "prototypal inheritance", ]
     }, {   
         category: "language",
-        skill: "C#/.Net",
+        skill: "jquery",
+        details: ["tbd", "tbd", ]
+    }, {   
+        category: "language",
+        skill: "c#/.net",
         details: ["TBD", "TBD"]
     }, {   
         category: "web framework",

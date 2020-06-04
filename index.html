@@ -24,6 +24,8 @@
         
         
         -->
+
+        <!------------------------ HEADER:  --------------------------->
         <header class="header">
             <div class="header__role">software developer</div>
             <div class="header__img-container">
@@ -49,9 +51,11 @@
                 </nav>
             </div>
         </header>
+
+        <!------------------------ ABOUT SECTION  --------------------------->
         <section class="about">
             <h2 class="heading-2 heading-2--dark u-margin-bottom-sm">About</h2>
-            <div class="about__text">
+            <div class="about__text justify-text">
                 <p class="paragraph">
                     Lorem ipsum dolor, sit amet consectetur adipisicing elit. Ratione placeat rerum minima. Aliquam non
                     provident dolorum ratione perferendis, atque iusto esse dolore ipsum, veritatis ullam ad quae
@@ -67,26 +71,26 @@
             <!-- </div> -->
 
         </section>
-
+        <!------------------------ WORK SECTION  --------------------------->
         <section class="work">
-            <div class="section-header">
+            <div class="section-header u-margin-bottom-lg">
                 <div class="section-header__bottom">
                     <div class="section-header__top">
                         <h2 class="heading-2 heading-2--light center-v-h">Work</h2>
                     </div>
                 </div>
             </div>
-            <div class="section-content">
+            
                 <div class="project">
                     <div class="project__header">
-                        
+
                         <h3 class="project__title">Project Title Name</h3>
 
                         <ul class="project__skills-list">
-                           <li class="project__skill">html</li>
-                           <li class="project__skill">sass</li>
-                           <li class="project__skill">javascript</li>
-                           <li class="project__skill">react</li>
+                            <li class="project__skill">html</li>
+                            <li class="project__skill">sass</li>
+                            <li class="project__skill">javascript</li>
+                            <li class="project__skill">react</li>
                         </ul>
                     </div>
                     <div class="project__block">
@@ -97,23 +101,24 @@
                     <figure class="project__img-container">
                         <img src="../assets/img/project-1-1500.jpg" alt="project 1 image" class="project__image">
                     </figure>
-                  
-                 
+
+
                     <p class="project__text">
                         Lorem ipsum dolor sit amet consectetur adipisicing elit. Eveniet voluptates repellendus ab eos
                         porro. Sequi suscipit reprehenderit laborum, iure labore earum voluptate dicta consequatur
-                        consequuntur maxime vel optio. Est, enim.  maxime vel optio. Est, enim.
-                    </p>                     
+                        consequuntur maxime vel optio. Est, enim. maxime vel optio. Est, enim.
+                    </p>
                 </div>
-            </div>
+    
         </section>
+        <!------------------------ SKILLS SECTION  --------------------------->
 
         <section class="skills">
-            <div class="section-header">
+            <div class="section-header u-margin-bottom-m">
                 <div class="section-header__bottom">
                     <div class="section-header__top">
                         <h2 class="heading-2 heading-2--light center-v-h">Skills</h2>
-                        
+
                     </div>
                 </div>
             </div>
@@ -123,48 +128,65 @@
                     <h4 class="heading-4 heading-4--dark u-margin-bottom-sm">
                         Select a skill for details
                     </h4>
-                    <button class="btn btn--1 btn-skills" data-skill="html">html</button>
-                    <button class="btn btn--1 btn-skills" data-skill="css">css</button>
-                    <button class="btn btn--1 btn-skills" data-skill="sass">sass</button>
+                    <button class="btn btn--color-1 btn-skills" data-skill="html">html</button>
+                    <button class="btn btn--color-1 btn-skills" data-skill="css">css</button>
+                    <button class="btn btn--color-1 btn-skills" data-skill="sass">sass</button>
                     <!-- <br> -->
-                    <button class="btn btn--1 btn-skills" data-skill="javascript">javascript</button>
-                    <button class="btn btn--1 btn-skills" data-skill="jquery">jquery</button>
-                    <button class="btn btn--1 btn-skills" data-skill="c*/.net">c*/.net</button>
-                    <button class="btn btn--1 btn-skills" data-skill="react">react</button>
+                    <button class="btn btn--color-1 btn-skills" data-skill="javascript">javascript</button>
+                    <button class="btn btn--color-1 btn-skills" data-skill="jquery">jquery</button>
+                    <button class="btn btn--color-1 btn-skills" data-skill="c#/.net">c#/.net</button>
+                    <button class="btn btn--color-1 btn-skills" data-skill="react">react</button>
                     <!-- <br> -->
-                    <button class="btn btn--2 btn-skills" data-skill="node.js">node.js</button>
-                    <button class="btn btn--2 btn-skills" data-skill="express">express</button>
+                    <button class="btn btn--color-3 btn-skills" data-skill="node">node.js</button>
+                    <button class="btn btn--color-3 btn-skills" data-skill="express">express</button>
                     <!-- <br> -->
-                    <button class="btn btn--2 btn-skills" data-skill="mongodb">mongodb</button>
-                    <button class="btn btn--2 btn-skills" data-skill="mongoose">mongoose</button>
-                    <button class="btn btn--2 btn-skills" data-skill="sql">sql</button>
+                    <button class="btn btn--color-3 btn-skills" data-skill="mongodb">mongodb</button>
+                    <button class="btn btn--color-3 btn-skills" data-skill="mongoose">mongoose</button>
+                    <button class="btn btn--color-3 btn-skills" data-skill="sql">sql</button>
 
-                    <button class="btn btn--2 btn-skills" data-skill="firebase">firebase</button>  
+                    <button class="btn btn--color-3 btn-skills" data-skill="firebase">firebase</button>
 
                 </div>
 
                 <div class="skills__details">
                     <h3 class="heading-3 u-margin-bottom-sm heading-3--dark skill__heading"></h3>
-                
-
+                    <!-- paragraphs inserted dynamically on button click -->
                 </div>
-    
-                     
             </div>
-
-
-
         </section>
+
+        <!------------------------ CONTACT SECTION  --------------------------->
+
         <section class="contact">
-            <div class="section-header">
+            <div class="section-header u-margin-bottom-m">
                 <div class="section-header__bottom">
                     <div class="section-header__top">
                         <h2 class="heading-2 heading-2--light center-v-h">Contact</h2>
                     </div>
                 </div>
             </div>
-            <div class="section-content">
-                Work goes here
+            <!-- displays as flex -->
+            <div class="contact__form">
+                <form action="#" class="form">
+                    <h4 class="heading-4 heading-4--dark u-margin-bottom-sm">
+                        Interested in working together?
+                    </h4>
+                    <p class="paragraph center-text"> Send me a message or email me directly at contact@lisavinson.com</p>
+                    <div class="form__group form__group--input">
+                        <input type="text" class="form__input" placeholder="Name" id="name" required>
+                        <label for="name" class="form__label">Name</label>                        
+                    </div><div class="form__group form__group--input">
+                        <input type="email" class="form__input" placeholder="Email" id="email" required>
+                        <label for="email" class="form__label">Email</label>                        
+                    </div>
+                    <div class="form__group">
+                        <textarea name="message" class="form__textarea" placeholder="Your message" required></textarea>
+                        <label for="message" class="form__label">Message</label>                        
+                    </div>
+                    <div class="form__group">
+                        <button class="btn btn--color-2 form__submit" type="submit">send</button>
+                    </div>
+                </form>
             </div>
         </section>
         <footer class="footer">

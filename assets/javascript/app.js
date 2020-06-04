@@ -38,7 +38,6 @@ const displaySkillDetails = ({ skill, details, category} ) => {
         console.log(paragraph);
         console.log(element);
         element.appendChild(paragraph);
-
     })
 }
 
