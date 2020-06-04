@@ -1,10 +1,81 @@
-.heading-secondary {
-    @include heading-base($color-secondary);   
-    
+%heading {
+  font-family: $font-title;    
+  text-align: center;
+  // margin: 0 auto;
+}
 
-    &--light {
-      @include heading-base($color-white);       
-    }
+.heading-1{
+
+}
+
+.heading-2 {
+  @extend %heading;
+  font-size: 6rem;
+  line-height: 1;
+  text-transform: lowercase;
+
+  &--light { color: $color-white};       
+  &--dark { color: $color-secondary};   
+}
+
+.heading-3 {
+  @extend %heading;
+  text-transform: lowercase;
+
+  font-size: 3rem;
+  &--light { color: $color-white};       
+  &--dark { color: $color-secondary}; 
+}
+
+.heading-4 {
+  @extend %heading;
+  font-size: 2.5rem;
+  &--light { color: $color-white};       
+  &--dark { color: $color-secondary}; 
+
+}
+
+.paragraph {
+  line-height:1.2;
+  margin-bottom: 1.5rem;
+  text-align: justify;
+  font-family:$font-title;
+  font-size: 2rem; 
+  font-weight: 300;  
+}
+
+.btn {
+  border: none;
+  padding: 1.6rem 2.5vw;
+  font-size:2rem;
+  border-radius:2%;
+  color: $color-accent-1;
+  box-shadow: 0 .2rem 1rem rgba(0,0,0,.2);
+  transition: all .2s;
+  &--1 {
+    background-color: $color-primary;
+  }
+
+  &--2 {
+    background-color: $color-tertiary;
+  }
+
+  &:hover{
+    filter:brightness(90%)
+  }
+
+  &:active{
+    transform:translateY(2px);
+  }
+
+
+}
+
+
+
+
+.heading-secondary {
+
 
   }
 

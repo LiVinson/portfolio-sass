@@ -4,11 +4,3 @@
     left: 50%;
     transform: translate(-50%, -50%);
 }
-
-@mixin heading-base($color: $color-secondary) {
-    font-family: $font-title;
-    font-size: 6rem;
-    text-align: center;
-    text-transform: lowercase;
-    color:$color;
-}
