@@ -1,8 +1,42 @@
 .footer {
-    background-color: $color-tertiary;
+    background-color: $color-secondary;
     grid-column: 1/-1;
 
-    //temp:
-    height: 10rem;
+    display:flex;
+    justify-content:space-evenly;    
+    color: $color-accent-1;
+    padding: 3rem 15rem;
+    // border-top: .5rem solid $color-primary;
+
+    &__text {
+      font-size:1.3rem;
+    }
+
+    &__links {
+      list-style-type: none;  
+      font-size:1.5rem;          
+    }
+
+    
+    &__link {
+      display: inline-block;      
+      
+      a {
+        text-decoration: none;
+        color: $color-accent-1;
+      }
+    }
+    
+    //Creates a vertical line between each list item
+    // :not(:last-child)::after {
+    &__link:not(:last-child)::after {
+      content:"";
+      display:inline-block;
+      height: 1.5rem;
+      width:2px;
+      background-color: $color-accent-1;
+      margin-left:2rem;
+      margin-right:2rem;
+    }
   }
   
