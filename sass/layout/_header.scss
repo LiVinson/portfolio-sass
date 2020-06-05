@@ -42,6 +42,10 @@
     display:flex;
     align-content: center;
     flex-wrap:wrap;
+
+    h1 {
+      flex:0 0 100%;
+    }
   }
 
   &__block-right {

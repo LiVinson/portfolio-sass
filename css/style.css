@@ -169,6 +169,8 @@ section {
     display: flex;
     align-content: center;
     flex-wrap: wrap; }
+    .header__name h1 {
+      flex: 0 0 100%; }
   .header__block-right {
     background-color: #FF5200;
     grid-column: header-col-start 12 / header-col-end 12;
