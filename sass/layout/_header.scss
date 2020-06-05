@@ -1,84 +1,121 @@
 .header {
-    color: $color-accent-1;
-    //stretches entire container with height of 95vh
-    grid-column: col-start 1/ col-end 12;
+  color: $color-accent-1;
+  //stretches entire container with height of 95vh
+  grid-column: col-start 1 / col-end 12;
+  grid-row: 1/2;
+  display: grid; //12x8
+  grid-template-columns: repeat(
+    12,
+    [header-col-start] minmax(min-content, 1fr) [header-col-end]
+  );
+  grid-template-rows: repeat(8, 1fr);
+  gap: 1.5rem;
+
+  &__role {
+    background-color: $color-primary;
+    grid-column: header-col-start 6 / header-col-end 11;
     grid-row: 1/2;
-    display: grid; //12x8
-    grid-template-columns: repeat(12, [header-col-start] minmax(min-content,  1fr) [header-col-end]);
-    grid-template-rows: repeat(8, 1fr);
-    gap: 1.5rem;
-  
-    &__role {
-      background-color: $color-primary;      
-      grid-column: header-col-start 6/ header-col-end 11;
-      grid-row: 1/2;
-      font-size: 2.5rem;
-      padding-left: 2rem;
-    }
-  
-    &__img-container {
-      grid-row: 1/6;
-      grid-column: header-col-start 1 / header-col-end 5;
-      background-image: url("../assets/img/header-img-1000.jpg");
-      background-size: cover;
-    }
-  
-    &__name {
-      background-color: $color-primary;
-      grid-row: 2/7;
-      grid-column: header-col-start 6/ header-col-end 11;
-      padding: 5rem;
-      font-size: 10rem;
-    }
-  
-    &__block-right {
-      background-color: $color-primary;
-      grid-column: header-col-start 12/ header-col-end 12;
-      grid-row: 1/7;
-    }
+    font-size: 2.5rem;
+    padding-left: 2rem;
   }
-  
-  .nav {
-    //contains left nav, aligned to far right of block
-    &__container-left {
-        background-color: $color-secondary;
-        grid-column:header-col-start 1/ header-col-end 5;
-        grid-row: 6/-1;
-        display: flex;
-        align-items:flex-end;
 
+  &__img-container {
+    grid-row: 1/6;
+    grid-column: header-col-start 1 / header-col-end 5;
+    background-image: url("../assets/img/header-img-1000.jpg");
+    background-size: cover;
+  }
 
-        //Want nav element to equal 2 columns and 1 gap to match right nav. 
-        //parent is 3 columns and 2 gaps tall
-        //Total width of block (100%) - gaps (3rem) / 3columns * 2 column + 1gap(1.5)
-        nav {
-          height: calc(((100% - 3rem) / 3) * 2 + 1.5rem);
-          border: solid 1px blue;       
-          width:100%;
-          //aligns ui to the center of nav and far right of block
-          display: flex;
-          align-items:center;
-          justify-content: flex-end;
-        }
-    }
+  &__name {
+    background-color: $color-primary;
+    grid-row: 2/7;
+    grid-column: header-col-start 6 / header-col-end 11;
+    padding: 5rem;
+    
+    display:flex;
+    align-content: center;
+    flex-wrap:wrap;
+  }
 
-    &__container-right {
-        background-color: $color-tertiary;
-        grid-column:header-col-start 6/ header-col-end 12;
-        grid-row: 7/-1;
-        display: flex;
-        align-items:center;        
-    }
+  &__block-right {
+    background-color: $color-primary;
+    grid-column: header-col-start 12 / header-col-end 12;
+    grid-row: 1/7;
+  }
+}
 
-        &__list {
-        border: solid 1px red;
-    }
-  
-    &__item {
-      font-size: 2rem;
-      display: inline-block;
-      &:not(:last-child) {
-        margin-right: 3rem;
+.nav {
+  //contains left nav, aligned to far right of block
+  &__container-left {
+    background-color: $color-secondary;
+    grid-column: header-col-start 1 / header-col-end 5;
+    grid-row: 6/-1;
+    display: flex;
+    align-items: flex-end;
+    justify-content: flex-end;
+
+    //Want nav element to equal 2 columns and 1 gap to match right nav.
+    //parent is 3 columns and 2 gaps tall
+    //Total width of block (100%) - gaps (3rem) / 3columns * 2 column + 1gap(1.5)
+    .nav {
+      height: calc(((100% - 3rem) / 3) * 2 + 1.5rem);
+      // border: solid 1px blue;
+      width: 75%;
+      //aligns ui to the center of nav and far right of block
+      display: flex;
+      align-items: center;
+      justify-content: flex-end;
+
+      &__list {
+        // border: solid 1px red;
+        padding: 2rem;
+        background-color: $color-accent-1;
+        color:$color-secondary;
+        outline: solid .8rem $color-accent-1;
+        outline-offset: 1.2rem;
+      }
+
+      &__item {
+        padding: 0 1rem;
+        margin-left: 3rem;
+        font-size: 2rem;
+        display: inline-block;
       }
     }
   }
+
+  &__container-right {
+    background-color: $color-tertiary;
+    grid-column: header-col-start 6 / header-col-end 12;
+    grid-row: 7/-1;
+    display: flex;
+    align-items: center;
+
+    .nav {
+      // border: solid 1px blue;
+      height: 50%;
+      display: flex;
+      align-items: center;
+
+      &__list {
+        outline: solid 0.5rem $color-accent-1;
+        padding: 2rem;
+      }
+
+      &__item {
+        padding: 0 1rem;
+        margin-right: 3rem;
+        font-size: 2rem;
+        display: inline-block;
+      }
+    }
+  }
+
+  // &__item {
+  //   font-size: 2rem;
+  //   display: inline-block;
+  //   // &:not(:last-child) {
+  //     margin-right: 3rem;
+  //   // }
+  // }
+}

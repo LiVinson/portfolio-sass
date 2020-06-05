@@ -11,42 +11,32 @@
 </head>
 
 <body>
-
-
     <div class="container">
-        <!-- Sections
-            Header - based on vh - css grid
-            About - based on content height
-            Work - based on content height
-            Skills: Based on content height
-            Contact - based on content height
-            Footer - based on content     
-        
-        
-        -->
-
         <!------------------------ HEADER:  --------------------------->
         <header class="header">
-            <div class="header__role">software developer</div>
+            <div class="header__role"></div>
             <div class="header__img-container">
             </div>
-            <div class="header__name">lisa vinson</div>
+            <div class="header__name">
+                <h1 class="heading-1">Lisa Vinson</h1>
+                <h3 class="heading-4">software developer</h3>
+            </div>
             <div class="header__block-right"></div>
             <div class="nav__container-left">
-                <nav>
+                <nav class="nav">
                     <ul class="nav__list">
-                        <li class="nav__item">about</li>
-                        <li class="nav__item">work</li>
+                        <li class="nav__item"><a class="btn-link btn-link--dark" href="#about">about</a></li>
+                        <li class="nav__item"><a class="btn-link btn-link--dark" href="#work">work</a></li>
                     </ul>
                 </nav>
             </div>
 
             <div class="nav__container-right">
-                <nav>
+                <nav class="nav">
                     <ul class="nav__list">
-                        <li class="nav__item">skills</li>
-                        <li class="nav__item">contact</li>
-                        <li class="nav__item">resume</li>
+                        <li class="nav__item"><a class="btn-link btn-link--light" href="#skills">skills</a></li>
+                        <li class="nav__item"><a class="btn-link btn-link--light" href="#contact">contact</a></li>
+                        <li class="nav__item"><a class="btn-link btn-link--light" href="#">resume</a></li>
                     </ul>
                 </nav>
             </div>
@@ -54,7 +44,7 @@
 
         <!------------------------ ABOUT SECTION  --------------------------->
         <section class="about">
-            <h2 class="heading-2 heading-2--dark u-margin-bottom-sm ">About</h2>
+            <h2 id="about" class="heading-2 heading-2--dark u-margin-bottom-sm">About</h2>
             <div class="about__text justify-text">
                 <p class="paragraph">
                     Lorem ipsum dolor, sit amet consectetur adipisicing elit. Ratione placeat rerum minima. Aliquam non
@@ -73,7 +63,7 @@
         </section>
         <!------------------------ WORK SECTION  --------------------------->
         <section class="work">
-            <div class="section-header u-margin-bottom-lg">
+            <div id="work" class="section-header u-margin-bottom-lg">
                 <div class="section-header__bottom">
                     <div class="section-header__top">
                         <h2 class="heading-2 heading-2--light center-v-h">Work</h2>
@@ -249,7 +239,7 @@
         <!------------------------ SKILLS SECTION  --------------------------->
 
         <section class="skills">
-            <div class="section-header u-margin-bottom-m">
+            <div id="skills" class="section-header u-margin-bottom-m">
                 <div class="section-header__bottom">
                     <div class="section-header__top">
                         <h2 class="heading-2 heading-2--light center-v-h">Skills</h2>
@@ -293,7 +283,7 @@
         <!------------------------ CONTACT SECTION  --------------------------->
 
         <section class="contact">
-            <div class="section-header u-margin-bottom-m">
+            <div id="contact" class="section-header u-margin-bottom-m">
                 <div class="section-header__bottom">
                     <div class="section-header__top">
                         <h2 class="heading-2 heading-2--light center-v-h">Contact</h2>

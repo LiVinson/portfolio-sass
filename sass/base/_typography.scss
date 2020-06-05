@@ -1,28 +1,27 @@
 %heading {
   font-family: $font-title;    
-  // text-align: center;
+  text-transform: lowercase;
   
 }
 
 .heading-1{
+  @extend %heading;
+  font-size: 8.5rem;
+  line-height: 1;  
 
 }
 
 .heading-2 {
   @extend %heading;
   font-size: 6rem;
-  line-height: 1;
-  text-transform: lowercase;
+  line-height: 1;  
   text-align:center;
-
   &--light { color: $color-white};       
   &--dark { color: $color-secondary};   
 }
 
 .heading-3 {
-  @extend %heading;
-  text-transform: lowercase;
-
+  @extend %heading;  
   font-size: 3rem;
   &--light { color: $color-white};       
   &--dark { color: $color-secondary}; 
@@ -33,7 +32,6 @@
   font-size: 2.5rem;
   &--light { color: $color-white};       
   &--dark { color: $color-secondary}; 
-
 }
 
 .paragraph {
@@ -52,6 +50,7 @@
   color: $color-accent-1;
   box-shadow: 0 .2rem 1rem rgba(0,0,0,.2);
   transition: all .2s;
+  
   &--color-1 {
     background-color: $color-primary;
   }
@@ -68,7 +67,6 @@
     background-color: $color-accent-1;
   }
 
-
   &:hover{
     filter:brightness(90%)
   }
@@ -76,22 +74,22 @@
   &:active{
     transform:translateY(2px);
   }
-
-
 }
 
 .btn-link {
   font-family: $font-text;
-  font-size:1.5rem;
+  font-size:2rem;
   text-decoration: none;
-  color: $color-white;    
-  margin-right: 1.4rem;
-  transition: all .2s;
+  display:inline-block;
+  transition: all .3s;
 
   &:hover {
     text-decoration:underline;
-    color: $color-accent-1;
+    transform:translateY(-2px);
+    filter:brightness(90%)
   }
-}
 
-  
+  &--light { color:$color-accent-1; }
+
+  &--dark { color:$color-secondary; }
+}
