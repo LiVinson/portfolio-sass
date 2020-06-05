@@ -1,7 +1,20 @@
 %heading {
   font-family: $font-title;    
-  text-transform: lowercase;
-  
+  text-transform: lowercase;  
+}
+
+%btn-link {
+  font-family: $font-text;
+  font-size:1.8rem;
+  text-decoration: none;
+  display:inline-block;
+  transition: all .3s;
+
+  &:hover {
+    text-decoration:underline;
+    transform:translateY(-2px);
+    filter:brightness(90%)
+  }
 }
 
 .heading-1{
@@ -65,6 +78,7 @@
 
   &--color-4 {
     background-color: $color-accent-1;
+    border: solid 1px $color-secondary; 
   }
 
   &:hover{
@@ -77,19 +91,27 @@
 }
 
 .btn-link {
-  font-family: $font-text;
-  font-size:2rem;
-  text-decoration: none;
-  display:inline-block;
-  transition: all .3s;
+  @extend %btn-link;  
 
-  &:hover {
-    text-decoration:underline;
-    transform:translateY(-2px);
-    filter:brightness(90%)
+  &--light {
+    @extend %btn-link;
+     color:$color-white;
+
+     &--lg {
+        @extend %btn-link;
+        color:$color-white;
+        font-size: 2.2rem;
+     }
   }
 
-  &--light { color:$color-accent-1; }
+  &--dark { 
+    @extend %btn-link;
+    color:$color-secondary; 
 
-  &--dark { color:$color-secondary; }
+    &--lg {
+      @extend %btn-link;
+      color:$color-secondary;   
+      font-size: 2.2rem;
+    }
+  }
 }

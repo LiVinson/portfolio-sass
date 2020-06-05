@@ -22,8 +22,15 @@
   &__img-container {
     grid-row: 1/6;
     grid-column: header-col-start 1 / header-col-end 5;
-    background-image: url("../assets/img/header-img-1000.jpg");
-    background-size: cover;
+
+    img {
+      width: 100%;
+      height: 100%;
+      //image 'snaps' to grid lines
+      object-fit: cover;
+      //avoids white space after image as if it were text
+      display: block;
+    }
   }
 
   &__name {

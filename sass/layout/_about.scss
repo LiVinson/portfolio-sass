@@ -2,13 +2,9 @@
     grid-column:3/11;
     padding: 5rem 0 8rem 0;
 
-    &__img {
-      max-width: 100%;
-      max-height: auto;
-    }
-
     &__text {
-           column-count: 2; 
+      column-count: 2; 
+      column-gap: 2rem;
     }
   }
 

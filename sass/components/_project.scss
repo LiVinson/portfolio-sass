@@ -10,33 +10,49 @@
     margin-top:2rem;
     border: 7px solid $color-accent-1;  
     border-bottom: 8px solid $color-accent-1; 
+    
 }
 
 %project__block {
     z-index: 1;
-    padding: 12rem 1.5rem 1.5rem 4.5rem;        
+    padding: 2rem;        
     align-self: stretch;
     background-color: $color-secondary;
     grid-column: 2 / span 1;
     grid-row: 1/ span 1;
+
+    display:flex;
+    align-items:end;
+
+    
 }
 
 %project__img-container {
     grid-row: 1/span 2;
     justify-self:end;
     z-index:10;
-    grid-column: 3/ span 1;
+    grid-column: 3/ span 1;    
 }
 
 %project__img {
     width: 90%;
     height: 100%;
+    
     //image 'snaps' to grid lines
     object-fit: cover;
     //avoids white space after image as if it were text
     display: block;
     //right aligns image in the figure
-    box-shadow: 0 .5rem .5rem rgba(0,0,0,.1);
+    // box-shadow: 0 .5rem .5rem rgba(0,0,0,.1);
+}
+
+%project__img-background {
+    
+    position:relative;
+    background-color: $color-primary;
+    width: 90%;
+    height: 70%;
+    z-index:8;    
 }
 
 %project__text {
@@ -54,6 +70,7 @@
     //Every element start at top of row
     align-items: start;
     gap: 2rem;
+    margin-bottom:8rem;
 
     //Contains title and skills list
     &__header {
@@ -75,7 +92,11 @@
    
     //solid color below title
     &__block {
-    @extend %project__block;
+        @extend %project__block;
+
+        a {
+            margin-right: 1.5rem;
+        }
 
         &--reverse {
             background-color: $color-secondary;
@@ -88,9 +109,11 @@
         list-style: none;
         //Removes extra padding from list item so border element is centered between list items
         font-size: 0rem;  
-        margin-top: .4rem;          
+        // margin-top: .4rem;          
         display: inline-block;
-        margin-top:1rem;
+        // margin-top:1rem;
+        border-right: solid 1px #fff;
+        color:#fff;
     }
 
     &__skill {
@@ -111,17 +134,41 @@
         &--reverse {
             @extend %project__img-container;
             grid-column: 2/ span 1;
+        }        
+    }
+
+    &__img-background {
+        @extend %project__img-background;
+        justify-self: end;
+        align-self:flex-end;
+        grid-column:3/4;
+        grid-row: 1/span 2;
+        transform: translate(10%, 10%);
+
+        &--reverse {
+            @extend %project__img-background;
+            // justify-items: flex-start;
+            grid-column:2/3;
+            grid-row: 1/span 2;
+            align-self:flex-end;
+            // justify-self: start;
+            transform: translate(-10%, 10%);
         }
+
     }
     
     &__image {
        @extend %project__img;
        margin-left:10%;
+       border-right:solid .8rem $color-accent-1;
+       border-bottom:solid .8rem $color-accent-1;
 
        &--reverse {
             @extend %project__img;
            margin-left:0;
            margin-right:10%;
+           border-left:solid .8rem $color-accent-1;
+           border-bottom:solid .8rem $color-accent-1;
        }
     }
 
@@ -133,5 +180,10 @@
         &--right {
             grid-column: 3/ span 1;
         }
+
+         a {
+             margin-top: 1rem;
+             margin-right:2rem;
+         }
     }
 }
