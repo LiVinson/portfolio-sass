@@ -1,6 +1,6 @@
 %heading {
   font-family: $font-title;    
-  text-align: center;
+  // text-align: center;
   
 }
 
@@ -13,6 +13,7 @@
   font-size: 6rem;
   line-height: 1;
   text-transform: lowercase;
+  text-align:center;
 
   &--light { color: $color-white};       
   &--dark { color: $color-secondary};   
