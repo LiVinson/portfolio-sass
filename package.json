@@ -5,12 +5,12 @@
   "main": "index.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
-    "watch:sass": "node-sass sass/main.scss css/style.css -w",
+    "watch:sass": "node-sass sass/main.scss public/assets/css/style.css -w",
     "devserver": "live-server --browser=firefox",
     "start": "npm-run-all --parallel devserver watch:sass",
-    "compile:sass": "node-sass sass/main.scss css/style.comp.css",
-    "prefix:css": "postcss --use autoprefixer -b \"last 10 versions\" css/style.comp.css -o css/style.prefix.css",
-    "compress:css": "node-sass css/style.prefix.css css/style.css --output-style compressed",
+    "compile:sass": "node-sass sass/main.scss public/assets/css/style.comp.css",
+    "prefix:css": "postcss --use autoprefixer -b \"last 10 versions\" public/assets/css/style.comp.css -o public/assets/css/style.prefix.css",
+    "compress:css": "node-sass public/assets/css/style.prefix.css public/assets/css/style.css --output-style compressed",
     "build:css": "npm-run-all compile:sass prefix:css compress:css"
   },
   "keywords": [
@@ -27,5 +27,11 @@
     "node-sass": "^4.14.0",
     "npm-run-all": "^4.1.5",
     "postcss-cli": "^7.1.1"
+  },
+  "dependencies": {
+    "body-parser": "^1.19.0",
+    "dotenv": "^8.2.0",
+    "express": "^4.17.1",
+    "nodemailer": "^6.4.8"
   }
 }

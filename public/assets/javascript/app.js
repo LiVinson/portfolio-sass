@@ -3,11 +3,13 @@ import data from "../files/skills.js";
 //Add click event to each 'skills' button
 window.addEventListener("load", function () {
     console.log("loaded")
-    document.querySelectorAll(".btn-skills").forEach(item => {
-       
+    document.querySelectorAll(".btn-skills").forEach(item => {     
         item.addEventListener('click', getSkillDetails)
       })
-  })
+
+    document.querySelector(".form__submit")
+        .addEventListener("click", submitForm)
+})
 
   //Click event: Retrieve details for selected skill
 const getSkillDetails = function() {
@@ -39,5 +41,38 @@ const displaySkillDetails = ({ skill, details, category} ) => {
         console.log(element);
         element.appendChild(paragraph);
     })
+}
+
+const submitForm = (event) => {
+    event.preventDefault()
+    console.log("submitted")
+
+    const name = document.getElementsByName("name")[0].value
+    const email = document.getElementsByName("email")[0].value
+    const message = document.getElementsByName("message")[0].value
+
+    //grab data from form
+    //send request to /contact
+    const xhr = new XMLHttpRequest();
+    xhr.open("POST", "/contact", true)
+    xhr.setRequestHeader( 'Content-Type', 'application/x-www-form-urlencoded' );
+    
+    const formData = `name=${name}&email=${email}&message=${message}`;
+    console.log(formData)
+
+    xhr.onreadystatechange = function() {
+        console.log("state changed")
+        if (xhr.readyState === XMLHttpRequest.DONE) {
+            console.log("response received")
+            var status=xhr.status;
+            console.log(status)
+        }
+    }
+
+    xhr.send( formData )
+    
+    //when response is received 
+        //:display success message
+        //display error message 
 }
 
