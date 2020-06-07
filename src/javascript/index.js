@@ -3,7 +3,7 @@ import "../sass/main.scss"
 
 //Add click event to each 'skills' button
 window.addEventListener("load", function () {
-    console.log("loaded")
+    console.log("loaded!")
     console.log(data.skills[0])
     document.querySelectorAll(".btn-skills").forEach(item => {     
         item.addEventListener('click', getSkillDetails)

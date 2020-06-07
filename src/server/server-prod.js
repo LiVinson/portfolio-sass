@@ -4,19 +4,22 @@ const express = require("express");
 const bodyParser = require("body-parser");
 const path = require("path");
 
-port = process.env.PORT || 3000
+
+const port = process.env.PORT || 3000
+
 const app = express(),
             DIST_DIR = __dirname,
             HTML_FILE = path.join(DIST_DIR, 'index.html')
-
-// app.use(bodyParser.urlencoded({ extended: true }))
+            
 app.use(express.static(DIST_DIR));
 
 
-app.get("/", (req, res) => {
+app.get("/", (req, res, next) => {
     console.log("home");
     return res.sendFile(HTML_FILE)
 })
+
+
 
 app.post("/contact", function(req,res) {
     console.log("form submitted")

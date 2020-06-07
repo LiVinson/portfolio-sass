@@ -73,6 +73,7 @@ module.exports = {
       filename: "[name].css",
       chunkFilename: "[id].css",
     }),
+    new webpack.NoEmitOnErrorsPlugin()
   ],
   mode: "development",
 }
