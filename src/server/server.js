@@ -5,14 +5,17 @@ const bodyParser = require("body-parser");
 const path = require("path");
 
 port = process.env.PORT || 3000
-const app = express();
-app.use(bodyParser.urlencoded({ extended: true }))
-app.use(express.static("public"));
+const app = express(),
+            DIST_DIR = __dirname,
+            HTML_FILE = path.join(DIST_DIR, 'index.html')
+
+// app.use(bodyParser.urlencoded({ extended: true }))
+app.use(express.static(DIST_DIR));
 
 
 app.get("/", (req, res) => {
     console.log("home");
-    return res.sendFile(path.join(__dirname + "/index.html"));
+    return res.sendFile(HTML_FILE)
 })
 
 app.post("/contact", function(req,res) {
@@ -54,4 +57,7 @@ async function sendEmail({ name, email, message}) {
     return info
 }
 
-app.listen(port, () => console.log(`starting server on port: ${port}`  ))
+app.listen(port, () => {
+    console.log(`starting server on port: ${port}`)
+    console.log("mode: ", process.env.NODE_ENV)
+})
