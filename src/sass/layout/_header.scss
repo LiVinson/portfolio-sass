@@ -1,8 +1,8 @@
 .header {
   color: $color-accent-1;
   //stretches entire container with height of 95vh
-  grid-column: col-start 1 / col-end 12;
-  grid-row: 1/2;
+  width:100%;
+  height:95vh;
   display: grid; //12x8
   grid-template-columns: repeat(
     12,
@@ -11,18 +11,10 @@
   grid-template-rows: repeat(8, 1fr);
   gap: 1.5rem;
 
-  &__role {
-    background-color: $color-primary;
-    grid-column: header-col-start 6 / header-col-end 11;
-    grid-row: 1/2;
-    font-size: 2.5rem;
-    padding-left: 2rem;
-  }
-
   &__img-container {
     grid-row: 1/6;
     grid-column: header-col-start 1 / header-col-end 5;
-
+      
     img {
       width: 100%;
       height: 100%;
@@ -30,26 +22,34 @@
       object-fit: cover;
       //avoids white space after image as if it were text
       display: block;
+      
+
+      
     }
   }
 
   &__name {
-    background-color: $color-primary;
+    background-image:linear-gradient(to bottom right, $color-primary-light, $color-primary);
+    // background-color: $color-primary;
     grid-row: 2/7;
     grid-column: header-col-start 6 / header-col-end 11;
-    padding: 5rem;
-    
+    padding: 5rem;    
     display:flex;
-    align-content: center;
-    flex-wrap:wrap;
-
-    h1 {
-      flex:0 0 100%;
-    }
+    align-items: center;
+    justify-content:center;
+    flex-wrap:wrap;   
   }
 
-  &__block-right {
-    background-color: $color-primary;
+  &__block--top {
+    background-image:linear-gradient(to right bottom, $color-primary, $color-primary-light);
+    // background-color: $color-primary;
+    grid-column: header-col-start 6 / header-col-end 11;
+    grid-row: 1/2; 
+  }
+
+  &__block--right {
+    background-image:linear-gradient(to bottom, $color-primary-light, $color-primary);
+    // background-color: $color-primary;
     grid-column: header-col-start 12 / header-col-end 12;
     grid-row: 1/7;
   }
@@ -59,9 +59,12 @@
   //contains left nav, aligned to far right of block
   &__container-left {
     background-color: $color-secondary;
+    // background-image:linear-gradient(to bottom right, $color-secondary, $color-secondary-light);
     grid-column: header-col-start 1 / header-col-end 5;
     grid-row: 6/-1;
+
     display: flex;
+    //pushes ul to the far right and bottom of nav
     align-items: flex-end;
     justify-content: flex-end;
 
@@ -78,18 +81,21 @@
       justify-content: flex-end;
 
       &__list {
-        // border: solid 1px red;
-        padding: 2rem;
-        background-color: $color-accent-1;
+        width:65%;
+        padding: 4vh 2rem;
+        background-color: $color-white;
         color:$color-secondary;
-        outline: solid .8rem $color-accent-1;
-        outline-offset: 1.2rem;
+        outline: solid 1rem $color-white;
+        outline-offset: 2rem;
+
+        display:flex;
+        justify-content:space-evenly;
+        align-items:center;
       }
 
       &__item {
         padding: 0 1rem;
-        margin-left: 3rem;
-        font-size: 2rem;
+        // margin-left: 3rem;        
         display: inline-block;
       }
     }
@@ -105,17 +111,24 @@
     .nav {
       // border: solid 1px blue;
       height: 50%;
+      width: 75%;
       display: flex;
       align-items: center;
+      
 
       &__list {
-        outline: solid 0.5rem $color-accent-1;
-        padding: 2rem;
+        width: 70%;
+        outline: solid 0.75rem $color-white;
+        //must subtract the outline from padding so the height matches left ul height
+        padding: calc(4vh - .75rem) 2rem;
+        display: flex;
+        justify-content:space-evenly;
+        align-items: center;
       }
 
       &__item {
         padding: 0 1rem;
-        margin-right: 3rem;
+        // margin-right: 3rem;
         font-size: 2rem;
         display: inline-block;
       }

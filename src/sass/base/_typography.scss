@@ -1,5 +1,5 @@
 %heading {
-  font-family: $font-title;    
+  font-family: $font-title;      
   text-transform: lowercase;  
 }
 
@@ -19,7 +19,8 @@
 
 .heading-1{
   @extend %heading;
-  font-size: 8.5rem;
+  font-weight: 100;
+  font-size:10rem;
   line-height: 1;  
 
 }
@@ -27,7 +28,8 @@
 .heading-2 {
   @extend %heading;
   font-size: 6rem;
-  line-height: 1;  
+  line-height: 1.2;  
+  font-weight: 400;
   text-align:center;
   &--light { color: $color-white};       
   &--dark { color: $color-secondary};   
@@ -48,13 +50,14 @@
 }
 
 .paragraph {
-  line-height:1.2;
-  margin-bottom: 1.5rem;
-  font-family:$font-title;
-  font-size: 2rem; 
-  font-weight: 300;  
+  line-height:1.5;
+  margin-bottom: 1rem;
+  font-family:$font-text;
+  font-size: 2.2rem; 
+  font-weight: 400;  
 }
 
+/* ---------------- BUTTONS ------------  */
 .btn {
   border: none;
   padding: 1.4rem 2.5vw;
@@ -100,7 +103,7 @@
      &--lg {
         @extend %btn-link;
         color:$color-white;
-        font-size: 2.2rem;
+        font-size: 2.5rem;
      }
   }
 
@@ -111,7 +114,7 @@
     &--lg {
       @extend %btn-link;
       color:$color-secondary;   
-      font-size: 2.2rem;
+      font-size: 2.5rem;
     }
   }
 }
