@@ -6,25 +6,37 @@
 
 
     &__bottom {       
-        width: 40%;
+        width: 65%;
         z-index: -2;
         padding:2rem 0;
         background-color: $color-primary;
         //allows to fit entire width, but with initial 35% of parent 'empty'
-        margin-left: 35%;
+        margin-left: 17.5%;
     }
 
     
     &__top {       
         //fills entire parent element/65% of section header 
-        width: 100%;
+        width: 105%;
         //Moves element from inside of parent and to the left. .8 accounts for outline
-        margin-left:-40%;
+        margin-left:-2.5%;
         padding:6rem 1rem;
         background-color: $color-secondary;
         z-index: 2;
-        border: solid .8rem $color-accent-1;
+        border: solid .8rem $color-white;
         border-left:none;
+        
+       
+        // & .heading-2::before,
+        // & .heading-2::after {
+        //     content:"";
+        //     display: inline-block;
+        //     width:1vw;
+        //     height : 4px;
+        //     background-color: white;
+        //     vertical-align: middle;
+        //     margin: 0 4rem;
+        // }
         
     }
 
