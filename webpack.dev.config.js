@@ -6,7 +6,7 @@ const MiniCssExtractPlugin = require("mini-css-extract-plugin")
 
 module.exports = {
   entry: {
-    main: "./src/javascript/index.js",
+    main: ["webpack-hot-middleware/client?path=/__webpack_hmr&timeout=20000","./src/javascript/index.js"]
   },
   output: {
     path: path.join(__dirname, "dist"),
@@ -41,7 +41,7 @@ module.exports = {
             // After all CSS loaders we use plugin to do his work.
             // It gets all transformed CSS and extracts it into separate
             // single bundled file
-            loader: MiniCssExtractPlugin.loader,
+            loader: "style-loader",
           },
           {
             // This loader resolves url() and @imports inside CSS
@@ -73,7 +73,9 @@ module.exports = {
       filename: "[name].css",
       chunkFilename: "[id].css",
     }),
-    new webpack.NoEmitOnErrorsPlugin()
+    new webpack.NoEmitOnErrorsPlugin(),
+    new webpack.HotModuleReplacementPlugin()
+
   ],
   mode: "development",
 }

@@ -78,3 +78,7 @@ const submitForm = (event) => {
         //display error message 
 }
 
+// Needed for Hot Module Replacement
+if(typeof(module.hot) !== "undefined") {
+    module.hot.accept() 
+  }
