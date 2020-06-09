@@ -4,12 +4,12 @@
 }
 
 %btn-link {
-  font-family: $font-text;
-  font-size:1.8rem;
+  font-family: $font-title;
+  font-size:2rem;
   text-decoration: none;
   display:inline-block;
   transition: all .3s;
-
+  // padding-left:2rem;
   &:hover {
     text-decoration:underline;
     transform:translateY(-2px);
@@ -19,8 +19,8 @@
 
 .heading-1{
   @extend %heading;
-  font-weight: 100;
-  font-size:10rem;
+  font-weight: 200;
+  font-size:17rem;
   line-height: 1;  
 
 }
@@ -32,11 +32,12 @@
   font-weight: 400;
   text-align:center;
   &--light { color: $color-white};       
-  &--dark { color: $color-secondary};   
+  &--dark { color: $color-primary};   
 }
 
 .heading-3 {
   @extend %heading;  
+  font-weight: 400;
   font-size: 3rem;
   &--light { color: $color-white};       
   &--dark { color: $color-secondary}; 

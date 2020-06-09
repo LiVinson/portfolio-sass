@@ -1,9 +1,11 @@
 .section-header{
-    width: 100%; //based on container width
+    grid-column: 2 / span 10;
+     //based on container width
     position: relative;
     // margin: 0 auto;
-    margin-bottom:15rem;
-
+    // margin-bottom:15rem;
+    // margin-top:-9rem;
+    transform: translateY(-50%);
 
     &__bottom {       
         width: 65%;
@@ -23,8 +25,8 @@
         padding:6rem 1rem;
         background-color: $color-secondary;
         z-index: 2;
-        border: solid .8rem $color-white;
-        border-left:none;
+        border-top: solid .8rem $color-white;
+        border-bottom: solid .8rem $color-accent-2;
         
        
         // & .heading-2::before,

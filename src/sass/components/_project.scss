@@ -1,40 +1,42 @@
 %project__header {
-    font-family: $font-title;
-    color: $color-white;    
-    grid-row: 1/ span 1;
+    // width: calc(100% + 4rem + 1.4rem ); 
+      
+    // grid-row: 1/ span 1;
     background-color: $color-tertiary;        
     padding: 1rem 0 1.5rem 2rem;     
     //above accent block, below image
     z-index: 5;
     //Allows spacking at top of row so layered block extends beyond top of header
-    margin-top:2rem;
-    border: 7px solid $color-accent-1;  
-    border-bottom: 8px solid $color-accent-1;     
+    // margin-top:2rem;
+    border: .7rem solid $color-accent-2;  
+    border-bottom: 1rem solid $color-accent-2;     
 }
 
 %project__block {
     z-index: 1;
-    padding: 2rem;        
-    align-self: stretch;
+    padding-top: 2rem;       
+    padding-bottom: 2rem;        
+ 
+    // align-self: stretch;
     background-color: $color-secondary;
-    grid-column: 2 / span 1;
+    grid-column: 1 / span 6;
     grid-row: 1/ span 1;
 
-    display:flex;
-    align-items:flex-end;
+    // display:flex;
+    // align-items:flex-end;
 
     
 }
 
 %project__img-container {
     grid-row: 1/span 2;
-    justify-self:end;
+    // justify-self:end;
     z-index:10;
-    grid-column: 3/ span 1;    
+    grid-column: 7/ -1;    
 }
 
 %project__img {
-    width: 90%;
+    width: 100%;
     height: 100%;
     
     //image 'snaps' to grid lines
@@ -62,27 +64,31 @@
 }
 
 .project {     
+    grid-column: 3 / span 8;
+
     display: grid;
     //outer columns to allow spacing on either side of center elements
-    grid-template-columns: 6rem repeat(2, 1fr) 6rem;
-    grid-template-rows: repeat(2, 1fr); 
+    grid-template-columns: repeat(10, minmax(min-content, 1fr));
+    // grid-template-rows: repeat(2, min-max(min-content, 1fr)); 
     //Every element start at top of row
     align-items: start;
-    gap: 2rem;
-    margin-bottom:8rem;
-
+    column-gap: 4rem;
+    row-gap:1.5rem;
+    margin: 5rem 0;
+    color: $color-white;  
     //Contains title and skills list
     &__header {
         @extend %project__header;   
-        background-color: $color-tertiary;        
+        // background-color: $color-tertiary;        
         padding-right: 2rem; 
-        grid-column: 1/span 2;
-        transform: translateX(4rem);  
+        // margin-left:-2.7rem;
+        // grid-column: 1/span 2;
+        // transform: translateX(4rem);  
     }
 
     &__header--reverse {
         @extend %project__header;   
-        background-color: $color-tertiary;        
+        // background-color: $color-tertiary;        
         grid-column: 3/ span 2;
         padding-left: 8rem;    
         transform: translateX(-4rem);    
@@ -113,14 +119,16 @@
         // margin-top:1rem;
         border-right: solid 1px #fff;
         color:#fff;
+        margin-top: 1.5rem;
+        padding-left:2rem;
     }
 
     &__skill {
         display: inline-block;
-        font-size: 1.6rem;  
+        font-size: 2rem;  
         text-align:center;
         border-right: solid 2px $color-accent-1;
-        padding: 0 1.2rem;
+        padding: 0 1.5rem;
         &:first-child {
             padding-left:0;
         }      
@@ -158,9 +166,9 @@
     
     &__image {
        @extend %project__img;
-       margin-left:10%;
-       border-right:solid .8rem $color-accent-1;
-       border-bottom:solid .8rem $color-accent-1;
+    //    margin-left:10%;
+    //    border-right:solid .8rem $color-accent-1;
+    //    border-bottom:solid .8rem $color-accent-1;
 
        &--reverse {
             @extend %project__img;
@@ -173,11 +181,13 @@
 
     &__text {
         @extend %project__text;
-        grid-column: 2/ span 1;
-        
+        grid-column: 1/ span 6;
+        color: $color-dark-gray-1;
+        padding-left:2rem;
+        padding-right: 2rem;
 
         &--right {
-            grid-column: 3/ span 1;
+            
         }
 
          a {
