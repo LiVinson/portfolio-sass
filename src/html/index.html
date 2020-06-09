@@ -46,27 +46,30 @@
 
 
 <!-------------------- HEADER 2 - img/solid split 60/40 ---------------------->
-    <header class="header-2">
-        <div class="bg-img"></div>
-       <div class="bg-solid">
+    <header class="header">
+        <div class="header__img"></div>
+       <div class="header__background">
             <ul class="nav-list">
-                <li>about</li>
-                <li>portfolio</li>
-                <li>contact</li>
-                <li>resume</li>
+                <li><a class="btn-link" href="#">about</a></li>
+                <li><a class="btn-link" href="#">portfolio</a></li>
+                <li><a class="btn-link" href="#">contact</a></li>
+                <li><a class="btn-link" href="#">resume</a></li>
             </ul>
-            <h1 class="heading-1">hello.</h1>
-            <h2 class="heading-3 heading-3--light"> I'm lisa, a software developer from Florida.</h2>
+            <div class="header__container">
+                <h1 class="heading-1">hello<span>.</span></h1>
+                <h2 class="heading-3 heading-3--light"> I'm lisa, a software developer from Florida.</h2>
+            </div>
+            
         </div>          
     </header>
     <!-------------------- END HEADER 2 - img/solid split 60/40 ---------------------->
 
 
-    <div class="container">
+    <!-- <div class="container"> -->
 
 <!------------------------ ABOUT SECTION  --------------------------->
         <section id="about" class="about">
-            <h2 id="about" class="heading-2 heading-2--dark u-margin-bottom-lg">About</h2>
+            <!-- <h2 id="about" class="heading-2 heading-2--dark u-margin-bottom-lg">About</h2>
             <div class="about__text justify-text">
                 <p class="paragraph">
                     I am experienced in the full life cycle of software development and I enjoy everything from design,
@@ -80,9 +83,27 @@
                 <p class="paragraph">When I'm not in front of a screen, I love to take road trips, eat delicious food (I
                     can't recommend Pappy's Smokehouse in St. Louis enough!), hike, kayak, and read. </p>
                 <p class="paragraph">I am currently open to freelance, contract, and full time opportunities.</p>
+            </div> -->
+            <div class="section__container">
+                <h3 class="heading-2 heading-2--dark-3 u-margin-bottom-md">
+                    I focus on creating clean, responsive,<br/> and user friend applications.                </h3>
+                <div class="about__text justify-text">
+                    <p class="paragraph">
+                        I am experienced in the full life cycle of software development and I enjoy everything from design,
+                        to front end and back end development. My goal for every project is to create a product that is
+                        seamless for the user and built to scale for future features. I am knowledgeable in a variety of
+                        current tech stacks, and I'm always looking to become a better developer. </p>
+                    <p class="paragraph">While my previous experiences as a math teacher and HR manager may seem very
+                        different from
+                        programming on the surface, my passion for all three have been rooted
+                        in a desire to help people figure out simple solutions to complex problems. </p>
+                    <p class="paragraph">When I'm not in front of a screen, I love to take road trips, eat delicious food (I
+                        can't recommend Pappy's Smokehouse in St. Louis enough!), hike, kayak, and read. </p>
+                    <p class="paragraph">I am currently open to freelance, contract, and full time opportunities.</p>
+                </div>
+                
             </div>
-
-            <!-- </div> -->
+            
 
         </section>
         <!------------------------ WORK SECTION  --------------------------->
@@ -381,7 +402,7 @@
                 <li class="footer__link"><a href="www.github.com/LiVinson">Resume</a></li>
             </ul>
         </footer>
-    </div>
+    <!-- </div> -->
 
     <!-- <script src="assets/javascript/app.js" type="module"></script> -->
 </body>

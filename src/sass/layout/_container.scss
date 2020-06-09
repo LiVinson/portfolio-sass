@@ -1,19 +1,28 @@
 .container {
-    // max-width:140rem;
     margin: 0 auto;
-    // background-color: $color-white;
-    // background-color: $color-accent-1;
+
     background-color: #f7f7f7;
     
-    display: grid;
-    grid-template-rows: repeat(5, min-content);
-    grid-template-columns: repeat(12, [col-start] minmax(min-content,  1fr) [col-end]);
-    grid-gap: 1.5rem;
+    // display: grid;
+    // grid-template-rows: repeat(5, min-content);
+    // grid-template-columns: repeat(12, [col-start] minmax(min-content,  1fr) [col-end]);
+    // grid-gap: 1.5rem;
 }
 
 section {
     padding-bottom: 8rem;
+
+    &.about{
+        background-color: $new-color-accent-dark-1;
+    }
 }
+
+.section__container {
+    margin: 0 auto;
+    width: 110rem;
+}
+
+
 
 .light-background-12 {
     grid-column: 1/ -1;

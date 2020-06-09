@@ -1,13 +1,13 @@
 %heading {
   font-family: $font-title;      
-  text-transform: lowercase;  
 }
 
 %btn-link {
   font-family: $font-title;
   font-size:2rem;
+  font-weight:300;
   text-decoration: none;
-  display:inline-block;
+  // display:inline-block;
   transition: all .3s;
   // padding-left:2rem;
   &:hover {
@@ -19,6 +19,7 @@
 
 .heading-1{
   @extend %heading;
+  text-transform: lowercase;  
   font-weight: 200;
   font-size:17rem;
   line-height: 1;  
@@ -27,20 +28,26 @@
 
 .heading-2 {
   @extend %heading;
-  font-size: 6rem;
-  line-height: 1.2;  
+  font-size: 5rem;
+  line-height: 1.6;  
   font-weight: 400;
+  text-transform: lowercase;  
   text-align:center;
-  &--light { color: $color-white};       
-  &--dark { color: $color-primary};   
+  &--light { color: $new-color-accent-dark-1};       
+  &--dark-1 { color: $new-color-primary};   
+  &--dark-2 { color: $new-color-secondary};   
+  &--dark-3 { color: $new-color-tertiary};   
 }
 
 .heading-3 {
   @extend %heading;  
+  line-height:1.5;
   font-weight: 400;
-  font-size: 3rem;
-  &--light { color: $color-white};       
-  &--dark { color: $color-secondary}; 
+  font-size: 4rem;
+  &--light { color: $new-color-accent-dark-1};       
+  &--dark-1 { color: $new-color-primary};   
+  &--dark-2 { color: $new-color-secondary};   
+  &--dark-3 { color: $new-color-tertiary};   
 }
 
 .heading-4 {
@@ -96,6 +103,7 @@
 
 .btn-link {
   @extend %btn-link;  
+  color:$color-white;
 
   &--light {
     @extend %btn-link;

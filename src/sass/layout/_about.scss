@@ -2,12 +2,15 @@
     grid-column:3/11;
     padding: 8rem 0 20rem 0;
     
+    & h3 {
+      padding-left:4rem;
+      padding-right:4rem;
+    }
 
     &__text {
       column-count: 2; 
-      column-gap: 2rem;
-      // text-indent: 4rem;
-      // max-height:30%;
+      column-gap: 2.5rem;
     }
+
   }
 
