@@ -1,25 +1,23 @@
 .container {
-    margin: 0 auto;
-
     background-color: #f7f7f7;
-    
-    // display: grid;
-    // grid-template-rows: repeat(5, min-content);
-    // grid-template-columns: repeat(12, [col-start] minmax(min-content,  1fr) [col-end]);
-    // grid-gap: 1.5rem;
 }
 
 section {
-    padding-bottom: 8rem;
-
+  
     &.about{
         background-color: $new-color-accent-dark-1;
+        padding-bottom: 16rem;  
+    }
+
+    &.portfolio {
+        background-color: $new-color-accent-light;
+         
     }
 }
 
 .section__container {
     margin: 0 auto;
-    width: 110rem;
+    width: 100rem;
 }
 
 

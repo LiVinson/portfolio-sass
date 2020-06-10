@@ -13,63 +13,35 @@
 </head>
 
 <body>
-
-    <!------------------------ HEADER:  --------------------------->
-    <!-- <header class="header u-margin-bottom-md">
-        <div class="header__block--top"></div>
-        <div class="header__img-container">
-            <img src="./../img/header-img-2000.jpg" alt="notebook, headphones, keyboard, and coffee" class="">
-        </div>
-        <div class="header__name">
-            <h1 class="heading-1">What can I help you create?</h1>
-        </div>
-        <div class="header__block--right"></div>
-        <div class="nav__container-left">
-            <nav class="nav">
-                <ul class="nav__list">
-                    <li class="nav__item"><a class="btn-link--dark--lg" href="#about">about</a></li>
-                    <li class="nav__item"><a class="btn-link--dark--lg" href="#work">work</a></li>
-                </ul>
-            </nav>
-        </div>
-
-        <div class="nav__container-right">
-            <nav class="nav">
-                <ul class="nav__list">
-                    <li class="nav__item"><a class="btn-link--light--lg" href="#skills">skills</a></li>
-                    <li class="nav__item"><a class="btn-link--light--lg" href="#contact">contact</a></li>
-                    <li class="nav__item"><a class="btn-link--light--lg" href="#">resume</a></li>
-                </ul>
-            </nav>
-        </div>
-    </header> -->
-
-
-<!-------------------- HEADER 2 - img/solid split 60/40 ---------------------->
+    <!-------------------- HEADER 2 - img/solid split 60/40 ---------------------->
     <header class="header">
         <div class="header__img"></div>
-       <div class="header__background">
-            <ul class="nav-list">
-                <li><a class="btn-link" href="#">about</a></li>
-                <li><a class="btn-link" href="#">portfolio</a></li>
-                <li><a class="btn-link" href="#">contact</a></li>
-                <li><a class="btn-link" href="#">resume</a></li>
-            </ul>
+        <div class="header__background">
+            <nav>
+                <ul class="inline-list">
+                    <li><a class="btn-link" href="#">about</a></li>
+                    <li><a class="btn-link" href="#">portfolio</a></li>
+                    <li><a class="btn-link" href="#">contact</a></li>
+                    <li><a class="btn-link" href="#">resume</a></li>
+                </ul>
+            </nav>
             <div class="header__container">
                 <h1 class="heading-1">hello<span>.</span></h1>
-                <h2 class="heading-3 heading-3--light"> I'm lisa, a software developer from Florida.</h2>
+                <h4 class="heading-4"> I'm lisa, a software developer from Florida.</h4>
             </div>
-            
-        </div>          
+
+        </div>
     </header>
     <!-------------------- END HEADER 2 - img/solid split 60/40 ---------------------->
 
 
     <!-- <div class="container"> -->
 
-<!------------------------ ABOUT SECTION  --------------------------->
-        <section id="about" class="about">
-            <!-- <h2 id="about" class="heading-2 heading-2--dark u-margin-bottom-lg">About</h2>
+    <!------------------------ ABOUT SECTION  --------------------------->
+    <section id="about" class="about">
+        <div class="section__container">
+            <h3 class="heading-3 heading-3--dark-3 u-margin-bottom-md">
+                I focus on creating clean, responsive, and user friendly applications. </h3>
             <div class="about__text justify-text">
                 <p class="paragraph">
                     I am experienced in the full life cycle of software development and I enjoy everything from design,
@@ -83,248 +55,351 @@
                 <p class="paragraph">When I'm not in front of a screen, I love to take road trips, eat delicious food (I
                     can't recommend Pappy's Smokehouse in St. Louis enough!), hike, kayak, and read. </p>
                 <p class="paragraph">I am currently open to freelance, contract, and full time opportunities.</p>
-            </div> -->
-            <div class="section__container">
-                <h3 class="heading-2 heading-2--dark-3 u-margin-bottom-md">
-                    I focus on creating clean, responsive,<br/> and user friend applications.                </h3>
-                <div class="about__text justify-text">
-                    <p class="paragraph">
-                        I am experienced in the full life cycle of software development and I enjoy everything from design,
-                        to front end and back end development. My goal for every project is to create a product that is
-                        seamless for the user and built to scale for future features. I am knowledgeable in a variety of
-                        current tech stacks, and I'm always looking to become a better developer. </p>
-                    <p class="paragraph">While my previous experiences as a math teacher and HR manager may seem very
-                        different from
-                        programming on the surface, my passion for all three have been rooted
-                        in a desire to help people figure out simple solutions to complex problems. </p>
-                    <p class="paragraph">When I'm not in front of a screen, I love to take road trips, eat delicious food (I
-                        can't recommend Pappy's Smokehouse in St. Louis enough!), hike, kayak, and read. </p>
-                    <p class="paragraph">I am currently open to freelance, contract, and full time opportunities.</p>
-                </div>
-                
             </div>
-            
+        </div>
+    </section>
 
+    <section class="portfolio">
+        <header class="portfolio__subheader">
+            <div class="section__container">
+                <h2 class="heading-2 heading-2--light heading-2--bg-1 center-text">Portfolio
+                </h2>
+                <h4 class="heading-4 heading-4--dark-3 center-text">
+                    Lorem ipsum dolor adipisicing elit. Facilis maiores, molestias
+                </h4>
+            </div>
+        </header>
+        <section class="project--bg-1 light">
+            <div class="project__container">
+                <h4 class="heading-4 heading-4--light u-margin-bottom-sm">Project Title</h4>
+                <img src="../img/project-1-1500.jpg" alt="project 1 image" class="project__image u-margin-bottom-md">              
+                <ul class="inline-list inline-list--border u-margin-bottom-xs">
+                    <li class="list-item">html</li>
+                    <li class="list-item">css</li>
+                    <li class="list-item">react</li>
+                    <li class="list-item">node</li>
+                    <li class="list-item">mysql</li>
+                </ul>
+                <p class="paragraph justify-text">
+                    Lorem ipsum dolor sit amet, consectetur adipisicing elit. Odit cupiditate recusandae eveniet
+                    ducimus. Eaque eius repudiandae tempora dolor dicta. Impedit magni, maiores tempora dolorem vero.
+                </p>
+                <div class="project__btn-group light">
+                    <button class="btn btn--color-3">View Code</button>
+                    <button class="btn btn--color-4 tertiary">View Site</button>
+                </div>
+            </div>
         </section>
-        <!------------------------ WORK SECTION  --------------------------->
-        <section class="work">
-            <!-- <div id="work" class="section-header u-margin-bottom-md">
+
+        <section class="project--bg-2 light">
+            <div class="project__container">
+                <h4 class="heading-4 heading-4--light u-margin-bottom-sm">Project Title</h4>
+                <img src="../img/project-1-1500.jpg" alt="project 1 image" class="project__image u-margin-bottom-md">              
+                <ul class="inline-list u-margin-bottom-xs">
+                    <li class="list-item">html</li>
+                    <li class="list-item">css</li>
+                    <li class="list-item">react</li>
+                    <li class="list-item">node</li>
+                    <li class="list-item">mysql</li>
+                </ul>
+                <p class="paragraph justify-text">
+                    Lorem ipsum dolor sit amet, consectetur adipisicing elit. Odit cupiditate recusandae eveniet
+                    ducimus. Eaque eius repudiandae tempora dolor dicta. Impedit magni, maiores tempora dolorem vero.
+                </p>
+                <div class="project__btn-group light">
+                    <button class="btn btn--color-2">View Code</button>
+                    <button class="btn btn--color-4 secondary">View Site</button>
+                </div>
+            </div>
+        </section>
+
+        <section class="project--bg-3 secondary-dark-2">
+            <div class="project__container">
+                <h4 class="heading-4 u-margin-bottom-sm">Project Title</h4>
+                <img src="../img/project-1-1500.jpg" alt="project 1 image" class="project__image u-margin-bottom-md">              
+                <ul class="inline-list u-margin-bottom-xs">
+                    <li class="list-item">html</li>
+                    <li class="list-item">css</li>
+                    <li class="list-item">react</li>
+                    <li class="list-item">node</li>
+                    <li class="list-item">mysql</li>
+                </ul>
+                <p class="paragraph justify-text">
+                    Lorem ipsum dolor sit amet, consectetur adipisicing elit. Odit cupiditate recusandae eveniet
+                    ducimus. Eaque eius repudiandae tempora dolor dicta. Impedit magni, maiores tempora dolorem vero.
+                </p>
+                <div class="project__btn-group light">
+                    <button class="btn btn--color-2-dark">View Code</button>
+                    <button class="btn btn--color-4 secondary-dark-2">View Site</button>
+                </div>
+            </div>
+        </section>
+
+        <section class="project--bg-4 secondary-dark-2">
+            <div class="project__container">
+                <h4 class="heading-4 u-margin-bottom-sm">Project Title</h4>
+                <img src="../img/project-1-1500.jpg" alt="project 1 image" class="project__image u-margin-bottom-md">              
+                <ul class="inline-list u-margin-bottom-xs">
+                    <li class="list-item">html</li>
+                    <li class="list-item">css</li>
+                    <li class="list-item">react</li>
+                    <li class="list-item">node</li>
+                    <li class="list-item">mysql</li>
+                </ul>
+                <p class="paragraph justify-text">
+                    Lorem ipsum dolor sit amet, consectetur adipisicing elit. Odit cupiditate recusandae eveniet
+                    ducimus. Eaque eius repudiandae tempora dolor dicta. Impedit magni, maiores tempora dolorem vero.
+                </p>
+                <div class="project__btn-group light">
+                    <button class="btn btn--color-2-dark">View Code</button>
+                    <button class="btn btn--color-4 secondary-dark-2">View Site</button>
+                </div>
+            </div>
+        </section>
+
+        <section class="project--bg-5 light">
+            <div class="project__container">
+                <h4 class="heading-4 heading-4--dark u-margin-bottom-sm">Project Title</h4>
+                <img src="../img/project-1-1500.jpg" alt="project 1 image" class="project__image u-margin-bottom-md">              
+                <ul class="inline-list u-margin-bottom-xs">
+                    <li class="list-item">html</li>
+                    <li class="list-item">css</li>
+                    <li class="list-item">react</li>
+                    <li class="list-item">node</li>
+                    <li class="list-item">mysql</li>
+                </ul>
+                <p class="paragraph justify-text">
+                    Lorem ipsum dolor sit amet, consectetur adipisicing elit. Odit cupiditate recusandae eveniet
+                    ducimus. Eaque eius repudiandae tempora dolor dicta. Impedit magni, maiores tempora dolorem vero.
+                </p>
+                <div class="project__btn-group light">
+                    <button class="btn btn--color-1">View Code</button>
+                    <button class="btn btn--color-4 primary">View Site</button>
+                </div>
+            </div>
+        </section>   
+    </section>
+
+
+    <!------------------------ WORK SECTION  --------------------------->
+    <!-- <section class="work"> -->
+    <!-- <div id="work" class="section-header u-margin-bottom-md">
                 <div class="section-header__bottom">
                     <div class="section-header__top">
                         <h2 class="heading-2 heading-2--light center-v-h">Work</h2>
                     </div>
                 </div>
             </div> -->
-            <h2 id="skills" class="heading-2 heading-2--dark u-margin-bottom-lg center-text">Portfolio</h2>
+    <!-- <h2 id="skills" class="heading-2 heading-2--dark u-margin-bottom-lg center-text">Portfolio</h2> -->
 
-            <!--------------- Text left, Image right - DEFAULT (1 /6) ---------------->
-            <div class="project u-margin-bottom-lg">
-                <div class="project__block">
-                    <div class="project__header">
-                        <h3 class="heading-3 project__title">Project Title Name</h3>
-                    </div>
-                    <ul class="project__skills-list">
-                        <li class="project__skill">html</li>
-                        <li class="project__skill">sass</li>
-                        <li class="project__skill">javascript</li>
-                        <li class="project__skill">react</li>
-                    </ul>
+    <!--------------- Text left, Image right - DEFAULT (1 /6) ---------------->
+    <!-- <div class="project u-margin-bottom-lg">
+            <div class="project__block">
+                <div class="project__header">
+                    <h3 class="heading-3 project__title">Project Title Name</h3>
                 </div>
-                <figure class="project__img-container">
-
-                    <img src="./../img/project-1-1500.jpg" alt="project 1 image" class="project__image">
-                </figure>
-
-                <div class="project__text project__text--left">
-                    <p class="paragraph">Lorem ipsum dolor sit amet consectetur adipisicing elit. Eveniet voluptates
-                        repellendus
-                        ab eos
-                        porro. Sequi suscipit reprehenderit laborum, iure labore earum voluptate dicta consequatur
-                        consequuntur maxime vel optio. Est, enim. maxime vel optio. </p>
-                    <a href="#" class="btn-link--dark">view site</a>
-                    <a href="#" class="btn-link--dark">view code</a>
-                </div>
-            </div>
-
-            <!--------------- Text left, Image right - DEFAULT (2/6)---------------->
-            <div class="project u-margin-bottom-lg">
-                <div class="project__block">
-                    <div class="project__header">
-                        <h3 class="heading-3 project__title">Project Title Name</h3>
-                    </div>
-                    <ul class="project__skills-list">
-                        <li class="project__skill">html</li>
-                        <li class="project__skill">sass</li>
-                        <li class="project__skill">javascript</li>
-                        <li class="project__skill">react</li>
-                    </ul>
-                </div>
-                <figure class="project__img-container">
-
-                    <img src="./../img/project-1-1500.jpg" alt="project 1 image" class="project__image">
-                </figure>
-
-                <div class="project__text project__text--left">
-                    <p class="paragraph">Lorem ipsum dolor sit amet consectetur adipisicing elit. Eveniet voluptates
-                        repellendus
-                        ab eos
-                        porro. Sequi suscipit reprehenderit laborum, iure labore earum voluptate dicta consequatur
-                        consequuntur maxime vel optio. Est, enim. maxime vel optio. </p>
-                    <a href="#" class="btn-link--dark">view site</a>
-                    <a href="#" class="btn-link--dark">view code</a>
-                </div>
-            </div>
-
-            <div class="light-background-12">
-
-
-                <!--------------- Image left, text right REVERSE (3/6)---------------->
-                <div class="project u-margin-bottom-lg">
-                    <div class="project__block">
-                        <div class="project__header">
-                            <h3 class="heading-3 project__title">Project Title Name</h3>
-                        </div>
-                        <ul class="project__skills-list">
-                            <li class="project__skill">html</li>
-                            <li class="project__skill">sass</li>
-                            <li class="project__skill">javascript</li>
-                            <li class="project__skill">react</li>
-                        </ul>
-                    </div>
-                    <figure class="project__img-container">
-
-                        <img src="./../img/project-1-1500.jpg" alt="project 1 image" class="project__image">
-                    </figure>
-
-                    <div class="project__text project__text--left">
-                        <p class="paragraph">Lorem ipsum dolor sit amet consectetur adipisicing elit. Eveniet voluptates
-                            repellendus
-                            ab eos
-                            porro. Sequi suscipit reprehenderit laborum, iure labore earum voluptate dicta consequatur
-                            consequuntur maxime vel optio. Est, enim. maxime vel optio. </p>
-                        <a href="#" class="btn-link--dark">view site</a>
-                        <a href="#" class="btn-link--dark">view code</a>
-                    </div>
-                </div>
-                <!--------------- Image left, text right REVERSE (4/6)---------------->
-                <div class="project u-margin-bottom-lg">
-                    <div class="project__block">
-                        <div class="project__header">
-                            <h3 class="heading-3 project__title">Project Title Name</h3>
-                        </div>
-                        <ul class="project__skills-list">
-                            <li class="project__skill">html</li>
-                            <li class="project__skill">sass</li>
-                            <li class="project__skill">javascript</li>
-                            <li class="project__skill">react</li>
-                        </ul>
-                    </div>
-                    <figure class="project__img-container">
-
-                        <img src="./../img/project-1-1500.jpg" alt="project 1 image" class="project__image">
-                    </figure>
-
-                    <div class="project__text project__text--left">
-                        <p class="paragraph">Lorem ipsum dolor sit amet consectetur adipisicing elit. Eveniet voluptates
-                            repellendus
-                            ab eos
-                            porro. Sequi suscipit reprehenderit laborum, iure labore earum voluptate dicta consequatur
-                            consequuntur maxime vel optio. Est, enim. maxime vel optio. </p>
-                        <a href="#" class="btn-link--dark">view site</a>
-                        <a href="#" class="btn-link--dark">view code</a>
-                    </div>
-                </div>
-
-            </div>
-            <!--------------- Text left, Image right - DEFAULT (5/6)---------------->
-            <div class="project u-margin-bottom-lg">
-                <div class="project__block">
-                    <div class="project__header">
-                        <h3 class="heading-3 project__title">Project Title Name</h3>
-                    </div>
-                    <ul class="project__skills-list">
-                        <li class="project__skill">html</li>
-                        <li class="project__skill">sass</li>
-                        <li class="project__skill">javascript</li>
-                        <li class="project__skill">react</li>
-                    </ul>
-                </div>
-                <figure class="project__img-container">
-
-                    <img src="./../img/project-1-1500.jpg" alt="project 1 image" class="project__image">
-                </figure>
-
-                <div class="project__text project__text--left">
-                    <p class="paragraph">Lorem ipsum dolor sit amet consectetur adipisicing elit. Eveniet voluptates
-                        repellendus
-                        ab eos
-                        porro. Sequi suscipit reprehenderit laborum, iure labore earum voluptate dicta consequatur
-                        consequuntur maxime vel optio. Est, enim. maxime vel optio. </p>
-                    <a href="#" class="btn-link--dark">view site</a>
-                    <a href="#" class="btn-link--dark">view code</a>
-                </div>
-            </div>
-
-            <!--------------- Text left, Image right - DEFAULT (6/6)---------------->
-            <div class="project u-margin-bottom-lg">
-                <div class="project__block">
-                    <div class="project__header">
-                        <h3 class="heading-3 project__title">Project Title Name</h3>
-                    </div>
-                    <ul class="project__skills-list">
-                        <li class="project__skill">html</li>
-                        <li class="project__skill">sass</li>
-                        <li class="project__skill">javascript</li>
-                        <li class="project__skill">react</li>
-                    </ul>
-                </div>
-                <figure class="project__img-container">
-
-                    <img src="./../img/project-1-1500.jpg" alt="project 1 image" class="project__image">
-                </figure>
-
-                <div class="project__text project__text--left">
-                    <p class="paragraph">Lorem ipsum dolor sit amet consectetur adipisicing elit. Eveniet voluptates
-                        repellendus
-                        ab eos
-                        porro. Sequi suscipit reprehenderit laborum, iure labore earum voluptate dicta consequatur
-                        consequuntur maxime vel optio. Est, enim. maxime vel optio. </p>
-                    <a href="#" class="btn-link--dark">view site</a>
-                    <a href="#" class="btn-link--dark">view code</a>
-                </div>
-            </div>
-
-        </section>
-        <!------------------------ SKILLS SECTION  --------------------------->
-
-        <section class="skills">
-            <div id="skills" class="section-header  u-margin-bottom-lg">
-                <div class="section-header__bottom">
-                    <div class="section-header__top">
-                        <h2 class="heading-2 heading-2--light center-v-h">Skills</h2>
-
-                    </div>
-                </div>
-            </div>
-
-            <div class="skills__container">
-                <ul class="skills__list">
-                    <li class="item">html</li>
-                    <li class="item">css</li>
-                    <li class="item">sass</li>
-                    <li class="item">javascript</li>
-                    <li class="item">jquery</li>
-                    <li class="item">c#/.net</li>
-                    <li class="item">react</li>
-                    <li class="item">node.js</li>
-                    <li class="item">express</li>
-                    <li class="item">mongodb</li>
-                    <li class="item">mongoose</li>
-                    <li class="item">sql</li>
-                    <li class="item">firebase</li>
-
+                <ul class="project__skills-list">
+                    <li class="project__skill">html</li>
+                    <li class="project__skill">sass</li>
+                    <li class="project__skill">javascript</li>
+                    <li class="project__skill">react</li>
                 </ul>
-                <!--<div class="skills__buttons">
+            </div>
+            <figure class="project__img-container">
+
+                <img src="./../img/project-1-1500.jpg" alt="project 1 image" class="project__image">
+            </figure>
+
+            <div class="project__text project__text--left">
+                <p class="paragraph">Lorem ipsum dolor sit amet consectetur adipisicing elit. Eveniet voluptates
+                    repellendus
+                    ab eos
+                    porro. Sequi suscipit reprehenderit laborum, iure labore earum voluptate dicta consequatur
+                    consequuntur maxime vel optio. Est, enim. maxime vel optio. </p>
+                <a href="#" class="btn-link--dark">view site</a>
+                <a href="#" class="btn-link--dark">view code</a>
+            </div>
+        </div> -->
+
+    <!--------------- Text left, Image right - DEFAULT (2/6)---------------->
+    <!-- <div class="project u-margin-bottom-lg">
+            <div class="project__block">
+                <div class="project__header">
+                    <h3 class="heading-3 project__title">Project Title Name</h3>
+                </div>
+                <ul class="project__skills-list">
+                    <li class="project__skill">html</li>
+                    <li class="project__skill">sass</li>
+                    <li class="project__skill">javascript</li>
+                    <li class="project__skill">react</li>
+                </ul>
+            </div>
+            <figure class="project__img-container">
+
+                <img src="./../img/project-1-1500.jpg" alt="project 1 image" class="project__image">
+            </figure>
+
+            <div class="project__text project__text--left">
+                <p class="paragraph">Lorem ipsum dolor sit amet consectetur adipisicing elit. Eveniet voluptates
+                    repellendus
+                    ab eos
+                    porro. Sequi suscipit reprehenderit laborum, iure labore earum voluptate dicta consequatur
+                    consequuntur maxime vel optio. Est, enim. maxime vel optio. </p>
+                <a href="#" class="btn-link--dark">view site</a>
+                <a href="#" class="btn-link--dark">view code</a>
+            </div>
+        </div>
+
+        <div class="light-background-12"> -->
+
+
+    <!--------------- Image left, text right REVERSE (3/6)---------------->
+    <!-- <div class="project u-margin-bottom-lg">
+                <div class="project__block">
+                    <div class="project__header">
+                        <h3 class="heading-3 project__title">Project Title Name</h3>
+                    </div>
+                    <ul class="project__skills-list">
+                        <li class="project__skill">html</li>
+                        <li class="project__skill">sass</li>
+                        <li class="project__skill">javascript</li>
+                        <li class="project__skill">react</li>
+                    </ul>
+                </div>
+                <figure class="project__img-container">
+
+                    <img src="./../img/project-1-1500.jpg" alt="project 1 image" class="project__image">
+                </figure>
+
+                <div class="project__text project__text--left">
+                    <p class="paragraph">Lorem ipsum dolor sit amet consectetur adipisicing elit. Eveniet voluptates
+                        repellendus
+                        ab eos
+                        porro. Sequi suscipit reprehenderit laborum, iure labore earum voluptate dicta consequatur
+                        consequuntur maxime vel optio. Est, enim. maxime vel optio. </p>
+                    <a href="#" class="btn-link--dark">view site</a>
+                    <a href="#" class="btn-link--dark">view code</a>
+                </div>
+            <!-- </div> -->
+    <!--------------- Image left, text right REVERSE (4/6)---------------->
+    <!-- <div class="project u-margin-bottom-lg">
+                <div class="project__block">
+                    <div class="project__header">
+                        <h3 class="heading-3 project__title">Project Title Name</h3>
+                    </div>
+                    <ul class="project__skills-list">
+                        <li class="project__skill">html</li>
+                        <li class="project__skill">sass</li>
+                        <li class="project__skill">javascript</li>
+                        <li class="project__skill">react</li>
+                    </ul>
+                </div>
+                <figure class="project__img-container">
+
+                    <img src="./../img/project-1-1500.jpg" alt="project 1 image" class="project__image">
+                </figure>
+
+                <div class="project__text project__text--left">
+                    <p class="paragraph">Lorem ipsum dolor sit amet consectetur adipisicing elit. Eveniet voluptates
+                        repellendus
+                        ab eos
+                        porro. Sequi suscipit reprehenderit laborum, iure labore earum voluptate dicta consequatur
+                        consequuntur maxime vel optio. Est, enim. maxime vel optio. </p>
+                    <a href="#" class="btn-link--dark">view site</a>
+                    <a href="#" class="btn-link--dark">view code</a>
+                </div>
+            </div> 
+
+        </div> -->
+    <!--------------- Text left, Image right - DEFAULT (5/6)---------------->
+    <!-- <div class="project u-margin-bottom-lg">
+            <div class="project__block">
+                <div class="project__header">
+                    <h3 class="heading-3 project__title">Project Title Name</h3>
+                </div>
+                <ul class="project__skills-list">
+                    <li class="project__skill">html</li>
+                    <li class="project__skill">sass</li>
+                    <li class="project__skill">javascript</li>
+                    <li class="project__skill">react</li>
+                </ul>
+            </div>
+            <figure class="project__img-container">
+
+                <img src="./../img/project-1-1500.jpg" alt="project 1 image" class="project__image">
+            </figure>
+
+            <div class="project__text project__text--left">
+                <p class="paragraph">Lorem ipsum dolor sit amet consectetur adipisicing elit. Eveniet voluptates
+                    repellendus
+                    ab eos
+                    porro. Sequi suscipit reprehenderit laborum, iure labore earum voluptate dicta consequatur
+                    consequuntur maxime vel optio. Est, enim. maxime vel optio. </p>
+                <a href="#" class="btn-link--dark">view site</a>
+                <a href="#" class="btn-link--dark">view code</a>
+            </div>
+        </div> -->
+
+    <!--------------- Text left, Image right - DEFAULT (6/6)---------------->
+    <!-- <div class="project u-margin-bottom-lg">
+            <div class="project__block">
+                <div class="project__header">
+                    <h3 class="heading-3 project__title">Project Title Name</h3>
+                </div>
+                <ul class="project__skills-list">
+                    <li class="project__skill">html</li>
+                    <li class="project__skill">sass</li>
+                    <li class="project__skill">javascript</li>
+                    <li class="project__skill">react</li>
+                </ul>
+            </div>
+            <figure class="project__img-container">
+
+                <img src="./../img/project-1-1500.jpg" alt="project 1 image" class="project__image">
+            </figure>
+
+            <div class="project__text project__text--left">
+                <p class="paragraph">Lorem ipsum dolor sit amet consectetur adipisicing elit. Eveniet voluptates
+                    repellendus
+                    ab eos
+                    porro. Sequi suscipit reprehenderit laborum, iure labore earum voluptate dicta consequatur
+                    consequuntur maxime vel optio. Est, enim. maxime vel optio. </p>
+                <a href="#" class="btn-link--dark">view site</a>
+                <a href="#" class="btn-link--dark">view code</a>
+            </div>
+        </div> -->
+
+    <!-- </section> -->
+    <!------------------------ SKILLS SECTION  --------------------------->
+
+    <!-- <section class="skills">
+        <div id="skills" class="section-header  u-margin-bottom-lg">
+            <div class="section-header__bottom">
+                <div class="section-header__top">
+                    <h2 class="heading-2 heading-2--light center-v-h">Skills</h2>
+
+                </div>
+            </div>
+        </div>
+
+        <div class="skills__container">
+            <ul class="skills__list">
+                <li class="item">html</li>
+                <li class="item">css</li>
+                <li class="item">sass</li>
+                <li class="item">javascript</li>
+                <li class="item">jquery</li>
+                <li class="item">c#/.net</li>
+                <li class="item">react</li>
+                <li class="item">node.js</li>
+                <li class="item">express</li>
+                <li class="item">mongodb</li>
+                <li class="item">mongoose</li>
+                <li class="item">sql</li>
+                <li class="item">firebase</li>
+
+            </ul> -->
+            <!--<div class="skills__buttons">
                     <h4 class="heading-4 heading-4--dark u-margin-bottom-sm">
                         Select a skill for details
                     </h4>
@@ -352,56 +427,55 @@
                     <h3 class="heading-3 u-margin-bottom-sm heading-3--dark skill__heading"></h3>
                     paragraphs inserted dynamically on button click
                 </div> -->
+        <!-- </div>
+    </section> -->
+
+    <!------------------------ CONTACT SECTION  --------------------------->
+
+    <section class="contact">
+        <header class="portfolio__subheader">
+            <div class="section__container">
+                <h2 class="heading-2 heading-2--light heading-2--bg-2 center-text">Contact
+                </h2>
             </div>
-        </section>
-
-        <!------------------------ CONTACT SECTION  --------------------------->
-
-        <section class="contact">
-            <div id="contact" class="section-header  u-margin-bottom-lg">
-                <div class="section-header__bottom">
-                    <div class="section-header__top">
-                        <h2 class="heading-2 heading-2--light center-v-h">Contact</h2>
-                    </div>
+        </header>
+        <!-- displays as flex -->
+        <div class="contact__form">
+            <form action="#" class="form">
+                <h4 class="heading-4 heading-4--dark u-margin-bottom-sm">
+                    Interested in working together?
+                </h4>
+                <p class="paragraph center-text"> Send me a message or email me directly at contact@lisavinson.com
+                </p>
+                <div class="form__group form__group--input">
+                    <input type="text" class="form__input" placeholder="Name" name="name" required>
+                    <label for="name" class="form__label">Name</label>
                 </div>
-            </div>
-            <!-- displays as flex -->
-            <div class="contact__form">
-                <form action="#" class="form">
-                    <h4 class="heading-4 heading-4--dark u-margin-bottom-sm">
-                        Interested in working together?
-                    </h4>
-                    <p class="paragraph center-text"> Send me a message or email me directly at contact@lisavinson.com
-                    </p>
-                    <div class="form__group form__group--input">
-                        <input type="text" class="form__input" placeholder="Name" name="name" required>
-                        <label for="name" class="form__label">Name</label>
-                    </div>
-                    <div class="form__group form__group--input">
-                        <input type="email" class="form__input" placeholder="Email" name="email" required>
-                        <label for="email" class="form__label">Email</label>
-                    </div>
-                    <div class="form__group">
-                        <textarea name="message" class="form__textarea" placeholder="Your message" required></textarea>
-                        <label for="message" class="form__label">Message</label>
-                    </div>
-                    <div class="form__group">
-                        <button class="btn btn--color-2 form__submit" type="submit">send</button>
-                    </div>
-                </form>
-            </div>
-        </section>
+                <div class="form__group form__group--input">
+                    <input type="email" class="form__input" placeholder="Email" name="email" required>
+                    <label for="email" class="form__label">Email</label>
+                </div>
+                <div class="form__group">
+                    <textarea name="message" class="form__textarea" placeholder="Your message" required></textarea>
+                    <label for="message" class="form__label">Message</label>
+                </div>
+                <div class="form__group">
+                    <button class="btn btn--color-2 form__submit" type="submit">send</button>
+                </div>
+            </form>
+        </div>
+    </section>
 
-        <!------------------------ FOOTER SECTION  --------------------------->
+    <!------------------------ FOOTER SECTION  --------------------------->
 
-        <footer class="footer">
-            <p class="footer__text">Website designed and created by Lisa Vinson. &copy; 2020</p>
-            <ul class="footer__links">
-                <li class="footer__link"><a href="www.github.com/LiVinson">Github</a></li>
-                <li class="footer__link"><a href="www.github.com/LiVinson">LinkedIn</a></li>
-                <li class="footer__link"><a href="www.github.com/LiVinson">Resume</a></li>
-            </ul>
-        </footer>
+    <footer class="footer">
+        <p class="footer__text">Website designed and created by Lisa Vinson. &copy; 2020</p>
+        <ul class="footer__links">
+            <li class="footer__link"><a href="www.github.com/LiVinson">Github</a></li>
+            <li class="footer__link"><a href="www.github.com/LiVinson">LinkedIn</a></li>
+            <li class="footer__link"><a href="www.github.com/LiVinson">Resume</a></li>
+        </ul>
+    </footer>
     <!-- </div> -->
 
     <!-- <script src="assets/javascript/app.js" type="module"></script> -->

@@ -2,6 +2,13 @@
   font-family: $font-title;      
 }
 
+%heading-bg {
+  margin: 0 auto -3rem auto;
+  width:50%;
+  padding: 2rem 4rem;
+  transform:translateY(-50%);
+}
+
 %btn-link {
   font-family: $font-title;
   font-size:2rem;
@@ -28,22 +35,41 @@
 
 .heading-2 {
   @extend %heading;
-  font-size: 5rem;
+  font-size: 7rem;
   line-height: 1.6;  
-  font-weight: 400;
+  font-weight: 300;
   text-transform: lowercase;  
   text-align:center;
   &--light { color: $new-color-accent-dark-1};       
   &--dark-1 { color: $new-color-primary};   
   &--dark-2 { color: $new-color-secondary};   
   &--dark-3 { color: $new-color-tertiary};   
+  &--bg-1 {
+    @extend %heading-bg;
+    background-color: $new-color-primary-light-2;
+    background-image: linear-gradient(
+      to bottom right,
+      $new-color-primary-light-2,
+      $new-color-primary
+    );
+  }
+
+  &--bg-2 {
+    @extend %heading-bg;
+    background-image: linear-gradient(
+      to bottom right,
+      $new-color-tertiary,     
+      $new-color-tertiary-dark 
+    );
+  }
 }
 
 .heading-3 {
   @extend %heading;  
-  line-height:1.5;
-  font-weight: 400;
-  font-size: 4rem;
+  font-size: 6rem;
+  line-height: 1.5;  
+  font-weight: 300;
+  text-align:center;
   &--light { color: $new-color-accent-dark-1};       
   &--dark-1 { color: $new-color-primary};   
   &--dark-2 { color: $new-color-secondary};   
@@ -52,17 +78,21 @@
 
 .heading-4 {
   @extend %heading;
-  font-size: 2.5rem;
-  &--light { color: $color-white};       
-  &--dark { color: $color-secondary}; 
+  line-height:1.5;
+  font-weight: 300;
+  font-size: 4.5rem;
+  &--light { color: $new-color-accent-dark-1};       
+  &--dark-1 { color: $new-color-primary};   
+  &--dark-2 { color: $new-color-secondary};   
+  &--dark-3 { color: $new-color-tertiary};    
 }
 
 .paragraph {
   line-height:1.5;
   margin-bottom: 1rem;
-  font-family:$font-text;
-  font-size: 2.2rem; 
-  font-weight: 400;  
+  font-family:$font-title;
+  font-size: 2rem; 
+  font-weight: 300;  
 }
 
 /* ---------------- BUTTONS ------------  */
@@ -70,26 +100,35 @@
   border: none;
   padding: 1.4rem 2.5vw;
   font-size:2rem;
-  border-radius:2%;
+  border-radius:3%;
   color: $color-accent-1;
   box-shadow: 0 .2rem 1rem rgba(0,0,0,.2);
   transition: all .2s;
   
   &--color-1 {
-    background-color: $color-primary;
+    background-color: $new-color-primary;
   }
+  // &--color-1-dark {
+  //   background-color: $new-color-primary;
+  // }
 
   &--color-2 {
-    background-color: $color-secondary;
+    background-color: $new-color-secondary-dark-1;
+  }
+
+  &--color-2-dark {
+    background-color: $new-color-secondary-dark-2;
   }
 
   &--color-3 {
-    background-color: $color-tertiary;
+    background-color: $new-color-tertiary-dark;
+    // border: 2px solid $new-color-accent-light;
   }
 
   &--color-4 {
-    background-color: $color-accent-1;
-    border: solid 1px $color-secondary; 
+    background-color: $new-color-accent-dark-1;
+    
+    // border: solid 1px $color-secondary; 
   }
 
   &:hover{
@@ -127,3 +166,33 @@
     }
   }
 }
+
+.inline-list {
+  list-style-type: none;
+  width: 100%;
+  padding: 0 2rem;
+  display:flex;
+  justify-content:center;     
+
+  li {
+    padding:0rem 3rem;
+    font-size:2rem;
+  }
+  &--border li {
+    
+    &:not(:last-child) {
+      border-right:solid 2px currentColor;
+    }
+
+    // &:not(:last-child)::after {
+    //   content:"";
+    //   display:inline-block;
+    //   height: 1.5rem;
+    //   width:2px;
+    //   background-color: $new-color-accent-light;
+    //   margin-left:2rem;
+    //   // margin-right:2rem;
+    // }
+  }  
+}
+

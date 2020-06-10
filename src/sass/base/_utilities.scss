@@ -1,34 +1,70 @@
 //MARGINS
 
 .u-margin-bottom-xl {
-    margin-bottom: 10rem;
+  margin-bottom: 10rem;
 }
 .u-margin-bottom-lg {
-    margin-bottom:8rem;
+  margin-bottom: 8rem;
 }
 
 .u-margin-bottom-md {
-    margin-bottom:6rem;
+  margin-bottom: 6rem;
 }
 
 .u-margin-bottom-sm {
-    margin-bottom:4rem;
+  margin-bottom: 4rem;
 }
 
 .u-margin-bottom-xs {
-    margin-bottom: 1rem;
+  margin-bottom: 2rem;
 }
-
 
 //centers element vertically and horizontally
 .center-v-h {
-    @include center-element;
+  @include center-element;
 }
 
 .center-text {
-    text-align:center;
+  text-align: center;
 }
 
 .justify-text {
-    text-align:justify;
+  text-align: justify;
+}
+
+// FONT COLOR
+
+.primary {
+  color: $new-color-primary;
+}
+
+.primary-light-1 {
+  color: $new-color-primary-light-1;
+}
+
+.primary-light-2 {
+  color: $new-color-primary-light-2;
+}
+
+.secondary {
+  color: $new-color-secondary;
+}
+
+.secondary-light {
+  color: $new-color-secondary-light;
+}
+.secondary-dark-1 {
+  color: $new-color-secondary-dark-1;
+}
+
+.secondary-dark-2 {
+  color: $new-color-secondary-dark-2;
+}
+
+.tertiary {
+  color: $new-color-tertiary;
+}
+
+.light {
+  color: $new-color-accent-light
 }

@@ -1,198 +1,302 @@
-%project__header {
-    // width: calc(100% + 4rem + 1.4rem ); 
+%project {
+    padding-bottom: 8rem;  
+}
+
+.project {
+    &--bg-1 {
+        @extend %project;
+        background-image: linear-gradient(to bottom right, $new-color-tertiary 0%, $new-color-tertiary 40%, $new-color-tertiary-dark 100%);
+        // background-color: $new-color-tertiary;
+    }
+
+    &--bg-2 {
+        @extend %project;
+        background-image: linear-gradient(to bottom right, $new-color-secondary 0%, $new-color-secondary 40%, $new-color-secondary-dark-1 100%);
+        // background-color: $new-color-tertiary;
+    }
+
+    &--bg-3 {
+        @extend %project;
+        background-image: linear-gradient(to bottom right, $new-color-accent-dark-1 0%, $new-color-accent-dark-1 40%, $new-color-accent-dark-2 100%);
+        // background-color: $new-color-tertiary;
+    }
+
+    &--bg-4 {
+        @extend %project;
+        background-color:$new-color-secondary-light
+        // background-image: linear-gradient(to bottom right, $new-color-secondary-light 0%, $new-color-secondary-dark-2 40%, $new-color-secondary-light 100%);
+
+    }
+
+    &--bg-5 {
+        @extend %project;
+        background-image: linear-gradient(to bottom right, $new-color-primary-light-2 0%, $new-color-primary-light-2 40%, $new-color-primary 100%);
+        padding-bottom: 16rem; 
+    }
+   
+    &__container {
+        display:flex;
+        flex-direction: column;
+        align-items:center;
+        width: 33%;
+        margin: 0 auto;
+        padding-top:5rem;
+    }
+
+    &__title {
+
+
+    }
+
+    &__skills {
+
+        
+    }
+
+    &__image {
+        width: 60rem;
+        // max-width: 100%;
+        box-shadow: 0 .8rem 4rem rgba(black, .8);
+        // max-height:40vh;
+
+    }
+
+    &__btn-group {
+        width:100%;
+        margin-top:2rem;
+        display:flex;
+        justify-content: space-between;
+
+        .btn {
+            width: 47%;
+        }
+
+    }
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+// %project__header {
+//     // width: calc(100% + 4rem + 1.4rem ); 
       
-    // grid-row: 1/ span 1;
-    background-color: $color-tertiary;        
-    padding: 1rem 0 1.5rem 2rem;     
-    //above accent block, below image
-    z-index: 5;
-    //Allows spacking at top of row so layered block extends beyond top of header
-    // margin-top:2rem;
-    border: .7rem solid $color-accent-2;  
-    border-bottom: 1rem solid $color-accent-2;     
-}
+//     // grid-row: 1/ span 1;
+//     background-color: $color-tertiary;        
+//     padding: 1rem 0 1.5rem 2rem;     
+//     //above accent block, below image
+//     z-index: 5;
+//     //Allows spacking at top of row so layered block extends beyond top of header
+//     // margin-top:2rem;
+//     border: .7rem solid $color-accent-2;  
+//     border-bottom: 1rem solid $color-accent-2;     
+// }
 
-%project__block {
-    z-index: 1;
-    padding-top: 2rem;       
-    padding-bottom: 2rem;        
+// %project__block {
+//     z-index: 1;
+//     padding-top: 2rem;       
+//     padding-bottom: 2rem;        
  
-    // align-self: stretch;
-    background-color: $color-secondary;
-    grid-column: 1 / span 6;
-    grid-row: 1/ span 1;
+//     // align-self: stretch;
+//     background-color: $color-secondary;
+//     grid-column: 1 / span 6;
+//     grid-row: 1/ span 1;
 
-    // display:flex;
-    // align-items:flex-end;
+//     // display:flex;
+//     // align-items:flex-end;
 
     
-}
+// }
 
-%project__img-container {
-    grid-row: 1/span 2;
-    // justify-self:end;
-    z-index:10;
-    grid-column: 7/ -1;    
-}
+// %project__img-container {
+//     grid-row: 1/span 2;
+//     // justify-self:end;
+//     z-index:10;
+//     grid-column: 7/ -1;    
+// }
 
-%project__img {
-    width: 100%;
-    height: 100%;
+// %project__img {
+//     width: 100%;
+//     height: 100%;
     
-    //image 'snaps' to grid lines
-    object-fit: cover;
-    //avoids white space after image as if it were text
-    display: block;
-    //right aligns image in the figure
-    // box-shadow: 0 .5rem .5rem rgba(0,0,0,.1);
-}
+//     //image 'snaps' to grid lines
+//     object-fit: cover;
+//     //avoids white space after image as if it were text
+//     display: block;
+//     //right aligns image in the figure
+//     // box-shadow: 0 .5rem .5rem rgba(0,0,0,.1);
+// }
 
-%project__img-background {
+// %project__img-background {
     
-    position:relative;
-    background-color: $color-primary;
-    width: 90%;
-    height: 70%;
-    z-index:8;    
-}
+//     position:relative;
+//     background-color: $color-primary;
+//     width: 90%;
+//     height: 70%;
+//     z-index:8;    
+// }
 
-%project__text {
-    font-size: 1.6rem;        
-    padding: 0 1.5rem;
-    text-align: justify;
-    grid-row:2/span 1;
-}
+// %project__text {
+//     font-size: 1.6rem;        
+//     padding: 0 1.5rem;
+//     text-align: justify;
+//     grid-row:2/span 1;
+// }
 
-.project {     
-    grid-column: 3 / span 8;
+// .project {     
+//     grid-column: 3 / span 8;
 
-    display: grid;
-    //outer columns to allow spacing on either side of center elements
-    grid-template-columns: repeat(10, minmax(min-content, 1fr));
-    // grid-template-rows: repeat(2, min-max(min-content, 1fr)); 
-    //Every element start at top of row
-    align-items: start;
-    column-gap: 4rem;
-    row-gap:1.5rem;
-    margin: 5rem 0;
-    color: $color-white;  
-    //Contains title and skills list
-    &__header {
-        @extend %project__header;   
-        // background-color: $color-tertiary;        
-        padding-right: 2rem; 
-        // margin-left:-2.7rem;
-        // grid-column: 1/span 2;
-        // transform: translateX(4rem);  
-    }
+//     display: grid;
+//     //outer columns to allow spacing on either side of center elements
+//     grid-template-columns: repeat(10, minmax(min-content, 1fr));
+//     // grid-template-rows: repeat(2, min-max(min-content, 1fr)); 
+//     //Every element start at top of row
+//     align-items: start;
+//     column-gap: 4rem;
+//     row-gap:1.5rem;
+//     margin: 5rem 0;
+//     color: $color-white;  
+//     //Contains title and skills list
+//     &__header {
+//         @extend %project__header;   
+//         // background-color: $color-tertiary;        
+//         padding-right: 2rem; 
+//         // margin-left:-2.7rem;
+//         // grid-column: 1/span 2;
+//         // transform: translateX(4rem);  
+//     }
 
-    &__header--reverse {
-        @extend %project__header;   
-        // background-color: $color-tertiary;        
-        grid-column: 3/ span 2;
-        padding-left: 8rem;    
-        transform: translateX(-4rem);    
-    }
+//     &__header--reverse {
+//         @extend %project__header;   
+//         // background-color: $color-tertiary;        
+//         grid-column: 3/ span 2;
+//         padding-left: 8rem;    
+//         transform: translateX(-4rem);    
+//     }
  
    
-    //solid color below title
-    &__block {
-        @extend %project__block;
+//     //solid color below title
+//     &__block {
+//         @extend %project__block;
 
-        a {
-            margin-right: 1.5rem;
-        }
+//         a {
+//             margin-right: 1.5rem;
+//         }
 
-        &--reverse {
-            background-color: $color-secondary;
-            grid-column: 3 / span 1;
-            grid-row: 1/ span 1;
-        }
-    }
+//         &--reverse {
+//             background-color: $color-secondary;
+//             grid-column: 3 / span 1;
+//             grid-row: 1/ span 1;
+//         }
+//     }
 
-    &__skills-list {
-        list-style: none;
-        //Removes extra padding from list item so border element is centered between list items
-        font-size: 0rem;  
-        // margin-top: .4rem;          
-        display: inline-block;
-        // margin-top:1rem;
-        border-right: solid 1px #fff;
-        color:#fff;
-        margin-top: 1.5rem;
-        padding-left:2rem;
-    }
+//     &__skills-list {
+//         list-style: none;
+//         //Removes extra padding from list item so border element is centered between list items
+//         font-size: 0rem;  
+//         // margin-top: .4rem;          
+//         display: inline-block;
+//         // margin-top:1rem;
+//         border-right: solid 1px #fff;
+//         color:#fff;
+//         margin-top: 1.5rem;
+//         padding-left:2rem;
+//     }
 
-    &__skill {
-        display: inline-block;
-        font-size: 2rem;  
-        text-align:center;
-        border-right: solid 2px $color-accent-1;
-        padding: 0 1.5rem;
-        &:first-child {
-            padding-left:0;
-        }      
-    }
+//     &__skill {
+//         display: inline-block;
+//         font-size: 2rem;  
+//         text-align:center;
+//         border-right: solid 2px $color-accent-1;
+//         padding: 0 1.5rem;
+//         &:first-child {
+//             padding-left:0;
+//         }      
+//     }
 
-    //container used so image can be set to fit inside figure
-    &__img-container {
-        @extend %project__img-container;
+//     //container used so image can be set to fit inside figure
+//     &__img-container {
+//         @extend %project__img-container;
 
-        &--reverse {
-            @extend %project__img-container;
-            grid-column: 2/ span 1;
-        }        
-    }
+//         &--reverse {
+//             @extend %project__img-container;
+//             grid-column: 2/ span 1;
+//         }        
+//     }
 
-    &__img-background {
-        @extend %project__img-background;
-        justify-self: end;
-        align-self:flex-end;
-        grid-column:3/4;
-        grid-row: 1/span 2;
-        transform: translate(10%, 10%);
+//     &__img-background {
+//         @extend %project__img-background;
+//         justify-self: end;
+//         align-self:flex-end;
+//         grid-column:3/4;
+//         grid-row: 1/span 2;
+//         transform: translate(10%, 10%);
 
-        &--reverse {
-            @extend %project__img-background;
-            // justify-items: flex-start;
-            grid-column:2/3;
-            grid-row: 1/span 2;
-            align-self:flex-end;
-            // justify-self: start;
-            transform: translate(-10%, 10%);
-        }
+//         &--reverse {
+//             @extend %project__img-background;
+//             // justify-items: flex-start;
+//             grid-column:2/3;
+//             grid-row: 1/span 2;
+//             align-self:flex-end;
+//             // justify-self: start;
+//             transform: translate(-10%, 10%);
+//         }
 
-    }
+//     }
     
-    &__image {
-       @extend %project__img;
-    //    margin-left:10%;
-    //    border-right:solid .8rem $color-accent-1;
-    //    border-bottom:solid .8rem $color-accent-1;
+//     &__image {
+//        @extend %project__img;
+//     //    margin-left:10%;
+//     //    border-right:solid .8rem $color-accent-1;
+//     //    border-bottom:solid .8rem $color-accent-1;
 
-       &--reverse {
-            @extend %project__img;
-           margin-left:0;
-           margin-right:10%;
-           border-left:solid .8rem $color-accent-1;
-           border-bottom:solid .8rem $color-accent-1;
-       }
-    }
+//        &--reverse {
+//             @extend %project__img;
+//            margin-left:0;
+//            margin-right:10%;
+//            border-left:solid .8rem $color-accent-1;
+//            border-bottom:solid .8rem $color-accent-1;
+//        }
+//     }
 
-    &__text {
-        @extend %project__text;
-        grid-column: 1/ span 6;
-        color: $color-dark-gray-1;
-        padding-left:2rem;
-        padding-right: 2rem;
+//     &__text {
+//         @extend %project__text;
+//         grid-column: 1/ span 6;
+//         color: $color-dark-gray-1;
+//         padding-left:2rem;
+//         padding-right: 2rem;
 
-        &--right {
+//         &--right {
             
-        }
+//         }
 
-         a {
-             margin-top: 1rem;
-             margin-right:2rem;
-         }
-    }
-}
+//          a {
+//              margin-top: 1rem;
+//              margin-right:2rem;
+//          }
+//     }
+// }
