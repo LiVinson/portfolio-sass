@@ -2,8 +2,7 @@
     background-color: #f7f7f7;
 }
 
-section {
-  
+section {  
     &.about{
         background-color: $new-color-accent-dark-1;
         padding-bottom: 16rem;  
@@ -15,16 +14,19 @@ section {
     }
 }
 
-.section__container {
+
+// SECTION CONTAINERS
+
+.container {
+
+&__about {
     margin: 0 auto;
-    width: 100rem;
+    width: 90rem;
 }
 
 
 
-.light-background-12 {
-    grid-column: 1/ -1;
-    background-color:$color-accent-1;
-    display: grid;
-    grid-template-columns: repeat(12, minmax(min-content,  1fr));
 }
+
+
+
