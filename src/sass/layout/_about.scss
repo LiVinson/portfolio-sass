@@ -1,5 +1,5 @@
 .about {
-    grid-column:3/11;
+    // grid-column:3/11;
     padding: 8rem 0 20rem 0;
     
     & h3 {
@@ -8,7 +8,9 @@
     }
 
     &__text {
-      padding: 0rem 6rem;
+      // padding: 0rem 4rem;
+      columns: 2;
+      column-gap: 2rem;
     }
 
   }
