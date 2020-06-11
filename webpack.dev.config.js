@@ -35,20 +35,19 @@ module.exports = {
       {
         // Apply rule for .sass, .scss or .css files
         test: /\.(sa|sc|c)ss$/,
-
         use: [
           {
             // After all CSS loaders we use plugin to do his work.
             // It gets all transformed CSS and extracts it into separate
             // single bundled file
-            loader: "style-loader",
+            loader: MiniCssExtractPlugin.loader,
           },
           {
             // This loader resolves url() and @imports inside CSS
             loader: "css-loader",
           },
           {
-            // First we transform SASS to standard CSS
+            // Transform SASS to standard CSS
             loader: "sass-loader",
             options: {
               implementation: require("sass"),
@@ -58,10 +57,21 @@ module.exports = {
       },
 
       {
-        test: /\.(png|svg|jpg|gif|pdf)$/,
-        use: ["file-loader"],
+        test:  /\.pdf$/,        
+        loader: "file-loader",
+        options: {
+          name: "[name].[ext]",
+          outputPath: "files"
+        },      
       },
-    ],
+      {
+        test: /\.(png|svg|jpg|gif)$/,        
+        loader: "file-loader",
+        options: {
+          outputPath: "images"
+        }          
+      }
+    ]
   },
   plugins: [
     new HtmlWebPackPlugin({
@@ -70,7 +80,7 @@ module.exports = {
       excludeChunks: ["server"],
     }),
     new MiniCssExtractPlugin({
-      filename: "[name].css",
+      filename: "bundle.css",
       chunkFilename: "[id].css",
     }),
     new webpack.NoEmitOnErrorsPlugin(),

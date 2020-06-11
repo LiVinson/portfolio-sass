@@ -62,6 +62,15 @@
       $new-color-tertiary-dark 
     );
   }
+
+  &--bg-3 {
+    @extend %heading-bg;
+    background-image: linear-gradient(
+      to bottom right,
+      $new-color-secondary-light,     
+      $new-color-secondary-dark-2 
+    );
+  }
 }
 
 .heading-3 {
@@ -80,7 +89,7 @@
   @extend %heading;
   line-height:1.5;
   font-weight: 300;
-  font-size: 4.5rem;
+  font-size: 4rem;
   &--light { color: $new-color-accent-dark-1};       
   &--dark-1 { color: $new-color-primary};   
   &--dark-2 { color: $new-color-secondary};   

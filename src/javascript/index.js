@@ -1,5 +1,7 @@
 import data from "./skills.js"
 import "../sass/main.scss"
+// import "../img"
+import "../files/Vinson_Lisa_Resume.pdf"
 
 // //Add click event to each 'skills' button
 // window.addEventListener("load", function () {

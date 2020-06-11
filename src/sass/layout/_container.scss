@@ -10,7 +10,13 @@ section {
 
     &.portfolio {
         background-color: $new-color-accent-light;
+        
          
+    }
+
+    &.section__skills {
+        padding-bottom: 10rem;
+        background-color: $new-color-secondary-light;
     }
 }
 
@@ -19,11 +25,15 @@ section {
 
 .container {
 
-&__about {
-    margin: 0 auto;
-    width: 90rem;
-}
+    &__about {
+        margin: 0 auto;
+        width: 90rem;
+    }
 
+    &__skills {
+        margin: 0 auto;
+        width: 100rem;
+    }
 
 
 }

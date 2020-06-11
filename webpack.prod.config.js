@@ -74,16 +74,19 @@ module.exports = {
         ],
       },
       {
-        test: /\.(png|svg|jpg|gif)$/,
-        use: [
-            {
-                loader: "file-loader",
-                options: {
-                    outputPath: 'images'
-                }
-            }
-        ],
+        test:  /\.pdf$/,        
+        loader: "file-loader",
+        options: {
+          outputPath: "files"
+        }          
       },
+      {
+        test: /\.(png|svg|jpg|gif)$/,        
+        loader: "file-loader",
+        options: {
+          outputPath: "images"
+        }          
+      }
     ],
   },
   plugins: [
