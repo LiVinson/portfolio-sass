@@ -6,7 +6,7 @@ const MiniCssExtractPlugin = require("mini-css-extract-plugin")
 
 module.exports = {
   entry: {
-    main: ["webpack-hot-middleware/client?path=/__webpack_hmr&timeout=20000","./src/javascript/index.js"]
+    main: ["webpack-hot-middleware/client?path=/__webpack_hmr&timeout=20000&reload=true","./src/javascript/index.js"]
   },
   output: {
     path: path.join(__dirname, "dist"),
@@ -15,6 +15,7 @@ module.exports = {
   },
   target: "web",
   devtool: "source-map",
+  mode: "development",
 
   module: {
     rules: [
@@ -86,6 +87,5 @@ module.exports = {
     new webpack.NoEmitOnErrorsPlugin(),
     new webpack.HotModuleReplacementPlugin()
 
-  ],
-  mode: "development",
+  ]
 }

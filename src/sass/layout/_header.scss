@@ -27,8 +27,7 @@
   
     // & .nav-list {
     //   list-style-type: none;
-    //   width: 100%;
-    //   padding: 0 2rem;
+    //   width: 100%;    //   padding: 0 2rem;
     //   display:flex;
     //   justify-content:center;      
   
@@ -39,23 +38,21 @@
   }
 
   &__container {
+    //center vertically, maintain horizontal position
     position: absolute;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%);
+    top: 50%; 
+    transform: translatey(-50%);
+    padding: 0 5rem;
 
     & .heading-1 {
       color: $new-color-primary;
       margin-bottom: 3rem;
 
 
-      //period in hello
-      & span {
-        // color: $new-color-accent-dark-2;
-      }
     }
-    & .heading-3 {
-      color: $new-color-accent-dark-1;
+    & .heading-4 {
+      color: $new-color-accent-dark-2;
+      padding-left:1.5rem;
     }
 
   }

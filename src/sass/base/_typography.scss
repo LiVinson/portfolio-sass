@@ -11,16 +11,16 @@
 
 %btn-link {
   font-family: $font-title;
-  font-size:2rem;
+
   font-weight:300;
+  //required for transition to work
+  display:inline-block;
   text-decoration: none;
-  // display:inline-block;
   transition: all .3s;
-  // padding-left:2rem;
-  &:hover {
-    text-decoration:underline;
-    transform:translateY(-2px);
-    filter:brightness(90%)
+
+  &:hover { 
+    transform:translateY(-4px);
+    filter:brightness(80%);
   }
 }
 
@@ -152,6 +152,7 @@
 .btn-link {
   @extend %btn-link;  
   color:$new-color-accent-light;
+  font-size:1.8rem;
 
   &--light {
     @extend %btn-link;
@@ -176,16 +177,18 @@
   }
 }
 
+
+/* ---------------- LISTS ------------  */
+
 .inline-list {
   list-style-type: none;
   width: 100%;
   padding: 0 2rem;
   display:flex;
-  justify-content:center;     
+  justify-content:space-evenly;     
 
   li {
     padding:0rem 3rem;
-    font-size:2rem;
   }
   &--border li {
     

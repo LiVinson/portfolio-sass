@@ -20,10 +20,13 @@ app.use(
   })
 )
 
-app.use(webpackHotMiddleware(compiler))
+app.use(webpackHotMiddleware(compiler, {
+  'log': false, 
+  'path': '/__webpack_hmr', 
+  'heartbeat': 10 * 1000
+}))
 
 app.get("/", (req, res, next) => {
-  console.log("home")
   compiler.outputFileSystem.readFile(HTML_FILE, (err, result) => {
     if (err) {
       return next(err)

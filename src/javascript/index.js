@@ -3,49 +3,12 @@ import "../sass/main.scss"
 // import "../img"
 import "../files/Vinson_Lisa_Resume.pdf"
 
-// //Add click event to each 'skills' button
-// window.addEventListener("load", function () {
-//     console.log("loaded!")
-//     console.log(data.skills[0])
-//     document.querySelectorAll(".btn-skills").forEach(item => {
-//         item.addEventListener('click', getSkillDetails)
-//       })
+// Needed for Hot Module Replacement
+if (typeof module.hot !== "undefined") {
+  console.log("hot")
+  module.hot.accept()
+}
 
-//     document.querySelector(".form__submit")
-//         .addEventListener("click", submitForm)
-// })
-
-//   //Click event: Retrieve details for selected skill
-// const getSkillDetails = function() {
-//     const skill = this.getAttribute("data-skill")
-//     // console.log(skill)
-//     const skillInfo = data.skills.find(item => item.skill === skill)
-//     console.log(skillInfo);
-//     displaySkillDetails(skillInfo)
-// }
-
-// //Display skill information to the dom
-// const displaySkillDetails = ({ skill, details, category} ) => {
-//     //pickle - add error checking / checking for existing
-//     const paragraphs = document.querySelectorAll("div.skills__details > p")
-//     console.log(paragraphs)
-//     if(paragraphs.length) {
-//         paragraphs.forEach(p => p.remove())
-//     }
-//     const heading = document.getElementsByClassName("skill__heading")[0]
-//     console.log(heading);
-//     heading.textContent = skill;
-//     details.forEach(para => {
-//         const paragraph = document.createElement("p");
-//         const node = document.createTextNode(para);
-//         paragraph.appendChild(node);
-//         paragraph.setAttribute("class", "paragraph")
-//         const element = document.getElementsByClassName("skills__details")[0];
-//         console.log(paragraph);
-//         console.log(element);
-//         element.appendChild(paragraph);
-//     })
-// }
 
 window.addEventListener("load", function () {
   console.log("loaded")
@@ -55,7 +18,8 @@ window.addEventListener("load", function () {
 
   //If some are hidden, check if skill Icon is inview port.
 
-  //In view: 
+  //In view:
+  scrollTo()
 
   this.window.addEventListener("scroll", (event) => {
     console.log("scrolling...")
@@ -64,11 +28,38 @@ window.addEventListener("load", function () {
 
       if (skills) {
         //remove hidden class, add fade-in
-        skills.forEach(skill => toggleClass(skill))
+        skills.forEach((skill) => toggleClass(skill))
       }
     }
   })
 })
+
+function scrollTo() {
+	const links = document.querySelectorAll('.scroll');
+	links.forEach(each => (each.onclick = scrollAnchors));
+}
+
+function scrollAnchors(e, respond = null) {
+  //returns the distance from the top of specified element 
+  const distanceToTop = el => Math.floor(el.getBoundingClientRect().top);
+  
+	e.preventDefault();
+	var targetID = (respond) ? respond.getAttribute('href') : this.getAttribute('href');
+  const targetAnchor = document.querySelector(targetID);
+  //checks to make sure element with id referenced in anchor tag href exists
+	if (!targetAnchor) return;
+	const originalTop = distanceToTop(targetAnchor);
+	window.scrollBy({ top: originalTop, left: 0, behavior: 'smooth' });
+	const checkIfDone = setInterval(function() {
+		const atBottom = window.innerHeight + window.pageYOffset >= document.body.offsetHeight - 2;
+		if (distanceToTop(targetAnchor) === 0 || atBottom) {
+			targetAnchor.tabIndex = '-1';
+			targetAnchor.focus();
+			window.history.pushState('', '', targetID);
+			clearInterval(checkIfDone);
+		}
+	}, 100);
+}
 
 const elementInViewport = (element) => {
   //Gets position of element
@@ -95,10 +86,10 @@ const elementInViewport = (element) => {
 }
 
 const toggleClass = (element, removeClass, addClass) => {
-    
-    element.classList.add("fade-in")
-    element.classList.remove("hidden")
+  element.classList.add(addClass)
+  element.classList.remove(removeClass)
 }
+
 const submitForm = (event) => {
   event.preventDefault()
   console.log("submitted")
@@ -130,9 +121,4 @@ const submitForm = (event) => {
   //when response is received
   //:display success message
   //display error message
-}
-
-// Needed for Hot Module Replacement
-if (typeof module.hot !== "undefined") {
-  module.hot.accept()
 }
