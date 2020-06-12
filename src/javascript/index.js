@@ -2,6 +2,7 @@ import data from "./skills.js"
 import "../sass/main.scss"
 // import "../img"
 import "../files/Vinson_Lisa_Resume.pdf"
+import "../img/_sprite.svg"
 
 // Needed for Hot Module Replacement
 if (typeof module.hot !== "undefined") {
@@ -12,7 +13,7 @@ if (typeof module.hot !== "undefined") {
 
 window.addEventListener("load", function () {
   console.log("loaded")
-  const skillIcon = document.querySelector("div.skill__icon")
+  // const skillIcon = document.querySelector("div.skill__icon")
 
   //Check if any skills are hidden. If no - no action
 
@@ -21,17 +22,17 @@ window.addEventListener("load", function () {
   //In view:
   scrollTo()
 
-  this.window.addEventListener("scroll", (event) => {
-    console.log("scrolling...")
-    if (elementInViewport(skillIcon)) {
-      const skills = document.querySelectorAll(".skill.hidden")
+  // this.window.addEventListener("scroll", (event) => {
+  //   console.log("scrolling...")
+  //   if (elementInViewport(skillIcon)) {
+  //     const skills = document.querySelectorAll(".skill.hidden")
 
-      if (skills) {
-        //remove hidden class, add fade-in
-        skills.forEach((skill) => toggleClass(skill))
-      }
-    }
-  })
+  //     if (skills) {
+  //       //remove hidden class, add fade-in
+  //       skills.forEach((skill) => toggleClass(skill))
+  //     }
+  //   }
+  // })
 })
 
 function scrollTo() {

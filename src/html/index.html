@@ -7,7 +7,7 @@
     <title>Lisa Vinson | Developer</title>
     <!-- <link rel="stylesheet" href="assets/css/style.css" /> -->
 
-    <link href="https://fonts.googleapis.com/css2?family=Lato:wght@300;400&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Lato:wght@100;300;400&display=swap" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@100;300;400;500&display=swap"
         rel="stylesheet">
 </head>
@@ -19,16 +19,17 @@
         <div class="header__background">
             <nav>
                 <ul class="inline-list">
-                    <li><a class="btn-link scroll" href="#about">about</a></li>
-                    <li><a class="btn-link scroll" href="#skills">skills</a></li>
-                    <li><a class="btn-link scroll" href="#portfolio">portfolio</a></li>
-                    <li><a class="btn-link scroll" href="#contact">contact</a></li>
-                    <li><a class="btn-link" href="./files/Vinson_Lisa_Resume.pdf" download="Vinson_Lisa_Resume.pdf">resume</a></li>
+                    <li><a class="btn-link--light scroll" href="#about">about</a></li>
+                    <li><a class="btn-link--light scroll" href="#skills">skills</a></li>
+                    <li><a class="btn-link--light scroll" href="#portfolio">portfolio</a></li>
+                    <li><a class="btn-link--light scroll" href="#contact">contact</a></li>
+                    <li><a class="btn-link--light" href="./files/Vinson_Lisa_Resume.pdf"
+                            download="Vinson_Lisa_Resume.pdf">resume</a></li>
                 </ul>
             </nav>
             <div class="header__container">
                 <h1 class="heading-1">hello<span>.</span></h1>
-                <h4 class="heading-4"> I'm lisa, a software developer from Florida.</h4>
+                <h43 class="heading-3"> I'm lisa, a software developer from Florida.</h43>
             </div>
 
         </div>
@@ -41,27 +42,31 @@
     <!------------------------ ABOUT SECTION  --------------------------->
     <section id="about" class="about">
         <div class="container__about">
-           
-      
-                <h2 class="heading-2 heading-2--dark-3 u-margin-bottom-sm">
-                    I design and create</br>clean, responsive,
-                    and</br>user friendly applications.
-                </h2>
+
+
+            <h2 class="heading-2 heading-2--dark-3 u-margin-bottom-sm">
+                I design and create</br>clean, responsive,
+                and</br>user friendly applications.
+            </h2>
 
             <div class="about__text justify-text">
                 <p class="paragraph">
                     I am experienced in the full life cycle of software development and I enjoy everything from design,
-                    to front end and back end development.</p><p class="paragraph"> My goal for every project is to create a product that is
+                    to front end and back end development.</p>
+                <p class="paragraph"> My goal for every project is to create a product that is
                     seamless for the user and built to scale for future features. I am knowledgeable in a variety of
-                    current tech stacks, and I'm always looking to become a better developer. Feel free to check out my LinkedIn or reach out for more details. </p>
-                <p class="paragraph">When I'm not in front of a screen, I love to take road trips and eat delicious food (I
-                    can't recommend Pappy's Smokehouse in St. Louis enough). My other interests include hiking, kayaking, and reading. </p>
+                    current tech stacks, and I'm always looking to become a better developer. Feel free to check out my
+                    LinkedIn or reach out for more details. </p>
+                <p class="paragraph">When I'm not in front of a screen, I love to take road trips and eat delicious food
+                    (I
+                    can't recommend Pappy's Smokehouse in St. Louis enough). My other interests include hiking,
+                    kayaking, and reading. </p>
             </div>
         </div>
     </section>
-        <!------------------------ SKILLS SECTION  --------------------------->
+    <!------------------------ SKILLS SECTION  --------------------------->
 
-        <section id="skills" class="section__skills">
+    <!-- <section id="skills" class="section__skills">
             <div class="container__skills">
                
                     <div class="section__container">
@@ -92,19 +97,76 @@
                     <div class="hidden skill skill--right row-3"><span>firebase</span></div>
                 </figure>
             </div>
-        </section>
+        </section> -->
+
+    <!-- 
+SKILL SECTION 2 -->
+    <section id="skills" class="section__skills">
+        <h2 class="heading-2 heading-2--light center-text u-margin-bottom-sm">
+            Skills
+        </h2>
+
+        <div class="container__skills">
+            <h4 class="heading-4 heading-4--light skills__subheader u-margin-bottom-md center-text">&quot;The beautiful thing about learning is<br/>nobody can take it away from you.&quot;<br/><span>- B.B. King</span></h4>
+
+            <!-- Container 1 of 3 -->
+            <div class="skills__block">
+                <svg class="skills__logo">
+                    <use xlink:href="#_sprite_icon-ruler"></use>
+                </svg>
+                <!-- <h4 class="heading-4  heading-4--dark-3 u-margin-bottom-xs">Design</h4> -->
+                <ul class="skills__list">
+                    <li class="list__item skill">html</li>
+                    <li class="list__item skill">css</li>
+                    <li class="list__item skill">sass</li>
+                    <li class="list__item skill">javascript</li>
+                    <li class="list__item skill">jquery</li>
 
 
+                </ul>
+            </div>
 
+            <!-- Container 2 of 3 -->
 
-        <!------------------------ PORTFOLIO SECTION  --------------------------->
+            <div class="skills__block">
+                <svg class="skills__logo">
+                    <use xlink:href="#_sprite_icon-embed2"></use>
+                </svg>
+                <!-- <h4 class="heading-4  heading-4--dark-3 u-margin-bottom-xs">Develop</h4> -->
+                <ul class="skills__list">
+                    <li class="list__item skill">react</li>
+                    <li class="list__item skill">redux</li>
+                    <li class="list__item skill">node.js</li>
+                    <li class="list__item skill">C#/.net</li>
+                    <li class="list__item skill">unit testing</li>
+                </ul>
+            </div>
+
+            <!-- Container 3 of 3 -->
+
+            <div class="skills__block">
+                <svg class="skills__logo">
+                    <use xlink:href="#_sprite_icon-database"></use>
+                </svg>
+                <!-- <h4 class="heading-4 heading-4--dark-3 u-margin-bottom-xs">Data</h4> -->
+                <ul class="skills__list">
+                    <li class="list__item skill">express</li>
+                    <li class="list__item skill">firebase</li>
+                    <li class="list__item skill">sql</li>
+                    <li class="list__item skill">mongodb</li>
+                    <li class="list__item skill">webpack</li>
+                </ul>
+            </div>
+        </div>
+    </section>
+    <!------------------------ PORTFOLIO SECTION  --------------------------->
 
     <section class="portfolio">
         <header class="portfolio__subheader">
             <div class="section__container">
                 <h2 id="portfolio" class="heading-2 heading-2--light heading-2--bg-1 center-text">Portfolio
                 </h2>
-                <h4 class="heading-4 heading-4--dark-3 center-text">
+                <h4 class="heading-4--dark-3 heading-4--dark-3 center-text">
                     Lorem ipsum dolor adipisicing elit. Facilis maiores, molestias
                 </h4>
             </div>

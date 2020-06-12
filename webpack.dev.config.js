@@ -2,7 +2,7 @@ const path = require("path")
 const webpack = require("webpack")
 const HtmlWebPackPlugin = require("html-webpack-plugin")
 const MiniCssExtractPlugin = require("mini-css-extract-plugin")
-
+const SpriteLoaderPlugin = require('svg-sprite-loader/plugin');
 
 module.exports = {
   entry: {
@@ -66,12 +66,30 @@ module.exports = {
         },      
       },
       {
-        test: /\.(png|svg|jpg|gif)$/,        
+        test: /\.(png|jpg|gif|svg)$/,        
         loader: "file-loader",
+        exclude: /_sprite.svg/,
         options: {
           outputPath: "images"
         }          
-      }
+      },
+      {
+        test: /\.svg$/i,
+    
+        // from all svg images
+        // include only sprite image
+        include: /.*_sprite\.svg/,
+    
+        use: [
+            {
+                loader: 'svg-sprite-loader',
+                options: {
+                    publicPath: '',
+                }
+            },
+        ],
+    },
+    
     ]
   },
   plugins: [
@@ -84,6 +102,7 @@ module.exports = {
       filename: "bundle.css",
       chunkFilename: "[id].css",
     }),
+    new SpriteLoaderPlugin(),
     new webpack.NoEmitOnErrorsPlugin(),
     new webpack.HotModuleReplacementPlugin()
 

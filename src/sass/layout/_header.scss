@@ -9,7 +9,8 @@
   //left header panel
   &__img {
     background-image: url("../img/bg1-rotate.jpg");
-    background-size: contain;
+    background-size: cover;
+    background-position: right;
     width: 60%;
   }
 
@@ -23,18 +24,8 @@
       $new-color-secondary-dark-1
     );
     width: 40%;
-    padding: 3rem 5rem;
-  
-    // & .nav-list {
-    //   list-style-type: none;
-    //   width: 100%;    //   padding: 0 2rem;
-    //   display:flex;
-    //   justify-content:center;      
-  
-    //   & li {
-    //     padding:1rem 3rem;
-    //   }  
-    // }   
+    padding: 3rem 5rem; 
+    
   }
 
   &__container {
@@ -57,171 +48,6 @@
 
   }
 }
-
-
-
-
-
-
-// .header {
-//   color: $color-accent-1;
-//   //stretches entire container with height of 95vh
-//   width: 100%;
-//   height: 95vh;
-//   display: grid; //12x8
-//   grid-template-columns: repeat(
-//     12,
-//     [header-col-start] minmax(min-content, 1fr) [header-col-end]
-//   );
-//   // grid-template-rows: repeat(8, 1fr);
-//   gap: 2rem;
-
-//   &__img-container {
-//     grid-row: 1/6;
-//     grid-column: header-col-start 1 / header-col-end 6;
-
-//     img {
-//       width: 100%;
-//       height: 100%;
-//       //image 'snaps' to grid lines
-//       object-fit: cover;
-//       //avoids white space after image as if it were text
-//       display: block;
-//     }
-//   }
-
-//   &__name {
-//     background-image: linear-gradient(
-//       to bottom right,
-//       $color-primary-light,
-//       $color-primary
-//     );
-//     // background-color: $color-primary;
-//     grid-row: 2/7;
-//     grid-column: header-col-start 7 / header-col-end 11;
-//     padding: 5rem;
-//     display: flex;
-//     align-items: center;
-//     justify-content: center;
-//     // flex-wrap:wrap;
-
-//     & h1 {
-//       margin-bottom: 5rem;
-//     }
-//   }
-
-//   &__block--top {
-//     background-image: linear-gradient(
-//       to right bottom,
-//       $color-primary,
-//       $color-primary-light
-//     );
-//     // background-color: $color-primary;
-//     grid-column: header-col-start 7 / header-col-end 11;
-//     grid-row: 1/2;
-//   }
-
-//   &__block--right {
-//     background-image: linear-gradient(
-//       to bottom,
-//       $color-primary-light,
-//       $color-primary
-//     );
-//     // background-color: $color-primary;
-//     grid-column: header-col-start 12 / header-col-end 12;
-//     grid-row: 1/7;
-//   }
-// }
-
-// .nav {
-//   //contains left nav, aligned to far right of block
-//   &__container-left {
-//     background-color: $color-secondary;
-//     // background-image:linear-gradient(to bottom right, $color-secondary, $color-secondary-light);
-//     grid-column: header-col-start 1 / header-col-end 6;
-//     grid-row: 6/-1;
-
-//     display: flex;
-//     //pushes ul to the far right and bottom of nav
-//     align-items: flex-end;
-//     justify-content: flex-end;
-
-//     //Want nav element to equal 2 columns and 1 gap to match right nav.
-//     //parent is 3 columns and 2 gaps tall
-//     //Total width of block (100%) - gaps (3rem) / 3columns * 2 column + 1gap(1.5)
-//     .nav {
-//       height: calc(((100% - 3rem) / 3) * 2 + 1.5rem);
-//       // border: solid 1px blue;
-//       width: 100%;
-//       //aligns ui to the center of nav and far right of block
-//       display: flex;
-//       align-items: center;
-//       justify-content: flex-end;
-
-//       &__list {
-//         width: calc(60% - 3.5rem);
-//         padding: 4vh 2rem;
-//         background-color: $color-white;
-//         color: $color-secondary;
-//         outline: solid 1rem $color-white;
-//         outline-offset: 2rem;
-
-//         display: flex;
-//         justify-content: space-evenly;
-//         align-items: center;
-//       }
-
-//       &__item {
-//         padding: 0 1rem;
-//         // margin-left: 3rem;
-//         display: inline-block;
-//       }
-//     }
-//   }
-
-//   &__container-right {
-//     background-color: $color-tertiary;
-//     grid-column: header-col-start 7 / header-col-end 12;
-//     grid-row: 7/-1;
-//     display: flex;
-//     align-items: center;
-
-//     .nav {
-//       // border: solid 1px blue;
-//       height: 50%;
-//       width: calc(57.5%);
-//       display: flex;
-//       align-items: center;
-
-//       &__list {
-//         width: 100%;
-//         outline: solid 0.75rem $color-white;
-//         //must subtract the outline from padding so the height matches left ul height
-//         padding: calc(4vh - 0.75rem) 2rem;
-//         display: flex;
-//         justify-content: space-evenly;
-//         align-items: center;
-//       }
-
-//       &__item {
-//         padding: 0 1rem;
-//         // margin-right: 3rem;
-//         font-size: 2rem;
-//         display: inline-block;
-//       }
-//     }
-//   }
-
-//   // &__item {
-//   //   font-size: 2rem;
-//   //   display: inline-block;
-//   //   // &:not(:last-child) {
-//   //     margin-right: 3rem;
-//   //   // }
-//   // }
-// }
-
-
 
 
 

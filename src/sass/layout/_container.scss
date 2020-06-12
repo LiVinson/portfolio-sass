@@ -5,7 +5,7 @@
 section {  
     &.about{
         background-color: $new-color-accent-dark-1;
-        padding-bottom: 16rem;  
+        padding-bottom: 10rem;  
     }
 
     &.portfolio {
@@ -15,8 +15,9 @@ section {
     }
 
     &.section__skills {
-        padding-bottom: 10rem;
-        background-color: $new-color-secondary-light;
+        padding: 8rem 0 10rem 0;
+        // background-color: $new-color-secondary-light;
+        background-image: linear-gradient(to bottom right, $new-color-secondary-light-1, $new-color-secondary-dark-1);
     }
 }
 
@@ -32,7 +33,11 @@ section {
 
     &__skills {
         margin: 0 auto;
-        width: 100rem;
+        width: 90rem;
+        display:flex;
+        flex-wrap:wrap;
+        justify-content:space-between;
+
     }
 
 

@@ -11,7 +11,7 @@
 
 %btn-link {
   font-family: $font-title;
-
+  font-size:1.8rem;
   font-weight:300;
   //required for transition to work
   display:inline-block;
@@ -27,7 +27,7 @@
 .heading-1{
   @extend %heading;
   text-transform: lowercase;  
-  font-weight: 200;
+  font-weight: 100;
   font-size:17rem;
   line-height: 1;  
 
@@ -37,12 +37,14 @@
   @extend %heading;
   font-size: 6.5rem;
   line-height: 1.3;  
-  font-weight: 200;
-  // text-transform: lowercase;  
-  &--light { color: $new-color-accent-dark-1};       
+  font-weight: 100;
+  &--light { color: $new-color-accent-dark-2};       
   &--dark-1 { color: $new-color-primary};   
   &--dark-2 { color: $new-color-secondary};   
-  &--dark-3 { color: $new-color-tertiary};   
+  &--dark-3 { color: $new-color-tertiary};
+  &--dark-4 { color: $new-color-secondary-dark-2};   
+   
+
   &--bg-1 {
     @extend %heading-bg;
     background-color: $new-color-primary-light-2;
@@ -74,32 +76,34 @@
 
 .heading-3 {
   @extend %heading;  
-  font-size: 6rem;
+  font-size: 4rem;
   line-height: 1.5;  
   font-weight: 300;
   text-align:center;
-  &--light { color: $new-color-accent-dark-1};       
+  &--light { color: $new-color-accent-dark-2};       
   &--dark-1 { color: $new-color-primary};   
   &--dark-2 { color: $new-color-secondary};   
-  &--dark-3 { color: $new-color-tertiary};   
+  &--dark-3 { color: $new-color-tertiary};
+  &--dark-4 { color: $new-color-secondary-dark-2};   
+   
 }
 
 .heading-4 {
   @extend %heading;
   line-height:1.5;
   font-weight: 300;
-  font-size: 4rem;
-  &--light { color: $new-color-accent-dark-1};       
+  font-size: 3rem;
+  &--light { color: $new-color-accent-dark-2};       
   &--dark-1 { color: $new-color-primary};   
   &--dark-2 { color: $new-color-secondary};   
   &--dark-3 { color: $new-color-tertiary};    
+  &--dark-4 { color: $new-color-secondary-dark-2};   
 }
 
 .paragraph {
   line-height:1.5;
   margin-bottom: 1rem;
-  font-family:$font-title;
-  font-size: 2rem; 
+  font-size: 2.2rem; 
   font-weight: 300;  
 }
 
@@ -149,13 +153,12 @@
 }
 
 .btn-link {
-  @extend %btn-link;  
-  color:$new-color-accent-light;
-  font-size:1.8rem;
+  @extend %btn-link; 
+
 
   &--light {
     @extend %btn-link;
-     color:$new-color-accent-light;
+     color:$new-color-accent-dark-2;
 
      &--lg {
         @extend %btn-link;

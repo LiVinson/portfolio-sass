@@ -1,82 +1,125 @@
+// .skills {
+//   margin: 2rem auto;
+//   font-size: 2rem;
+//   position: relative;
+//   display: flex;
+//   flex-wrap: wrap;
+//   width: 44rem;
+//   height: 44rem;
+//   color: $new-color-accent-light;
+// }
+// .hidden {
+//   opacity: 0;
+// }
+
+// .skill,
+// .skill__icon {
+//   height: 11rem;
+//   width: 11rem;
+//   flex: 0 0 25%;
+//   background-color: blue;
+//   border: 1px solid white;
+//   display: flex;
+//   align-items: center;
+//   justify-content: center;
+//   //select each skill box, except the icons
+
+//   &:hover {
+//     transform: translateY(-2px);
+//   }
+
+//   &--left {
+//     background-image: linear-gradient(
+//       to bottom right,
+//       $new-color-secondary,
+//       $new-color-secondary-dark-1
+//     );
+//   }
+
+//   &--right {
+//     background-image: linear-gradient(
+//       to bottom right,
+//       $new-color-tertiary,
+//       $new-color-tertiary-dark
+//     );
+//   }
+// }
+
+// skill {
+//   //Applies only to skill div, not icons
+
+//   //APplies only to skill icon div, not skill
+//   &__icon {
+//     position: relative;
+//     z-index: 10;
+//   }
+// }
+
+// .fade-in {
+//     animation: fade-in;
+//     &.row-1{
+//         animation-duration:1.8s;
+//     }
+//     &.row-2{
+//         animation-duration:2.5s;
+//     }
+//     &.row-3{
+//         animation-duration:3s;
+//     }
+// }
+
+// @keyframes fade-in {
+//   0% {
+//     opacity: 0;
+//   }
+
+//   20% {
+//       opacity: 0;
+//   }
+//   100% {
+//     opacity: 1;
+//   }
+// }
+
+// New Skill section
+
 .skills {
-  margin: 2rem auto;
-  font-size: 2rem;
-  position: relative;
-  display: flex;
-  flex-wrap: wrap;
-  width: 44rem;
-  height: 44rem;
-  color: $new-color-accent-light;
-}
-.hidden {
-  opacity: 0;
-}
 
-.skill,
-.skill__icon {
-  height: 11rem;
-  width: 11rem;
-  flex: 0 0 25%;
-  background-color: blue;
-  border: 1px solid white;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  //select each skill box, except the icons
+  &__subheader {
+    
+    flex: 0 0 100%;
 
-  &:hover {
-    transform: translateY(-2px);
-  }
-
-  &--left {
-    background-image: linear-gradient(
-      to bottom right,
-      $new-color-secondary,
-      $new-color-secondary-dark-1
-    );
-  }
-
-  &--right {
-    background-image: linear-gradient(
-      to bottom right,
-      $new-color-tertiary,
-      $new-color-tertiary-dark
-    );
-  }
-}
-
-skill {
-  //Applies only to skill div, not icons
-
-  //APplies only to skill icon div, not skill
-  &__icon {
-    position: relative;
-    z-index: 10;
-  }
-}
-
-.fade-in {
-    animation: fade-in;
-    &.row-1{
-        animation-duration:1.8s;
+    span {
+      font-style: italic;
     }
-    &.row-2{
-        animation-duration:2.5s;
-    }
-    &.row-3{
-        animation-duration:3s;
-    }
+  }
+
+  &__block {
+    background-color: $new-color-accent-light;
+    width: 30%;
+    padding: 3rem 4rem;
+    text-align: center;
+    box-shadow: 0 10px 6px -6px $new-color-dark-gray-2;
+
+  }
+
+  &__logo {
+    height: 4rem;
+    width: 4rem;
+    fill: $new-color-secondary;
+  }
+
+  &__category {
+  }
+
+  &__list {
+  }
 }
 
-@keyframes fade-in {
-  0% {
-    opacity: 0;
-  }
-
-  20% {
-      opacity: 0;
-  }
-  100% {
-    opacity: 1;
+.skill {
+  padding: 2rem 0;
+  
+  &:not(:last-child) {
+    border-bottom: 1px solid $new-color-light-gray-1;
   }
 }
