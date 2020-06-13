@@ -15,22 +15,29 @@
 <body>
     <!-------------------- HEADER - img/solid split 60/40 ---------------------->
     <header class="header">
-        <div class="header__img">
-            <nav class="header__nav">
-                <ul class="inline-list">
-                    <li><a class="btn-link--dark--lg scroll" href="#about">about</a></li>
-                    <li><a class="btn-link--dark--lg scroll" href="#skills">skills</a></li>
-                    <li><a class="btn-link--dark--lg scroll" href="#portfolio">portfolio</a></li>
-                    <li><a class="btn-link--dark--lg scroll" href="#contact">contact</a></li>
-                    <li><a class="btn-link--dark--lg" href="./files/Vinson_Lisa_Resume.pdf"
-                            download="Vinson_Lisa_Resume.pdf">resume</a></li>
-                </ul>
-            </nav>
+        <!-- <div class="header__img"> -->
+
+        <div class="header__container">
+            <h1 class="heading-1 fade-in u-margin-bottom-xs">Lisa Vinson</h1>
+            <h3 class="heading-3 heading-3--dark-3 fade-in"> software developer</h3>
+
+
         </div>
-        <div class="header__background">
+        <nav class="header__nav">
+            <ul class="inline-list">
+                <li><a class="btn-link--dark--lg scroll" href="#about">about</a></li>
+                <li><a class="btn-link--dark--lg scroll" href="#skills">skills</a></li>
+                <li><a class="btn-link--dark--lg scroll" href="#portfolio">portfolio</a></li>
+                <li><a class="btn-link--dark--lg scroll" href="#contact">contact</a></li>
+                <li><a class="btn-link--dark--lg" href="./files/Vinson_Lisa_Resume.pdf"
+                        download="Vinson_Lisa_Resume.pdf">resume</a></li>
+            </ul>
+        </nav>
+        <!-- </div> -->
+        <!-- <div class="header__background">
             <h1 class="heading-1 fade-in">hello.</h1>
             <h3 class="heading-3 heading-3--light fade-in"> I'm Lisa, a software developer from Florida.</h3>
-        </div>
+        </div> -->
     </header>
     <!-------------------- END HEADER 2 - img/solid split 60/40 ---------------------->
 
@@ -40,7 +47,7 @@
     <!------------------------ ABOUT SECTION  --------------------------->
     <section id="about" class="about">
         <div class="container__about">
-            <h2 class="heading-2 heading-2--dark-3 u-margin-bottom-sm">
+            <h2 class="heading-2 heading-2--dark-1 u-margin-bottom-sm">
                 I design and create</br>clean, responsive,
                 and</br>user friendly applications.
             </h2>
@@ -48,7 +55,8 @@
             <div class="about__text justify-text">
                 <p class="paragraph">
                     I am experienced in the full life cycle of software development and I enjoy everything from design,
-                    to front end and back end development.</p>
+                    to front end and back end development. My favorite tech stack to use is MERN, but I'm always open to
+                    opportunities to use other technologies.</p>
                 <p class="paragraph"> My goal for every project is to create a product that is
                     seamless for the user and built to scale for future features. I am knowledgeable in a variety of
                     current tech stacks, and I'm always looking to become a better developer. Feel free to check out my
@@ -117,17 +125,17 @@
     <!------------------------ PORTFOLIO SECTION  --------------------------->
 
     <section class="portfolio">
-        <h2 class="heading-2 heading-2--dark center-text u-margin-bottom-xs">
-            Portfolio
-        </h2>
-        <p class="paragraph center-text u-margin-bottom-xs">Below are some recent examples of my work. For additional
-            examples, check out my Github.</p>
+
         <section class="project--bg-1 light">
-
+            <h2 class="heading-2 heading-2--dark center-text u-margin-bottom-xs">
+                Portfolio
+            </h2>
+            <h4 class="heading-4 heading-4--dark center-text u-margin-bottom-xs">Below are some recent examples of my work. For additional
+                examples, check out my Github.</h4>
             <div class="project__container">
-
-                <img src="../img/hacker-2.png" alt="Hacker News Clone" class="project__image u-margin-bottom-md">
+                <img src="../img/hacker-1-bg.png" alt="Hacker News Clone" class="project__image u-margin-bottom-sm">
                 <h4 class="heading-4 heading-4--light u-margin-bottom-sm">Hacker News Clone</h4>
+
 
                 <ul class="inline-list inline-list--border u-margin-bottom-xs">
                     <li class="list-item">html</li>
@@ -153,7 +161,7 @@
         <section class="project--bg-2 light">
             <div class="project__container">
 
-                <img src="../img/study-1.png" alt="Hacker News Clone" class="project__image u-margin-bottom-md">
+                <img src="../img/study-1-bg.png" alt="Hacker News Clone" class="project__image u-margin-bottom-sm">
                 <h4 class="heading-4 heading-4--light u-margin-bottom-xs">Study Smart</h4>
 
                 <ul class="inline-list inline-list--border u-margin-bottom-xs">
@@ -182,7 +190,7 @@
         <section class="project--bg-3 secondary-dark-2">
             <div class="project__container">
 
-                <img src="../img/natours-1.png" alt="Nature Tour website" class="project__image u-margin-bottom-md">
+                <img src="../img/natours-1-bg.png" alt="Nature Tour website" class="project__image u-margin-bottom-sm">
                 <h4 class="heading-4 heading-4--dark u-margin-bottom-xs">Natours</h4>
 
                 <ul class="inline-list inline-list--border u-margin-bottom-xs">
@@ -207,7 +215,7 @@
         <section class="project--bg-4 secondary-dark-2">
             <div class="project__container">
 
-                <img src="../img/trillo-1.png" alt="Trillo Travel website" class="project__image u-margin-bottom-md">
+                <img src="../img/trillo-1-bg.png" alt="Trillo Travel website" class="project__image u-margin-bottom-sm">
                 <h4 class="heading-4 u-margin-bottom-xs">Trillo Travels</h4>
 
                 <ul class="inline-list inline-list--border u-margin-bottom-xs">
@@ -231,9 +239,9 @@
 
         <section class="project--bg-5 light">
             <div class="project__container">
-                <img src="../img/lion-1.png" alt="Lion king Click application"
+                <img src="../img/lion-1-bg.png" alt="Lion king Click application"
                     class="project__image u-margin-bottom-md">
-                    <h4 class="heading-4 heading-4--dark u-margin-bottom-xs">Lion King Click</h4>
+                <h4 class="heading-4 heading-4--dark u-margin-bottom-xs">Lion King Click</h4>
 
                 <ul class="inline-list inline-list--border u-margin-bottom-xs">
                     <li class="list-item">html</li>

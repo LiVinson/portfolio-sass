@@ -44,8 +44,8 @@
 
 
         p {
-            padding-left: 3rem;
-            padding-right:3rem;
+            padding-left: 6rem;
+            padding-right:6rem;
         }
     }
 
@@ -62,19 +62,21 @@
     &__image {
         width: 70rem;
         // max-width: 100%;
-        box-shadow: 0 .8rem 4rem rgba(black, .8);
+        // box-shadow: 0 .8rem 4rem rgba(black, .8);
         // max-height:40vh;
 
     }
 
     &__btn-group {
-        width:100%;
+        
         margin-top:2rem;
-        display:flex;
-        justify-content: space-between;
+
 
         .btn {
-            width: 47%;
+            width: 25rem;
+            &:not(:last-child) {
+                margin-right:2rem;
+            }
         }
 
     }
