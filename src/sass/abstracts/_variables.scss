@@ -1,33 +1,30 @@
 
-//--------New colors ----------//
+//------------------COLORS ------------------//
+//-----------ORANGE---------------
 
-$new-color-primary: #f54e00;
-$new-color-primary-light-1: #F05D23;
-$new-color-primary-light-2: #FA783C;
+$color-primary: #F05D23;
+$color-primary-light: #FA783C;
 
+// ------------ blue --------------
 
-$new-color-secondary-light-1: #81ebeb;
+$color-secondary: #1f98a1;
+$color-secondary-light: #90c9cc;
+$color-secondary-dark: #156565;
 
-$new-color-secondary: #25a7a7;
-$new-color-secondary-light: #b4d1db;
-$new-color-secondary-light-1: #8be6e6;
-$new-color-secondary-light-2: #8ed7f0;
+// ------------ burgandy --------------
 
-$new-color-secondary-dark-1: #156565;
-$new-color-secondary-dark-2: #1d3557;
+$color-tertiary: #b44161;
+$color-tertiary-light: #c55776;
+$color-tertiary-dark: #782B41;
 
-$new-color-tertiary: #b44161;
-$new-color-tertiary-dark: #782B41;
+//------------Accents---------------------------
+$color-accent-1: #f7f9f9; //white
+$color-accent-2: #f0f0e6;  //light cream
+$color-accent-3: #d1d1b3; //khaki
+$color-accent-4: #003C66; //navy blue
 
-$new-color-accent-light: #f7f9f9;
-$new-color-accent-dark-1: #f0f0e6;
-$new-color-accent-dark-2: #e6e6d5; 
-// $new-color-accent-dark-2: #faeacf; 
-
-
-$new-color-light-gray-1:#d6d6d6;
-$new-color-dark-gray-1:#333333;
-$new-color-dark-gray-2:#5C5C5C;
+$color-gray-1:#d6d6d6; //light gray
+$color-gray-2:#5C5C5C; //dark gray
 
 //---FONTS---//
 
@@ -49,5 +46,5 @@ $font-text:"Lato", "sans-serif";
 #de9688 - darker peach/pink
 #f4ccb5 - beige
 #d1b1b0 - grayish purple
-#c42333 - burgandy
+#AD1F2D - burgandy 
 */

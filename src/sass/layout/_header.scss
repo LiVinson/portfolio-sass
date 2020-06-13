@@ -1,50 +1,61 @@
-// HEADER VERSION 2 
+// 2 panel jumbotron
 .header {
-  color: $new-color-accent-dark-2;
   width: 100%;
   height: 95vh;
   display: flex;
   position: relative;
+  // text-align:center;
 
   //left header panel
   &__img {
     background-image: url("../img/bg1-rotate.jpg");
     background-size: cover;
     background-position: right;
-    width: 60%;
+    width: 40%;
+  }
+
+  &__nav {
+    padding: 2rem;
+
+    a {
+      text-shadow: 0 .4rem 1rem $color-gray-2;
+    }
   }
 
   //right header panel w/ nav and text
   &__background {
-    position: relative;
-    background-color:$new-color-secondary;
+    display:flex;
+    flex-direction: column;
+    // align-items:center;
+    justify-content:center; 
     background-image: linear-gradient(
       to bottom right,
-      $new-color-secondary,
-      $new-color-secondary-dark-1
+      $color-secondary,
+      $color-secondary-dark
     );
-    width: 40%;
-    padding: 3rem 5rem; 
+    width: 60%;
+    padding:5rem;  
     
+    & .heading-1 {
+      color: $color-tertiary;
+      margin-bottom: 3rem;
+
+    }
+    & .heading-3 {
+      // color: $color-accent-3;
+      padding-left:1.5rem;
+    }
   }
 
   &__container {
     //center vertically, maintain horizontal position
     position: absolute;
     top: 50%; 
-    transform: translatey(-50%);
-    padding: 0 5rem;
-
-    & .heading-1 {
-      color: $new-color-primary;
-      margin-bottom: 3rem;
+    left:50%;
+    transform: translate(-50%,-50%);
+    // padding: 0 5rem;
 
 
-    }
-    & .heading-4 {
-      color: $new-color-accent-dark-2;
-      padding-left:1.5rem;
-    }
 
   }
 }

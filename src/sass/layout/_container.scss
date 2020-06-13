@@ -4,20 +4,20 @@
 
 section {  
     &.about{
-        background-color: $new-color-accent-dark-1;
+        background-color: $color-accent-2;
         padding-bottom: 10rem;  
     }
 
     &.portfolio {
-        background-color: $new-color-accent-light;
-        
+        background-color: $color-accent-2;
+
          
     }
 
     &.section__skills {
         padding: 8rem 0 10rem 0;
-        // background-color: $new-color-secondary-light;
-        background-image: linear-gradient(to bottom right, $new-color-secondary-light-1, $new-color-secondary-dark-1);
+        // background-color: $color-secondary-light;
+        background-image: linear-gradient(to bottom right, $color-secondary, $color-secondary-dark);
     }
 }
 

@@ -35,36 +35,33 @@
 // FONT COLOR
 
 .primary {
-  color: $new-color-primary;
+  color: $color-primary;
 }
 
 .primary-light-1 {
-  color: $new-color-primary-light-1;
+  color: $color-primary-light;
 }
 
-.primary-light-2 {
-  color: $new-color-primary-light-2;
-}
 
 .secondary {
-  color: $new-color-secondary;
+  color: $color-secondary;
 }
 
 .secondary-light {
-  color: $new-color-secondary-light;
+  color: $color-secondary-light;
 }
 .secondary-dark-1 {
-  color: $new-color-secondary-dark-1;
+  color: $color-secondary-dark;
 }
 
 .secondary-dark-2 {
-  color: $new-color-secondary-dark-2;
+  color: $color-accent-4;
 }
 
 .tertiary {
-  color: $new-color-tertiary;
+  color: $color-tertiary;
 }
 
 .light {
-  color: $new-color-accent-light
+  color: $color-accent-1
 }

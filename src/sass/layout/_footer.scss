@@ -1,10 +1,10 @@
 .footer {
-    background-color: $new-color-tertiary;
+    background-color: $color-tertiary;
     grid-column: 1/-1;
 
     display:flex;
     justify-content:space-evenly;    
-    color: $new-color-accent-light;
+    color: $color-accent-1;
     padding: 3rem 15rem;
     // border-top: .5rem solid $color-primary;
 
@@ -23,7 +23,7 @@
       
       a {
         text-decoration: none;
-        color: $new-color-accent-light;
+        color: $color-accent-1;
       }
     }
     
@@ -34,7 +34,7 @@
       display:inline-block;
       height: 1.5rem;
       width:2px;
-      background-color: $new-color-accent-light;
+      background-color: $color-accent-1;
       margin-left:2rem;
       margin-right:2rem;
     }

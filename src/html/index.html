@@ -6,44 +6,40 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Lisa Vinson | Developer</title>
     <!-- <link rel="stylesheet" href="assets/css/style.css" /> -->
-
-    <link href="https://fonts.googleapis.com/css2?family=Lato:wght@100;300;400&display=swap" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@100;300;400;500&display=swap"
         rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Lato:wght@100;300;400&display=swap" rel="stylesheet">
+
 </head>
 
 <body>
     <!-------------------- HEADER - img/solid split 60/40 ---------------------->
     <header class="header">
-        <div class="header__img"></div>
-        <div class="header__background">
-            <nav>
+        <div class="header__img">
+            <nav class="header__nav">
                 <ul class="inline-list">
-                    <li><a class="btn-link--light scroll" href="#about">about</a></li>
-                    <li><a class="btn-link--light scroll" href="#skills">skills</a></li>
-                    <li><a class="btn-link--light scroll" href="#portfolio">portfolio</a></li>
-                    <li><a class="btn-link--light scroll" href="#contact">contact</a></li>
-                    <li><a class="btn-link--light" href="./files/Vinson_Lisa_Resume.pdf"
+                    <li><a class="btn-link--dark--lg scroll" href="#about">about</a></li>
+                    <li><a class="btn-link--dark--lg scroll" href="#skills">skills</a></li>
+                    <li><a class="btn-link--dark--lg scroll" href="#portfolio">portfolio</a></li>
+                    <li><a class="btn-link--dark--lg scroll" href="#contact">contact</a></li>
+                    <li><a class="btn-link--dark--lg" href="./files/Vinson_Lisa_Resume.pdf"
                             download="Vinson_Lisa_Resume.pdf">resume</a></li>
                 </ul>
             </nav>
-            <div class="header__container">
-                <h1 class="heading-1">hello<span>.</span></h1>
-                <h43 class="heading-3"> I'm lisa, a software developer from Florida.</h43>
-            </div>
-
+        </div>
+        <div class="header__background">
+            <h1 class="heading-1 fade-in">hello.</h1>
+            <h3 class="heading-3 heading-3--light fade-in"> I'm Lisa, a software developer from Florida.</h3>
         </div>
     </header>
     <!-------------------- END HEADER 2 - img/solid split 60/40 ---------------------->
 
 
-    <!-- <div class="container"> -->
+
 
     <!------------------------ ABOUT SECTION  --------------------------->
     <section id="about" class="about">
         <div class="container__about">
-
-
             <h2 class="heading-2 heading-2--dark-3 u-margin-bottom-sm">
                 I design and create</br>clean, responsive,
                 and</br>user friendly applications.
@@ -58,71 +54,32 @@
                     current tech stacks, and I'm always looking to become a better developer. Feel free to check out my
                     LinkedIn or reach out for more details. </p>
                 <p class="paragraph">When I'm not in front of a screen, I love to take road trips and eat delicious food
-                    (I
-                    can't recommend Pappy's Smokehouse in St. Louis enough). My other interests include hiking,
+                    (I can't recommend Pappy's Smokehouse in St. Louis enough!). My other interests include hiking,
                     kayaking, and reading. </p>
             </div>
         </div>
     </section>
-    <!------------------------ SKILLS SECTION  --------------------------->
 
-    <!-- <section id="skills" class="section__skills">
-            <div class="container__skills">
-               
-                    <div class="section__container">
-                        <h2 class="heading-2 heading-2--light heading-2--bg-3 center-text">
-                            Skills
-                        </h2>
-                        <h4 class="heading-4 heading-4--dark-3 center-text">
-                            Lorem ipsum dolor adipisicing elit. Facilis maiores, molestias
-                        </h4>
-                    </div>
-               
-                <figure class="skills">
-                    <div class="skill__icon skill--left">Icon</div>
-                    <div class="skill__icon skill--left">Icon</div>
-                    <div class="skill__icon skill--right">Icon</div>
-                    <div class="skill__icon skill--right">Icon</div>
-                    <div class="hidden skill skill--left row-1"><span>html</span></div>
-                    <div class="hidden skill skill--left row-1"><span>css</span></div>
-                    <div class="hidden skill skill--right row-1"><span>sass</span></div>
-                    <div class="hidden skill skill--right row-1"><span>javascript</span></div>
-                    <div class="hidden skill skill--left row-2"><span>jquery</span></div>
-                    <div class="hidden skill skill--left row-2"><span>react</span></div>
-                    <div class="hidden skill skill--right row-2"><span>node.js</span></div>
-                    <div class="hidden skill skill--right row-2"><span>c#/.net</span></div>
-                    <div class="hidden skill skill--left row-3"><span>express</span></div>
-                    <div class="hidden skill skill--left row-3"><span>sql</span></div>
-                    <div class="hidden skill skill--right row-3"><span>mongodb</span></div>
-                    <div class="hidden skill skill--right row-3"><span>firebase</span></div>
-                </figure>
-            </div>
-        </section> -->
+    <!------------------------ SKILL SECTION  --------------------------->
 
-    <!-- 
-SKILL SECTION 2 -->
     <section id="skills" class="section__skills">
         <h2 class="heading-2 heading-2--light center-text u-margin-bottom-sm">
             Skills
         </h2>
-
         <div class="container__skills">
-            <h4 class="heading-4 heading-4--light skills__subheader u-margin-bottom-md center-text">&quot;The beautiful thing about learning is<br/>nobody can take it away from you.&quot;<br/><span>- B.B. King</span></h4>
-
+            <h4 class="heading-4 heading-4--light skills__subheader u-margin-bottom-md center-text">&quot;The beautiful
+                thing about learning is<br />nobody can take it away from you.&quot;<br /><span>- B.B. King</span></h4>
             <!-- Container 1 of 3 -->
             <div class="skills__block">
                 <svg class="skills__logo">
                     <use xlink:href="#_sprite_icon-ruler"></use>
                 </svg>
-                <!-- <h4 class="heading-4  heading-4--dark-3 u-margin-bottom-xs">Design</h4> -->
                 <ul class="skills__list">
                     <li class="list__item skill">html</li>
                     <li class="list__item skill">css</li>
                     <li class="list__item skill">sass</li>
                     <li class="list__item skill">javascript</li>
                     <li class="list__item skill">jquery</li>
-
-
                 </ul>
             </div>
 
@@ -132,7 +89,6 @@ SKILL SECTION 2 -->
                 <svg class="skills__logo">
                     <use xlink:href="#_sprite_icon-embed2"></use>
                 </svg>
-                <!-- <h4 class="heading-4  heading-4--dark-3 u-margin-bottom-xs">Develop</h4> -->
                 <ul class="skills__list">
                     <li class="list__item skill">react</li>
                     <li class="list__item skill">redux</li>
@@ -148,7 +104,6 @@ SKILL SECTION 2 -->
                 <svg class="skills__logo">
                     <use xlink:href="#_sprite_icon-database"></use>
                 </svg>
-                <!-- <h4 class="heading-4 heading-4--dark-3 u-margin-bottom-xs">Data</h4> -->
                 <ul class="skills__list">
                     <li class="list__item skill">express</li>
                     <li class="list__item skill">firebase</li>
@@ -162,121 +117,139 @@ SKILL SECTION 2 -->
     <!------------------------ PORTFOLIO SECTION  --------------------------->
 
     <section class="portfolio">
-        <header class="portfolio__subheader">
-            <div class="section__container">
-                <h2 id="portfolio" class="heading-2 heading-2--light heading-2--bg-1 center-text">Portfolio
-                </h2>
-                <h4 class="heading-4--dark-3 heading-4--dark-3 center-text">
-                    Lorem ipsum dolor adipisicing elit. Facilis maiores, molestias
-                </h4>
-            </div>
-        </header>
+        <h2 class="heading-2 heading-2--dark center-text u-margin-bottom-xs">
+            Portfolio
+        </h2>
+        <p class="paragraph center-text u-margin-bottom-xs">Below are some recent examples of my work. For additional
+            examples, check out my Github.</p>
         <section class="project--bg-1 light">
+
             <div class="project__container">
-                <h4 class="heading-4 heading-4--light u-margin-bottom-sm">Project Title</h4>
-                <img src="../img/project-1-1500.jpg" alt="project 1 image" class="project__image u-margin-bottom-md">
+
+                <img src="../img/hacker-2.png" alt="Hacker News Clone" class="project__image u-margin-bottom-md">
+                <h4 class="heading-4 heading-4--light u-margin-bottom-sm">Hacker News Clone</h4>
+
                 <ul class="inline-list inline-list--border u-margin-bottom-xs">
                     <li class="list-item">html</li>
                     <li class="list-item">css</li>
+                    <li class="list-item">javascript</li>
                     <li class="list-item">react</li>
-                    <li class="list-item">node</li>
-                    <li class="list-item">mysql</li>
+                    <li class="list-item">babel</li>
+                    <li class="list-item">webpack</li>
                 </ul>
                 <p class="paragraph justify-text">
-                    Lorem ipsum dolor sit amet, consectetur adipisicing elit. Odit cupiditate recusandae eveniet
-                    ducimus. Eaque eius repudiandae tempora dolor dicta. Impedit magni, maiores tempora dolorem vero.
+                    A clone of the popular Hacker News website. Queries the Hacker News API and allows users to view the
+                    top and most recent news, view user information, and comment details.
                 </p>
                 <div class="project__btn-group light">
-                    <button class="btn btn--color-3">View Code</button>
-                    <button class="btn btn--color-4 tertiary">View Site</button>
+                    <a href="https://hacker-news-react-clone.netlify.app/" class="btn btn--color-3" target="_blank">View
+                        Site</a>
+                    <a href="https://github.com/LiVinson/hacker-news-clone" class="btn btn--color-4 tertiary"
+                        target="_blank">View Code</a>
                 </div>
             </div>
         </section>
 
         <section class="project--bg-2 light">
             <div class="project__container">
-                <h4 class="heading-4 heading-4--light u-margin-bottom-sm">Project Title</h4>
-                <img src="../img/project-1-1500.jpg" alt="project 1 image" class="project__image u-margin-bottom-md">
-                <ul class="inline-list u-margin-bottom-xs">
-                    <li class="list-item">html</li>
-                    <li class="list-item">css</li>
+
+                <img src="../img/study-1.png" alt="Hacker News Clone" class="project__image u-margin-bottom-md">
+                <h4 class="heading-4 heading-4--light u-margin-bottom-xs">Study Smart</h4>
+
+                <ul class="inline-list inline-list--border u-margin-bottom-xs">
+                    <li class="list-item">javascript</li>
+                    <li class="list-item">react-bootstrap</li>
                     <li class="list-item">react</li>
                     <li class="list-item">node</li>
-                    <li class="list-item">mysql</li>
+                    <li class="list-item">express</li>
+                    <li class="list-item">mongodb</li>
+
                 </ul>
                 <p class="paragraph justify-text">
-                    Lorem ipsum dolor sit amet, consectetur adipisicing elit. Odit cupiditate recusandae eveniet
-                    ducimus. Eaque eius repudiandae tempora dolor dicta. Impedit magni, maiores tempora dolorem vero.
+                    A full stack application that allows users to create and save detailed learning goals, schedule and
+                    view study
+                    sessions in a monthly or weekly calendar, and add resources for later review.
                 </p>
                 <div class="project__btn-group light">
-                    <button class="btn btn--color-2">View Code</button>
-                    <button class="btn btn--color-4 secondary">View Site</button>
+                    <a href="https://study-smart-app.herokuapp.com/" class="btn btn--color-2" target="_blank">View
+                        Site</a>
+                    <a href="https://github.com/LiVinson/study-smart" class="btn btn--color-4 secondary"
+                        target="_blank">View Code</a>
                 </div>
             </div>
         </section>
 
         <section class="project--bg-3 secondary-dark-2">
             <div class="project__container">
-                <h4 class="heading-4 u-margin-bottom-sm">Project Title</h4>
-                <img src="../img/project-1-1500.jpg" alt="project 1 image" class="project__image u-margin-bottom-md">
-                <ul class="inline-list u-margin-bottom-xs">
+
+                <img src="../img/natours-1.png" alt="Nature Tour website" class="project__image u-margin-bottom-md">
+                <h4 class="heading-4 heading-4--dark u-margin-bottom-xs">Natours</h4>
+
+                <ul class="inline-list inline-list--border u-margin-bottom-xs">
                     <li class="list-item">html</li>
-                    <li class="list-item">css</li>
-                    <li class="list-item">react</li>
-                    <li class="list-item">node</li>
-                    <li class="list-item">mysql</li>
+                    <li class="list-item">css animations</li>
+                    <li class="list-item">sass</li>
+                    <li class="list-item">BEM</li>
                 </ul>
                 <p class="paragraph justify-text">
-                    Lorem ipsum dolor sit amet, consectetur adipisicing elit. Odit cupiditate recusandae eveniet
-                    ducimus. Eaque eius repudiandae tempora dolor dicta. Impedit magni, maiores tempora dolorem vero.
+                    A fully responsive nature tour website with smooth animations, image and video backgrounds, and form
+                    with custom inputs. Built using floats to ensure cross browser compatibility
                 </p>
                 <div class="project__btn-group light">
-                    <button class="btn btn--color-2-dark">View Code</button>
-                    <button class="btn btn--color-4 secondary-dark-2">View Site</button>
+                    <a href="https://natoursadventures.netlify.app/" class="btn btn--color-2" target="_blank">View
+                        Site</a>
+                    <a href="https://github.com/LiVinson/natours" class="btn btn--color-4 secondary"
+                        target="_blank">View Code</a>
                 </div>
             </div>
         </section>
 
         <section class="project--bg-4 secondary-dark-2">
             <div class="project__container">
-                <h4 class="heading-4 u-margin-bottom-sm">Project Title</h4>
-                <img src="../img/project-1-1500.jpg" alt="project 1 image" class="project__image u-margin-bottom-md">
-                <ul class="inline-list u-margin-bottom-xs">
+
+                <img src="../img/trillo-1.png" alt="Trillo Travel website" class="project__image u-margin-bottom-md">
+                <h4 class="heading-4 u-margin-bottom-xs">Trillo Travels</h4>
+
+                <ul class="inline-list inline-list--border u-margin-bottom-xs">
                     <li class="list-item">html</li>
                     <li class="list-item">css</li>
-                    <li class="list-item">react</li>
-                    <li class="list-item">node</li>
-                    <li class="list-item">mysql</li>
+                    <li class="list-item">sass</li>
                 </ul>
+
                 <p class="paragraph justify-text">
-                    Lorem ipsum dolor sit amet, consectetur adipisicing elit. Odit cupiditate recusandae eveniet
-                    ducimus. Eaque eius repudiandae tempora dolor dicta. Impedit magni, maiores tempora dolorem vero.
+                    A fully responsive hotel landing page for an elegant travel website. Layout is created using flexbox
+                    and includes hover animations, svgs, and use of gradients.
                 </p>
                 <div class="project__btn-group light">
-                    <button class="btn btn--color-2-dark">View Code</button>
-                    <button class="btn btn--color-4 secondary-dark-2">View Site</button>
+                    <a href="https://trillo-travels.netlify.app/" class="btn btn--color-2-dark" target="_blank">View
+                        Site</a>
+                    <a href="https://github.com/LiVinson/trillo-travels" class="btn btn--color-4 secondary-dark-2"
+                        target="_blank">View Code</a>
                 </div>
             </div>
         </section>
 
         <section class="project--bg-5 light">
             <div class="project__container">
-                <h4 class="heading-4 heading-4--dark u-margin-bottom-sm">Project Title</h4>
-                <img src="../img/project-1-1500.jpg" alt="project 1 image" class="project__image u-margin-bottom-md">
-                <ul class="inline-list u-margin-bottom-xs">
+                <img src="../img/lion-1.png" alt="Lion king Click application"
+                    class="project__image u-margin-bottom-md">
+                    <h4 class="heading-4 heading-4--dark u-margin-bottom-xs">Lion King Click</h4>
+
+                <ul class="inline-list inline-list--border u-margin-bottom-xs">
                     <li class="list-item">html</li>
                     <li class="list-item">css</li>
+                    <li class="list-item">bootstrap</li>
                     <li class="list-item">react</li>
-                    <li class="list-item">node</li>
-                    <li class="list-item">mysql</li>
                 </ul>
                 <p class="paragraph justify-text">
-                    Lorem ipsum dolor sit amet, consectetur adipisicing elit. Odit cupiditate recusandae eveniet
-                    ducimus. Eaque eius repudiandae tempora dolor dicta. Impedit magni, maiores tempora dolorem vero.
+                    A fun mini-game built with React.js to test your memory skills. Try to click on each Lion King
+                    character without clicking the same image twice. Look carefully, the images move after each click!
                 </p>
                 <div class="project__btn-group light">
-                    <button class="btn btn--color-1">View Code</button>
-                    <button class="btn btn--color-4 primary">View Site</button>
+                    <a href="https://livinson.github.io/lion-king-clicky/" class="btn btn--color-1" target="_blank">View
+                        Site</a>
+                    <a href="https://github.com/LiVinson/lion-king-clicky" class="btn btn--color-4 primary"
+                        target="_blank">View Code</a>
                 </div>
             </div>
         </section>

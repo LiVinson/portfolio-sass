@@ -7,7 +7,7 @@ import config from "../../webpack.dev.config.js";
 import webpackDevMiddleware from "webpack-dev-middleware";
 import webpackHotMiddleware from "webpack-hot-middleware";
 
-const port = process.env.PORT || 3000
+const port = process.env.PORT || 3001
 
 const app = express(),
   DIST_DIR = __dirname,
