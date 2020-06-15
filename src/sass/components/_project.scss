@@ -4,9 +4,25 @@
 
 .project {
     &--bg-1 {
+        //Contains the header of the entire section
         @extend %project;
         background-image: linear-gradient(to bottom right, $color-tertiary 0%, $color-tertiary 40%, $color-tertiary-dark 100%);
-        // background-color: $color-tertiary;
+        display:flex;
+        flex-direction: column;
+        align-items:center;
+        padding-top:12rem;
+
+        h2 {
+            position:absolute;
+            top:0;
+            transform:translateY(-50%);
+            display:inline-block;
+            background: rgba($color-accent-2, .3);
+            font-weight:300;
+            padding: 2rem 10rem;
+            font-weight:300;
+            border: solid .3rem currentColor;
+        }
     }
 
     &--bg-2 {
