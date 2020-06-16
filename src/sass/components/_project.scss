@@ -1,5 +1,5 @@
 %project {
-    padding-bottom: 8rem;  
+    padding: 6rem 3rem;  
 }
 
 .project {
@@ -10,44 +10,44 @@
         display:flex;
         flex-direction: column;
         align-items:center;
-        padding-top:12rem;
+        padding-top:1rem;
 
         h2 {
-            position:absolute;
-            top:0;
-            transform:translateY(-50%);
-            display:inline-block;
-            background: rgba($color-accent-2, .3);
+            // position:absolute;
+            // top:0;
+            // transform:translateY(-50%);
+            // display:inline-block;
+            // background: rgba($color-accent-2, .3);
             font-weight:300;
-            padding: 2rem 10rem;
-            font-weight:300;
-            border: solid .3rem currentColor;
+            padding: 4rem 10rem;     
         }
     }
 
     &--bg-2 {
         @extend %project;
-        background-image: linear-gradient(to bottom right, $color-secondary 0%, $color-secondary 40%, $color-secondary-dark 100%);
+        background-image: linear-gradient(to bottom right, $color-accent-2 0%, $color-accent-2 40%, $color-accent-3 100%);
         // background-color: $color-tertiary;
     }
 
     &--bg-3 {
         @extend %project;
-        background-image: linear-gradient(to bottom right, $color-accent-2 0%, $color-accent-2 40%, $color-accent-3 100%);
+        // background-color:$color-secondary-light
+        background-image: linear-gradient(to bottom right, #2579b6 0%, $color-accent-4 40%, $color-accent-4 100%);
+
         // background-color: $color-tertiary;
     }
 
     &--bg-4 {
         @extend %project;
-        background-color:$color-secondary-light
+        background-image: linear-gradient(to bottom right, $color-accent-2 0%, $color-accent-2 40%, $color-accent-3 100%);
         // background-image: linear-gradient(to bottom right, $color-secondary-light 0%, $color-accent-4 40%, $color-secondary-light 100%);
 
     }
 
     &--bg-5 {
         @extend %project;
-        background-image: linear-gradient(to bottom right, $color-primary 0%, $color-primary-light 40%, $color-primary-light 100%);
-        padding-bottom: 16rem; 
+        background-image: linear-gradient(to bottom right, $color-primary-light 0%, $color-primary 40%, $color-primary 100%);
+        padding-bottom: 10rem; 
     }
    
     &__container {
@@ -56,7 +56,7 @@
         align-items:center;
         width: 40%;
         margin: 0 auto;
-        padding-top:5rem;
+        // padding-top:5rem;
 
 
         p {
@@ -83,17 +83,11 @@
 
     }
 
-    &__btn-group {
-        
+    &__btn-group {        
         margin-top:2rem;
-
-
-        .btn {
-            width: 25rem;
-            &:not(:last-child) {
-                margin-right:2rem;
-            }
-        }
+        width: 60%;
+        display: flex;
+        justify-content:space-between;
 
     }
 }

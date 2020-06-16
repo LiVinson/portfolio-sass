@@ -3,12 +3,16 @@
 //-----------ORANGE---------------
 
 $color-primary: #F05D23;
-$color-primary-light: #FA783C;
+// $color-primary-light: #fb8e5b;
+$color-primary-light: #ff6e34fb;
+
 
 // ------------ blue --------------
 
 $color-secondary: #1f98a1;
-$color-secondary-light: #90c9cc;
+$color-secondary-light: #44b6be;
+
+// $color-secondary-light: #90c9cc;
 $color-secondary-dark: #156565;
 
 // ------------ burgandy --------------
@@ -22,14 +26,16 @@ $color-accent-1: #f7f9f9; //white
 $color-accent-2: #f0f0e6;  //light cream
 $color-accent-3: #d1d1b3; //khaki
 $color-accent-4: #003C66; //navy blue
+// $color-accent-4: #2579b6; //navy blue
+
 
 $color-gray-1:#d6d6d6; //light gray
-$color-gray-2:#5C5C5C; //dark gray
+$color-gray-2:#383838; //dark gray
 
 //---FONTS---//
 
 $font-title: "Noto Sans KR", "sans-serif";
-$font-text:"Lato", "sans-serif";
+$font-text:"Noto Sans KR", "sans-serif";
 
 
 //IMAGE COLORS

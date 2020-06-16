@@ -9,28 +9,16 @@ section {
     }
 
     &.portfolio {
-        background-color: $color-accent-2;
-        position: relative;
-
-         
+        position: relative;  
     }
 
     &.section__skills {
-        padding: 8rem 0 10rem 0;
+        padding: 7rem 10rem;
         // background-color: $color-secondary-light;
-        background-image: linear-gradient(to bottom right, $color-secondary, $color-secondary-dark);
-        position: relative;
-        h2 {
-            position:absolute;
-            top:0;
-            left:50%;
-            transform:translate(-50%, -50%);
-            display:inline-block;
-            background: rgba($color-accent-2, .3);
-            padding: 2rem 10rem;
+        background-image: linear-gradient(to bottom right, $color-secondary-light, $color-secondary-dark);
+       
+        h2 {          
             font-weight:300;
-            border: solid .3rem currentColor;
-
         } 
     }
 }
@@ -51,10 +39,9 @@ section {
         display:flex;
         flex-wrap:wrap;
         justify-content:space-between;
-
     }
 
-
+   
 }
 
 

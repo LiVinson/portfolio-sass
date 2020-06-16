@@ -66,9 +66,10 @@
 .heading-4 {
   @extend %heading;
   line-height:1.5;
-  font-weight: 300;
+  font-weight: 400;
   font-size: 3rem;
   &--light { color: $color-accent-2};       
+  &--light-2 { color: $color-accent-3};   
   &--dark-1 { color: $color-primary};   
   &--dark-2 { color: $color-secondary};   
   &--dark-3 { color: $color-tertiary};    
@@ -85,20 +86,25 @@
 /* ---------------- BUTTONS ------------  */
 .btn {
   border: none;
-  padding: 1.4rem 2.5vw;
-  font-size:2rem;
+  // padding: 1.5rem 6.5rem;
+  display: inline-block;
+  width:48%;
+  padding-top:1.5rem;
+  padding-bottom:1.5rem;
+  font-size:2.2rem;
   border-radius:3%;
-  color: $color-accent-3;
+  color: $color-accent-2;
   box-shadow: 0 .2rem 1rem rgba(0,0,0,.2);
   transition: all .2s;
   text-align: center;
   text-decoration: none;
+  font-weight:300;
   &--color-1 {
     background-color: $color-primary;
   }
 
   &--color-2 {
-    background-color: $color-secondary-dark;
+    background-color: $color-secondary;
   }
 
   &--color-2-dark {
@@ -106,7 +112,7 @@
   }
 
   &--color-3 {
-    background-color: $color-tertiary-dark;
+    background-color: $color-tertiary;
     // border: 2px solid $color-accent-1;
   }
 
@@ -117,7 +123,7 @@
   }
 
   &:hover{
-    filter:brightness(90%)
+    filter:brightness(90%);
   }
 
   &:active{
@@ -164,7 +170,7 @@
   padding: 0 2rem;
   display:flex;
   justify-content:space-evenly;  
-  font-size:2rem;
+  font-size:2.2rem;
  
 
   li {
