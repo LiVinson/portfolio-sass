@@ -1,15 +1,13 @@
 .footer {
-    background-color: $color-tertiary;
-    grid-column: 1/-1;
-
+    background-color: $color-accent-4;
     display:flex;
     justify-content:space-evenly;    
     color: $color-accent-1;
-    padding: 3rem 15rem;
+    padding: 3rem 20rem;
     // border-top: .5rem solid $color-primary;
 
     &__text {
-      font-size:1.3rem;
+      font-size:1.6rem;
     }
 
     &__links {

@@ -1,8 +1,6 @@
 .form {
-    grid-column: 4/span 6;    
-    // border:1px solid red;
+
     padding: 0 2rem 0 2rem;
-    // padding-top: 0rem;
     display:flex;
     flex-wrap:wrap;
     //to have space between inputs that sit on the same line
@@ -13,12 +11,16 @@
       font-size: 1.5rem;
       font-family: $font-text;
       padding: 0 1rem 0 1rem;
-      width:100%;
 
       //form group that contains simple input only use half of form by default to allow 2/line
       &--input {
         width: 50%;     
-      }     
+      }  
+      
+      &--text,
+      &--btn {
+        width: 100%;
+      }
     }
 
     &__input,
@@ -37,13 +39,12 @@
     }
 
     &__textarea {
-      min-height:20rem;
-     
+      min-height:20rem;     
     }
     //'ending'position of label is below input. Transitions when input has content
     &__label {
       display: block;
-      padding:1rem 1rem 0rem 1rem;
+      padding:1rem;
       transform: translateY(0);
       transition: all .3s;
       color: $color-primary;

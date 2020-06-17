@@ -6,6 +6,10 @@ section {
     &.about{
         background-color: $color-accent-2;
         padding-bottom: 13rem;  
+
+        h2 {
+            font-weight:100;
+        }
     }
 
     &.portfolio {
@@ -15,11 +19,12 @@ section {
     &.section__skills {
         padding: 7rem 10rem;
         // background-color: $color-secondary-light;
-        background-image: linear-gradient(to bottom right, $color-secondary-light, $color-secondary-dark);
-       
-        h2 {          
-            font-weight:300;
-        } 
+        background-image: linear-gradient(to bottom right, $color-secondary-light, $color-secondary-dark);      
+    }
+
+    &.section__contact {
+        padding: 7rem 10rem;
+        background-image: linear-gradient(to bottom right, $color-accent-2 0%, $color-accent-2 40%, $color-accent-3 100%);
     }
 }
 
@@ -41,6 +46,10 @@ section {
         justify-content:space-between;
     }
 
+    &__contact {
+        margin: 0 auto;
+        width: 80rem;
+    }
    
 }
 

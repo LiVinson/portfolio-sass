@@ -126,7 +126,7 @@
 
     <section class="portfolio">
         <section class="project--bg-1 light">
-            <h2 class="heading-2 heading-2--light center-text">
+            <h2 class="heading-2 heading-2--light center-text" id="portfolio">
                 Portfolio
             </h2>
             <!-- <h4 class="heading-4 heading-4--light center-text u-margin-bottom-xs">Below are some recent examples of my
@@ -152,7 +152,7 @@
                     top and most recent news, view user information, and comment details.
                 </p>
                 <div class="project__btn-group light">
-                    <a href="https://hacker-news-react-clone.netlify.app/" class="btn btn--color-2-dark" target="_blank">View
+                    <a href="https://hacker-news-react-clone.netlify.app/" class="btn btn--color-5 secondary-dark-2" target="_blank">View
                         Site</a>
                     <a href="https://github.com/LiVinson/hacker-news-clone" class="btn btn--color-4 secondary-dark-2"
                         target="_blank">View Code</a>
@@ -258,7 +258,7 @@
                 <div class="project__btn-group light">
                     <a href="https://livinson.github.io/lion-king-click/" class="btn btn--color-2" target="_blank">View
                         Site</a>
-                    <a href="https://github.com/LiVinson/lion-king-click" class="btn btn--color-4 secondary"
+                        <a href="https://github.com/LiVinson/study-smart" class="btn btn--color-4 secondary-dark-2"
                         target="_blank">View Code</a>
                 </div>
             </div>
@@ -269,20 +269,17 @@
 
     <!------------------------ CONTACT SECTION  --------------------------->
 
-    <section class="contact">
-        <header class="portfolio__subheader">
-            <div class="section__container">
-                <h2 id="contact" class="heading-2 heading-2--light heading-2--bg-2 center-text">Contact
-                </h2>
-            </div>
-        </header>
+    <section id="contact" class="section__contact">
+        <h2 class="heading-2 heading-2--dark-4 center-text u-margin-bottom-sm">
+            Contact
+        </h2>
         <!-- displays as flex -->
-        <div class="contact__form">
+        <div class="container__contact">
             <form action="#" class="form">
-                <h4 class="heading-4 heading-4--dark u-margin-bottom-sm">
+                <h4 class="heading-4 heading-4--dark">
                     Interested in working together?
                 </h4>
-                <p class="paragraph center-text"> Send me a message or email me directly at contact@lisavinson.com
+                <p class="paragraph center-text u-margin-bottom-sm"> Send me a message or email me directly at contact@lisavinson.com
                 </p>
                 <div class="form__group form__group--input">
                     <input type="text" class="form__input" placeholder="Name" name="name" required>
@@ -292,12 +289,12 @@
                     <input type="email" class="form__input" placeholder="Email" name="email" required>
                     <label for="email" class="form__label">Email</label>
                 </div>
-                <div class="form__group">
+                <div class="form__group form__group--text">
                     <textarea name="message" class="form__textarea" placeholder="Your message" required></textarea>
-                    <label for="message" class="form__label">Message</label>
+                    <label for="message" class="form__label">Your Message</label>
                 </div>
-                <div class="form__group">
-                    <button class="btn btn--color-2 form__submit" type="submit">send</button>
+                <div class="form__group form__group--btn">
+                    <button class="btn btn--color-2-dark form__submit" type="submit">send</button>
                 </div>
             </form>
         </div>
