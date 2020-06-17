@@ -5,12 +5,12 @@
   display: flex;
   // align-items:flex-end;
   justify-content: flex-end;
+  align-items: flex-start;
 
   position: relative;
   text-align:center;
   background-image: url("../img/bg1-rotate.jpg");
   background-size: cover;
-  background-position: right;
 
 
   &__nav {
@@ -27,7 +27,7 @@
     top: 50%; 
     left:50%;
     transform: translate(-50%,-50%);
-    // padding: 0 5rem;
+
 
   }
 }

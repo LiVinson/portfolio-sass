@@ -1,17 +1,16 @@
-.about {
-    // grid-column:3/11;
-    padding: 8rem 0 20rem 0;
-    
-    & h3 {
-      // padding-left:4rem;
-      // padding-right:4rem;
+//Entire about section
+  .about{
+    background-color: $color-accent-2;
+    padding: 8rem 0 8rem 0; 
+
+    //large header 
+    h2 {
+        font-weight:100;
     }
 
+    //about paragraphs
     &__text {
-      // padding: 0rem 4rem;
       columns: 2;
       column-gap: 2rem;
     }
-
-  }
-
+}

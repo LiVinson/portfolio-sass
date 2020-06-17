@@ -3,24 +3,10 @@
 }
 
 section {  
-    &.about{
-        background-color: $color-accent-2;
-        padding-bottom: 13rem;  
 
-        h2 {
-            font-weight:100;
-        }
-    }
-
-    &.portfolio {
-        position: relative;  
-    }
-
-    &.section__skills {
-        padding: 7rem 10rem;
-        // background-color: $color-secondary-light;
-        background-image: linear-gradient(to bottom right, $color-secondary-light, $color-secondary-dark);      
-    }
+    
+    
+    
 
     &.section__contact {
         padding: 7rem 10rem;

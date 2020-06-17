@@ -1,15 +1,7 @@
 
 .skills {
 
-  &__subheader {
-    
-    flex: 0 0 100%;
-    span {
-      font-style: italic;
-    }
-  }
-
-  &__block {
+   &__block {
     background-color: $color-accent-1;
     width: 30%;
     padding: 3rem 4rem;

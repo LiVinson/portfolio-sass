@@ -9,45 +9,36 @@
     <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@100;300;400;500&display=swap"
         rel="stylesheet">
     <link href="https://fonts.googleapis.com/css2?family=Lato:wght@100;300;400&display=swap" rel="stylesheet">
-
+    <link href="https://fonts.googleapis.com/css2?family=Allura&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Great+Vibes&family=Open+Sans&display=swap" rel="stylesheet">
 </head>
 
 <body>
-    <!-------------------- HEADER - img/solid split 60/40 ---------------------->
+    <!-------------------- HEADER - flexbox w/ image background. nav top right, h1 centered ---------------------->
     <header class="header">
-        <!-- <div class="header__img"> -->
-
-        <div class="header__container">
+        <div class="header__container" id="top">
             <h1 class="heading-1">Lisa Vinson</h1>
             <h3 class="heading-3 heading-3--dark-3"> software developer</h3>
-
-
         </div>
         <nav class="header__nav">
             <ul class="inline-list">
-                <li><a class="btn-link--dark--lg scroll" href="#about">about</a></li>
-                <li><a class="btn-link--dark--lg scroll" href="#skills">skills</a></li>
-                <li><a class="btn-link--dark--lg scroll" href="#portfolio">portfolio</a></li>
-                <li><a class="btn-link--dark--lg scroll" href="#contact">contact</a></li>
-                <li><a class="btn-link--dark--lg" href="./files/Vinson_Lisa_Resume.pdf"
+                <li><a class="btn-link btn-link--dark--lg scroll" href="#about">about</a></li>
+                <li><a class="btn-link btn-link--dark--lg scroll" href="#skills">skills</a></li>
+                <li><a class="btn-link btn-link--dark--lg scroll" href="#portfolio">portfolio</a></li>
+                <li><a class="btn-link btn-link--dark--lg scroll" href="#contact">contact</a></li>
+                <li><a class="btn-link btn-link--dark--lg" href="./files/Vinson_Lisa_Resume.pdf"
                         download="Vinson_Lisa_Resume.pdf">resume</a></li>
             </ul>
         </nav>
-        <!-- </div> -->
-        <!-- <div class="header__background">
-            <h1 class="heading-1 fade-in">hello.</h1>
-            <h3 class="heading-3 heading-3--light fade-in"> I'm Lisa, a software developer from Florida.</h3>
-        </div> -->
+        </div>
     </header>
-    <!-------------------- END HEADER 2 - img/solid split 60/40 ---------------------->
-
-
-
 
     <!------------------------ ABOUT SECTION  --------------------------->
+
+
     <section id="about" class="about">
         <div class="container__about">
-            <h2 class="heading-2 heading-2--dark-1 u-margin-bottom-sm">
+            <h2 class="heading-2 heading-2--plain heading-2--dark-1 u-margin-bottom-sm">
                 I design and create</br>clean, responsive,
                 and</br>user friendly applications.
             </h2>
@@ -56,10 +47,11 @@
                 <p class="paragraph">
                     I am experienced in the full life cycle of software development and I enjoy everything from design,
                     to front end and back end development. My favorite tech stack to use is MERN, but I'm always open to
-                    opportunities to use other technologies.</p>
+                    using other technology.</p>
                 <p class="paragraph"> My goal for every project is to create a product that is
                     seamless for the user and built to scale for future features. I am knowledgeable in a variety of
-                    current tech stacks, and I'm always looking to become a better developer. Most recently, I have been
+                    current tech stacks, and I'm always looking to become a better developer.</p>
+                <p class="paragraph">Most recently, I have been
                     working on the reusability of react components and improving my design skills. </p>
                 <p class="paragraph">When I'm not in front of a screen, I love to take road trips and eat delicious food
                     (I can't recommend Pappy's Smokehouse in St. Louis enough!). My other interests include hiking,
@@ -70,14 +62,16 @@
 
     <!------------------------ SKILL SECTION  --------------------------->
 
-    <section id="skills" class="section__skills">
-        <h2 class="heading-2 heading-2--light center-text u-margin-bottom-sm">
+    <section id="skills" class="skills">
+        <h2 class="heading-2 heading-2--light center-text">
             Skills
         </h2>
+        <h4 class="heading-4 heading-4--light u-margin-bottom-md center-text">&quot;The beautiful
+            thing about learning is nobody can take it away from you.&quot;<span>- B.B. King</span>
+        </h4>
+
         <div class="container__skills">
-            <h4 class="heading-4 heading-4--light skills__subheader u-margin-bottom-md center-text">&quot;The beautiful
-                thing about learning is<br />nobody can take it away from you.&quot;<br /><span>- B.B. King</span></h4>
-            <!-- Container 1 of 3 -->
+            <!-- Skills Block 1 of 3 -->
             <div class="skills__block">
                 <svg class="skills__logo">
                     <use xlink:href="#_sprite_icon-ruler"></use>
@@ -91,7 +85,7 @@
                 </ul>
             </div>
 
-            <!-- Container 2 of 3 -->
+            <!-- Skills Block 2 of 3 -->
 
             <div class="skills__block">
                 <svg class="skills__logo">
@@ -106,7 +100,7 @@
                 </ul>
             </div>
 
-            <!-- Container 3 of 3 -->
+            <!-- Skills Block 3 of 3 -->
 
             <div class="skills__block">
                 <svg class="skills__logo">
@@ -126,17 +120,16 @@
 
     <section class="portfolio">
         <section class="project--bg-1 light">
-            <h2 class="heading-2 heading-2--light center-text" id="portfolio">
+            <h2 class="heading-2 heading-2--light center-text u-margin-bottom-sm" id="portfolio">
                 Portfolio
             </h2>
             <!-- <h4 class="heading-4 heading-4--light center-text u-margin-bottom-xs">Below are some recent examples of my
                 work. For additional
                 examples, check out my Github.</h4> -->
             <div class="project__container">
-                <div class="img__container">
-                    <img src="../img/edited/hacker.png" alt="Hacker News Clone" class="project__image">
-                </div>
-                <h4 class="heading-4 heading-4--dark-4 u-margin-bottom-xs">Hacker News Clone</h4>
+                <img src="../img/edited/hacker.png" alt="Hacker News Clone" class="project__image">
+
+                <h4 class="heading-4 heading-4--light-2 u-margin-bottom-xs">Hacker News Clone</h4>
 
 
                 <ul class="inline-list inline-list--border u-margin-bottom-xs">
@@ -152,10 +145,23 @@
                     top and most recent news, view user information, and comment details.
                 </p>
                 <div class="project__btn-group light">
-                    <a href="https://hacker-news-react-clone.netlify.app/" class="btn btn--color-5 secondary-dark-2" target="_blank">View
-                        Site</a>
+                    <a href="https://hacker-news-react-clone.netlify.app/" class="btn btn--color-5 secondary-dark-2"
+                        target="_blank">
+                        <svg class="project__link-logo">
+                            <use xlink:href="#_sprite_icon-link"></use>
+                        </svg>
+                        View Site
+
+                    </a>
+
                     <a href="https://github.com/LiVinson/hacker-news-clone" class="btn btn--color-4 secondary-dark-2"
-                        target="_blank">View Code</a>
+                        target="_blank">
+                        <svg class="project__code-logo">
+                            <use xlink:href="#_sprite_icon-embed2"></use>
+                        </svg>
+                        View Code
+
+                    </a>
                 </div>
             </div>
         </section>
@@ -177,10 +183,18 @@
                     with custom inputs. Built using floats to ensure cross browser compatibility
                 </p>
                 <div class="project__btn-group light">
-                    <a href="https://natoursadventures.netlify.app/" class="btn btn--color-1" target="_blank">View
-                        Site</a>
-                    <a href="https://github.com/LiVinson/natours" class="btn btn--color-4 primary"
-                        target="_blank">View Code</a>
+                    <a href="https://natoursadventures.netlify.app/" class="btn btn--color-1" target="_blank">
+                        <svg class="project__link-logo">
+                            <use xlink:href="#_sprite_icon-link"></use>
+                        </svg>
+                        View Site</a>
+                    <a href="https://github.com/LiVinson/natours" class="btn btn--color-4 primary" target="_blank">
+
+                        <svg class="project__code-logo">
+                            <use xlink:href="#_sprite_icon-embed2"></use>
+                        </svg>
+                        View Code
+                    </a>
                 </div>
             </div>
         </section>
@@ -202,10 +216,19 @@
                     and includes hover animations, svgs, and use of gradients.
                 </p>
                 <div class="project__btn-group light">
-                    <a href="https://trillo-travels.netlify.app/" class="btn btn--color-3" target="_blank">View
-                        Site</a>
+                    <a href="https://trillo-travels.netlify.app/" class="btn btn--color-3" target="_blank">
+                        <svg class="project__link-logo">
+                            <use xlink:href="#_sprite_icon-link"></use>
+                        </svg>
+                        View Site
+                    </a>
                     <a href="https://github.com/LiVinson/trillo-travels" class="btn btn--color-4 tertiary"
-                        target="_blank">View Code</a>
+                        target="_blank">
+                        <svg class="project__code-logo">
+                            <use xlink:href="#_sprite_icon-embed2"></use>
+                        </svg>
+                        View Code
+                    </a>
                 </div>
             </div>
         </section>
@@ -231,14 +254,22 @@
                     sessions in a monthly calendar, and add resources for later review.
                 </p>
                 <div class="project__btn-group light">
-                    <a href="https://study-smart-app.herokuapp.com/" class="btn btn--color-2-dark" target="_blank">View
-                        Site</a>
+                    <a href="https://study-smart-app.herokuapp.com/" class="btn btn--color-2-dark" target="_blank">
+                        <svg class="project__link-logo">
+                            <use xlink:href="#_sprite_icon-link"></use>
+                        </svg>
+                        View Site</a>
                     <a href="https://github.com/LiVinson/study-smart" class="btn btn--color-4 secondary-dark-2"
-                        target="_blank">View Code</a>
+                        target="_blank">
+                        <svg class="project__code-logo">
+                            <use xlink:href="#_sprite_icon-embed2"></use>
+                        </svg>
+                        View Code
+                    </a>
                 </div>
             </div>
         </section>
-        
+
         <section class="project--bg-5 light">
             <div class="project__container">
                 <img src="../img/edited/lion-king.png" alt="Lion king Click application" class="project__image">
@@ -256,10 +287,18 @@
                     character without clicking the same image twice. Look carefully, the images move after each click!
                 </p>
                 <div class="project__btn-group light">
-                    <a href="https://livinson.github.io/lion-king-click/" class="btn btn--color-2" target="_blank">View
-                        Site</a>
-                        <a href="https://github.com/LiVinson/study-smart" class="btn btn--color-4 secondary-dark-2"
-                        target="_blank">View Code</a>
+                    <a href="https://livinson.github.io/lion-king-click/" class="btn btn--color-2" target="_blank">
+                        <svg class="project__link-logo">
+                            <use xlink:href="#_sprite_icon-link"></use>
+                        </svg>
+                        View Site</a>
+                    <a href="https://github.com/LiVinson/study-smart" class="btn btn--color-4 secondary-dark-2"
+                        target="_blank">
+                        <svg class="project__code-logo">
+                            <use xlink:href="#_sprite_icon-embed2"></use>
+                        </svg>
+                        View Code
+                    </a>
                 </div>
             </div>
         </section>
@@ -279,7 +318,8 @@
                 <h4 class="heading-4 heading-4--dark">
                     Interested in working together?
                 </h4>
-                <p class="paragraph center-text u-margin-bottom-sm"> Send me a message or email me directly at contact@lisavinson.com
+                <p class="paragraph center-text u-margin-bottom-sm"> Send me a message or email me directly at
+                    contact@lisavinson.com
                 </p>
                 <div class="form__group form__group--input">
                     <input type="text" class="form__input" placeholder="Name" name="name" required>
