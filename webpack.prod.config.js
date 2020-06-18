@@ -1,9 +1,9 @@
 const path = require("path")
 const HtmlWebPackPlugin = require("html-webpack-plugin")
 const MiniCssExtractPlugin = require("mini-css-extract-plugin")
-const UglifyJsPlugin = require("uglifyjs-webpack-plugin")
 const OptimizeCSSAssetsPlugin = require("optimize-css-assets-webpack-plugin")
-
+const SpriteLoaderPlugin = require("svg-sprite-loader/plugin")
+const TerserPlugin = require("terser-webpack-plugin")
 module.exports = {
   entry: {
     main: "./src/javascript/index.js",
@@ -11,16 +11,19 @@ module.exports = {
   output: {
     path: path.join(__dirname, "dist"),
     publicPath: "/",
-    filename: "[name].js",
+    filename: "index.js",
   },
   target: "web",
   devtool: "source-map",
+  mode: "production",
   optimization: {
+    minimize: true,
     minimizer: [
-      new UglifyJsPlugin({
-        cache: true,
+      new TerserPlugin({
         parallel: true,
-        sourceMap: true,
+        terserOptions: {
+          ecma: 6,
+        },
       }),
       new OptimizeCSSAssetsPlugin({}),
     ],
@@ -74,19 +77,53 @@ module.exports = {
         ],
       },
       {
-        test:  /\.pdf$/,        
+        test: /\.pdf$/,
         loader: "file-loader",
         options: {
-          outputPath: "files"
-        }          
+          name: "[name].[ext]",
+          outputPath: "files",
+        },
       },
+
       {
-        test: /\.(png|svg|jpg|gif)$/,        
+        test: /\.(png|jpg|gif)$/,
+        use: {
+          loader: 'responsive-loader',
+          options: {
+            adapter: require('responsive-loader/sharp'),
+            sizes: [2500, 2000, 1600, 1400, 1050, 800, 700, 500, 300],
+            placeholder: true,
+            placeholderSize: 100,
+            name: 'images/[hash]-[width].[ext]'
+          }
+        }
+      },
+
+      {
+        test: /\.(svg)$/,
         loader: "file-loader",
+        exclude: /_sprite.svg/,
         options: {
-          outputPath: "images"
-        }          
-      }
+          outputPath: "images",
+        },
+      },
+
+      {
+        test: /\.svg$/i,
+
+        // from all svg images
+        // include only sprite image
+        include: /.*_sprite\.svg/,
+
+        use: [
+          {
+            loader: "svg-sprite-loader",
+            options: {
+              publicPath: "",
+            },
+          },
+        ],
+      },
     ],
   },
   plugins: [
@@ -94,11 +131,11 @@ module.exports = {
       template: "./src/html/index.html",
       filename: "./index.html",
       excludeChunks: ["server"],
+
     }),
     new MiniCssExtractPlugin({
       filename: "[name].css",
       chunkFilename: "[id].css",
     }),
   ],
-  mode: "production",
 }

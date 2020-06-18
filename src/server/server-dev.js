@@ -9,7 +9,7 @@ import webpackDevMiddleware from "webpack-dev-middleware"
 import webpackHotMiddleware from "webpack-hot-middleware"
 import validateInput from "../javascript/validation"
 
-const port = process.env.PORT || 3001
+const port = process.env.PORT || 3000
 
 const app = express(),
   DIST_DIR = __dirname,
@@ -30,6 +30,7 @@ app.use(
   })
 )
 
+//required to parse req.body in post request
 app.use(bodyParser.urlencoded({ extended: true }))
 
 app.get("/", (req, res, next) => {
@@ -45,10 +46,10 @@ app.get("/", (req, res, next) => {
 
 app.post("/contact", confirmInput, sendEmail)
 
+//verifies that all form data is valid before calling sendEmail
 function confirmInput(req, res, next){
   try {
     const { name, email, message } = req.body
-
     if(validateInput("name", name) && validateInput("email", email) && validateInput("message", message)){
       console.log("input valid")
       next()
@@ -57,13 +58,11 @@ function confirmInput(req, res, next){
     }
   } catch (error) {
     console.log(error)
-    res.sendStatus(error.responseCode || 500)
-    
-  }
-
- 
+    res.sendStatus(error.responseCode || 500)    
+  } 
 }
 
+//Called if form input is valid. Gets email and pw from .env and sends form data w/ nodemailer
 async function sendEmail(req, res) {
   console.log("send email")
   try {

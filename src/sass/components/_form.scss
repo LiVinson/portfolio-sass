@@ -4,7 +4,7 @@
   flex-wrap: wrap;
   //to have space between inputs that sit on the same line
   justify-content: space-between;
-  align-items: start;
+  align-items: flex-start;
 
   //div that contains input and label
   &__group {
