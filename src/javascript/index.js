@@ -1,7 +1,7 @@
 import "../sass/main.scss"
 import "../files/Vinson_Lisa_Resume.pdf"
 import "../img/_sprite.svg"
-import  data from "./validation.js"
+import  validateInput from "./validation.js"
 
 // Needed for Hot Module Replacement
 if (typeof module.hot !== "undefined") {
@@ -47,7 +47,7 @@ function scrollAnchors(e, respond = null) {
     //If target element is reached or you've reached bottom of the page, focus on that element. Add history for that location to the window.
 		if (distanceToTop(targetAnchor) === 0 || atBottom) {
 			targetAnchor.tabIndex = '-1';
-			targetAnchor.focus();
+
 			window.history.pushState('', '', targetID);
 			clearInterval(checkIfDone);
 		}
@@ -66,18 +66,18 @@ const submitForm = (event) => {
   
   //clear any previous messages
   feedback.textContent = ""
-  const { validateInput } = data
+  // const { validateInput } = data
   //add additional validation
-  if(!validateInput("email", email)) {
-    feedback.textContent="Please provide a valid email address between 1 and 100 characters."
-    return;
-  }
+ 
 
   if(!validateInput("name", name)) {
     feedback.textContent="Please provide a valid name between 1 and 100 characters"
     return;
   }
-
+  if(!validateInput("email", email)) {
+    feedback.textContent="Please provide a valid email address between 1 and 100 characters."
+    return;
+  }
   if(!validateInput("message", message)) {
     feedback.textContent="Please provide a message between 1 and 1000 characters"
     return;
@@ -103,7 +103,7 @@ const submitForm = (event) => {
         
       } else {
         feedback.textContent = "Uh oh! There was a problem sending your message. Please try again or send an email to contact@lisavinson.com."
-        document.querySelector(".form__submit").disabled = true
+        document.querySelector(".form__submit").disabled = false
       }
     }
   }

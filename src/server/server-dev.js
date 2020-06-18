@@ -7,6 +7,7 @@ import path from "path"
 import config from "../../webpack.dev.config.js"
 import webpackDevMiddleware from "webpack-dev-middleware"
 import webpackHotMiddleware from "webpack-hot-middleware"
+import validateInput from "../javascript/validation"
 
 const port = process.env.PORT || 3001
 
@@ -42,9 +43,29 @@ app.get("/", (req, res, next) => {
   })
 })
 
-app.post("/contact", sendEmail)
+app.post("/contact", confirmInput, sendEmail)
+
+function confirmInput(req, res, next){
+  try {
+    const { name, email, message } = req.body
+
+    if(validateInput("name", name) && validateInput("email", email) && validateInput("message", message)){
+      console.log("input valid")
+      next()
+    } else {
+      res.sendStatus(400)
+    }
+  } catch (error) {
+    console.log(error)
+    res.sendStatus(error.responseCode || 500)
+    
+  }
+
+ 
+}
 
 async function sendEmail(req, res) {
+  console.log("send email")
   try {
     //Create an instance of transporter object
     console.log(req.body)

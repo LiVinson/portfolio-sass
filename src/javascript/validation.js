@@ -32,4 +32,4 @@ const validateInput = (inputType, inputValue) => {
     }
 }
 
-export default { validateInput }
+export default  validateInput
