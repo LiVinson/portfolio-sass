@@ -2,11 +2,14 @@ const path = require("path")
 const webpack = require("webpack")
 const HtmlWebPackPlugin = require("html-webpack-plugin")
 const MiniCssExtractPlugin = require("mini-css-extract-plugin")
-const SpriteLoaderPlugin = require('svg-sprite-loader/plugin');
+const SpriteLoaderPlugin = require("svg-sprite-loader/plugin")
 
 module.exports = {
   entry: {
-    main: ["webpack-hot-middleware/client?path=/__webpack_hmr&timeout=20000&reload=true","./src/javascript/index.js"]
+    main: [
+      "webpack-hot-middleware/client?path=/__webpack_hmr&timeout=20000&reload=true",
+      "./src/javascript/index.js",
+    ],
   },
   output: {
     path: path.join(__dirname, "dist"),
@@ -58,39 +61,50 @@ module.exports = {
       },
 
       {
-        test:  /\.pdf$/,        
+        test: /\.pdf$/,
         loader: "file-loader",
         options: {
           name: "[name].[ext]",
-          outputPath: "files"
-        },      
+          outputPath: "files",
+        },
       },
       {
-        test: /\.(png|jpg|gif|svg)$/,        
+        test: /\.(png|jpg|gif|svg)$/,
         loader: "file-loader",
         exclude: /_sprite.svg/,
         options: {
-          outputPath: "images"
-        }          
+          outputPath: "images",
+        },
       },
       {
         test: /\.svg$/i,
-    
+
         // from all svg images
         // include only sprite image
         include: /.*_sprite\.svg/,
-    
+
         use: [
-            {
-                loader: 'svg-sprite-loader',
-                options: {
-                    publicPath: '',
-                }
+          {
+            loader: "svg-sprite-loader",
+            options: {
+              publicPath: "",
             },
+          },
         ],
-    },
-    
-    ]
+      },
+      {
+        test: /\.(woff(2)?|ttf|eot)(\?v=\d+\.\d+\.\d+)?$/,
+        use: [
+          {
+            loader: "file-loader",
+            options: {
+              name: "[name].[ext]",
+              outputPath: "fonts/",
+            },
+          },
+        ],
+      },
+    ],
   },
   plugins: [
     new HtmlWebPackPlugin({
@@ -104,7 +118,6 @@ module.exports = {
     }),
     new SpriteLoaderPlugin(),
     new webpack.NoEmitOnErrorsPlugin(),
-    new webpack.HotModuleReplacementPlugin()
-
-  ]
+    new webpack.HotModuleReplacementPlugin(),
+  ],
 }

@@ -6,23 +6,24 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Lisa Vinson | Developer</title>
     <!-- <link rel="stylesheet" href="assets/css/style.css" /> -->
-    <link href="https://fonts.googleapis.com/css2?family=Great+Vibes&family=Noto+Sans+KR:wght@100;300;400&display=optional" rel="stylesheet">
+    <!-- <link href="https://fonts.googleapis.com/css2?family=Great+Vibes&family=Noto+Sans+KR:wght@100;300;400&display=optional" rel="stylesheet"> -->
 </head>
 
 <body>
     <!-------------------- HEADER - flexbox w/ image background. nav top right, h1 centered ---------------------->
-    <header class="header">
-        <div class="header__container" id="top">
-            <h1 class="heading-1">Lisa Vinson</h1>
-            <h3 class="heading-3 heading-3--dark-3"> software developer</h3>
-        </div>
+    <header class="header" id="top">
+        <!-- Add mobile nav -->
+
+        <h1 class="heading-1">Lisa Vinson</h1>
+        <h3 class="heading-3 heading-3--dark-3"> software developer</h3>
+
         <nav class="header__nav">
             <ul class="inline-list">
-                <li><a class="btn-link btn-link--dark--lg scroll" href="#about">about</a></li>
-                <li><a class="btn-link btn-link--dark--lg scroll" href="#skills">skills</a></li>
-                <li><a class="btn-link btn-link--dark--lg scroll" href="#portfolio">portfolio</a></li>
-                <li><a class="btn-link btn-link--dark--lg scroll" href="#contact">contact</a></li>
-                <li><a class="btn-link btn-link--dark--lg" href="./files/Vinson_Lisa_Resume.pdf"
+                <li><a class="btn-link scroll" href="#about">about</a></li>
+                <li><a class="btn-link scroll" href="#skills">skills</a></li>
+                <li><a class="btn-link scroll" href="#portfolio">portfolio</a></li>
+                <li><a class="btn-link scroll" href="#contact">contact</a></li>
+                <li><a class="btn-link" href="./files/Vinson_Lisa_Resume.pdf"
                         download="Vinson_Lisa_Resume.pdf">resume</a></li>
             </ul>
         </nav>
@@ -41,17 +42,24 @@
 
             <div class="about__text justify-text">
                 <p class="paragraph">
-                    I am experienced in the full life cycle of software development and I enjoy everything from design,
-                    to front end and back end development. My favorite tech stack to use is MERN, but I'm always open to
-                    using other technology.</p>
-                <p class="paragraph"> My goal for every project is to create a product that is
+                    I am experienced in the full life cycle of software development and I enjoy design,
+                    front end and back end development. My favorite tech stack to use is MERN, but I'm always open to
+                    learning something new.
+                </p>
+                <p class="paragraph">
+                    My goal for every project is to create a product that is
                     seamless for the user and built to scale for future features. I am knowledgeable in a variety of
-                    current tech stacks, and I'm always looking to become a better developer.</p>
-                <p class="paragraph">Most recently, I have been
-                    working on the reusability of react components and improving my design skills. </p>
-                <p class="paragraph">When I'm not in front of a screen, I love to take road trips and eat delicious food
+                    current tech stacks, and I'm always looking to become a better developer.
+                </p>
+                <p class="paragraph">
+                    Most recently, I have been working on the reusability of react components and focusing on separating
+                    UI from logic. I have also been working on improving my design skills.
+                </p>
+                <p class="paragraph">
+                    When I'm not in front of a screen, I love to take road trips and eat delicious food
                     (I can't recommend Pappy's Smokehouse in St. Louis enough!). My other interests include hiking,
-                    kayaking, and reading. </p>
+                    kayaking, and reading.
+                </p>
             </div>
         </div>
     </section>
@@ -59,14 +67,15 @@
     <!------------------------ SKILL SECTION  --------------------------->
 
     <section id="skills" class="skills">
-        <h2 class="heading-2 heading-2--light center-text">
+        <h2 class="heading-2 heading-2--light center-text u-margin-bottom-xs">
             Skills
         </h2>
-        <h4 class="heading-4 heading-4--light u-margin-bottom-md center-text">&quot;The beautiful
-            thing about learning is nobody can take it away from you.&quot;<span>- B.B. King</span>
-        </h4>
+
 
         <div class="container__skills">
+            <h4 class="heading-4 heading-4--light u-margin-bottom-sm">&quot;The beautiful
+                thing about learning is nobody can take it away from you.&quot;<span>- B.B. King</span>
+            </h4>
             <!-- Skills Block 1 of 3 -->
             <div class="skills__block">
                 <svg class="skills__logo">
@@ -309,14 +318,15 @@
         </h2>
         <!-- displays as flex -->
         <div class="container__contact">
+            <h4 class="heading-4 heading-4--dark center-text">
+                Interested in working together?
+            </h4>
+            <p class="paragraph center-text u-margin-bottom-sm center-text"> Send me a message or email me directly
+                at
+                contact@lisavinson.com
+            </p>
             <form action="#" class="form">
-                <h4 class="heading-4 heading-4--dark center-text">
-                    Interested in working together?
-                </h4>
-                <p class="paragraph center-text u-margin-bottom-sm center-text"> Send me a message or email me directly
-                    at
-                    contact@lisavinson.com
-                </p>
+                
                 <div class="form__group form__group--input">
                     <input type="text" class="form__input" placeholder="Name" name="name" required>
                     <label for="name" class="form__label">Name</label>
@@ -326,26 +336,27 @@
                     <label for="email" class="form__label">Email</label>
                 </div>
                 <div class="form__group form__group--text">
-                    <textarea name="message" class="form__textarea" placeholder="Enter a message of up to 1000 characters" required></textarea>
+                    <textarea name="message" class="form__textarea"
+                        placeholder="Enter a message of up to 1000 characters" required></textarea>
                     <label for="message" class="form__label">Your Message</label>
                 </div>
                 <!-- Contains success or error message on form submission -->
                 <p class="paragraph form__feedback">
                     <br>
                     <br>
-                 </p>
-                    <div class="form__group form__group--btn">
-                        <button class="btn btn--color-2-dark form__submit" type="submit">
-                            Send
-                            <svg class="form__submit-logo">
-                                <use xlink:href="#_sprite_icon-paper-plane"></use>
-                            </svg>
-                        </button>
-                    </div>
+                </p>
+                <div class="form__group form__group--btn">
+                    <button class="btn btn--color-2-dark form__submit" type="submit">
+                        Send
+                        <svg class="form__submit-logo">
+                            <use xlink:href="#_sprite_icon-paper-plane"></use>
+                        </svg>
+                    </button>
+                </div>
             </form>
         </div>
     </section>
-    
+
 
     <!------------------------ FOOTER SECTION  --------------------------->
 
@@ -353,9 +364,10 @@
         <p class="footer__text">Website designed and created by Lisa Vinson. &copy; 2020</p>
         <ul class="footer__links">
             <li class="footer__link"><a href="https://github.com/LiVinson" target="_blank">Github</a></li>
-            <li class="footer__link"><a href="https://www.linkedin.com/in/lisavinson1/" target="_blank">LinkedIn</a></li>
-            <li class="footer__link"><a href= "./files/Vinson_Lisa_Resume.pdf"
-                download="Vinson_Lisa_Resume.pdf">Resume</a></li>
+            <li class="footer__link"><a href="https://www.linkedin.com/in/lisavinson1/" target="_blank">LinkedIn</a>
+            </li>
+            <li class="footer__link"><a href="./files/Vinson_Lisa_Resume.pdf"
+                    download="Vinson_Lisa_Resume.pdf">Resume</a></li>
         </ul>
     </footer>
     <!-- </div> -->

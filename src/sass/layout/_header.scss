@@ -3,33 +3,30 @@
   width: 100%;
   height: 95vh;
   display: flex;
-  // align-items:flex-end;
-  justify-content: flex-end;
-  align-items: flex-start;
-
+  flex-direction: column;
+  padding:2rem;
+  justify-content:center;
+  align-items: center;
   position: relative;
   text-align:center;
   background-image: url("../img/bg1-rotate.jpg");
   background-size: cover;
 
 
-  &__nav {
-    padding: 2rem;
+  //Takes up all remaining spave above header, centering it
+  h1 {
+    margin-top:auto;
+  }
 
+  //Takes up all remaining space between element above and edge of container
+  &__nav {
+    margin-top:auto;
     a {
       padding: 2px 4px;
     }
   }
 
-  &__container {
-    //center vertically, maintain horizontal position
-    position: absolute;
-    top: 50%; 
-    left:50%;
-    transform: translate(-50%,-50%);
 
-
-  }
 }
 
 

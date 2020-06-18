@@ -45,7 +45,7 @@
         display:flex;
         flex-direction: column;
         align-items:center;
-        width: 40%;
+        width: 55%;
         margin: 0 auto;
         // padding-top:5rem;
 
@@ -67,23 +67,25 @@
     }
 
     &__image {
-        width: 70rem;
-        // max-width: 100%;
-        // box-shadow: 0 .8rem 4rem rgba(black, .8);
-        // max-height:40vh;
-
+        width: 100%;
     }
 
     &__btn-group {        
         margin-top:2rem;
-        width: 60%;
         display: flex;
-        justify-content:space-between;
+        justify-content:center;
+        flex-wrap: wrap;
+        //View Site and View Code buttons       
         a {
-            font-weight:400;
+            //Centers text and icon within button
             display:flex;
             justify-content:center;
             align-items:center;
+            &:not(:last-child) {
+                margin-right:2rem;
+            }
+            
+            
         }
     }
 

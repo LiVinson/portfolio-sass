@@ -6,22 +6,31 @@
   box-sizing: inherit;
 }
 
-
 html {
-    //Defines 1 rem. If default font is 16px, 1 rem = 10px.
-    font-size: 62.5%;
-    box-sizing: border-box;
-}  
+  //Defines 1 rem. If default font is 16px, 1 rem = 10px.
+  font-size: 62.5%;
+  box-sizing: border-box;
 
-body {  
-  padding: 2.5rem;
+  //Changing font size change what 1 rem relates to, so everything sized in rems will have updated size
+  @include responsive(big-desktop) {
+    font-size: 75%; //1rem = 12px: 12/16=75%
+  }
+  @include responsive(tab-land) {
+    font-size: 56.25%; //1rem = 9px: 9/16 = 56.25%
+  }
+  @include responsive(tab-port) {
+    font-size: 50%; //1rem = 8px: 8/16 = 50%
+  }
+
+  //same font size for tab-port and for phone, so not needed
+}
+
+body {
+  padding: 2rem;
   padding-bottom: 0rem;
   font-family: $font-text;
   background-color: $color-accent-1;
   color: $color-gray-2;
-  line-height:1.3;
-  font-weight:300;
-
-  
-
+  line-height: 1.3;
+  font-weight: 300;
 }

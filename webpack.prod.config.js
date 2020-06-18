@@ -88,13 +88,13 @@ module.exports = {
       {
         test: /\.(png|jpg|gif)$/,
         use: {
-          loader: 'responsive-loader',
+          loader: "responsive-loader",
           options: {
-            adapter: require('responsive-loader/sharp'),
+            adapter: require("responsive-loader/sharp"),
             sizes: [2500, 2000, 1600, 1400, 1050, 800, 700, 500, 300],
-            name: 'images/[hash]-[width].[ext]'
-          }
-        }
+            name: "images/[hash]-[width].[ext]",
+          },
+        },
       },
 
       {
@@ -112,12 +112,23 @@ module.exports = {
         // from all svg images
         // include only sprite image
         include: /.*_sprite\.svg/,
-
         use: [
           {
             loader: "svg-sprite-loader",
             options: {
               publicPath: "",
+            },
+          },
+        ],
+      },
+      {
+        test: /\.(woff(2)?|ttf|eot)(\?v=\d+\.\d+\.\d+)?$/,
+        use: [
+          {
+            loader: "file-loader",
+            options: {
+              name: "[name].[ext]",
+              outputPath: "fonts/",
             },
           },
         ],
@@ -129,7 +140,6 @@ module.exports = {
       template: "./src/html/index.html",
       filename: "./index.html",
       excludeChunks: ["server"],
-
     }),
     new MiniCssExtractPlugin({
       filename: "[name].css",
