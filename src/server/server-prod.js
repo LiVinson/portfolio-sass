@@ -36,8 +36,6 @@ app.post("/contact", function(req,res) {
 })
 
 async function sendEmail({ name, email, message}) {
-
-
     //Create an instance of transporter object 
     const transporter = nodemailer.createTransport({
         service: "gmail",

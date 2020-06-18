@@ -74,7 +74,7 @@ const submitForm = (event) => {
   }
 
   if(!validateInput("name", name)) {
-    feedback.textContent="Please provide a name between 1 and 100 characters"
+    feedback.textContent="Please provide a valid name between 1 and 100 characters"
     return;
   }
 
@@ -82,8 +82,8 @@ const submitForm = (event) => {
     feedback.textContent="Please provide a message between 1 and 1000 characters"
     return;
   }
+  document.querySelector(".form__submit").disabled = true
 
-  
   //send request to /contact
   const xhr = new XMLHttpRequest()
   xhr.open("POST", "/contact", true)
@@ -99,13 +99,11 @@ const submitForm = (event) => {
       console.log(status)
       if (status >=200 && status <= 299){
         feedback.textContent = `Your message was sent! I will get back to you at ${email} as soon as possible.`
-        name="";
-        email="";
-        message="";
-        
+        document.querySelector(".form").reset()    
         
       } else {
         feedback.textContent = "Uh oh! There was a problem sending your message. Please try again or send an email to contact@lisavinson.com."
+        document.querySelector(".form__submit").disabled = true
       }
     }
   }

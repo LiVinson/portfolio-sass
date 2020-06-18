@@ -13,7 +13,7 @@ const validateName = (input) => {
 
 //Validate message
 const validateMessage = (input) => {
-    return input.length>0 && input.length <=1000;
+    return input.length > 0 && input.length <= 1000;
 }
 
 //Request validation - email, name, message
@@ -26,7 +26,7 @@ const validateInput = (inputType, inputValue) => {
         return validateEmail(inputValue)
     }
     else if(inputType === "message"){
-        return validateName(inputValue)
+        return validateMessage(inputValue)
     } else {
         return false
     }
