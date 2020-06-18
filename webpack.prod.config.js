@@ -92,8 +92,6 @@ module.exports = {
           options: {
             adapter: require('responsive-loader/sharp'),
             sizes: [2500, 2000, 1600, 1400, 1050, 800, 700, 500, 300],
-            placeholder: true,
-            placeholderSize: 100,
             name: 'images/[hash]-[width].[ext]'
           }
         }
