@@ -1,8 +1,7 @@
-import data from "./skills.js"
 import "../sass/main.scss"
-// import "../img"
 import "../files/Vinson_Lisa_Resume.pdf"
 import "../img/_sprite.svg"
+import  data from "./validation.js"
 
 // Needed for Hot Module Replacement
 if (typeof module.hot !== "undefined") {
@@ -13,46 +12,39 @@ if (typeof module.hot !== "undefined") {
 
 window.addEventListener("load", function () {
   console.log("loaded")
-  // const skillIcon = document.querySelector("div.skill__icon")
 
-  //Check if any skills are hidden. If no - no action
-
-  //If some are hidden, check if skill Icon is inview port.
-
-  //In view:
+  //Attach scroll click events to nav
   scrollTo()
+  const submitBtn = document.querySelector(".form__submit")
+  submitBtn.addEventListener("click", submitForm);
+  
 
-  // this.window.addEventListener("scroll", (event) => {
-  //   console.log("scrolling...")
-  //   if (elementInViewport(skillIcon)) {
-  //     const skills = document.querySelectorAll(".skill.hidden")
-
-  //     if (skills) {
-  //       //remove hidden class, add fade-in
-  //       skills.forEach((skill) => toggleClass(skill))
-  //     }
-  //   }
-  // })
 })
 
+//Grabs all elements with scroll class (nav links). Attach a scrollAnchors click event
 function scrollTo() {
 	const links = document.querySelectorAll('.scroll');
 	links.forEach(each => (each.onclick = scrollAnchors));
 }
 
+//Called when nav item clicked.
 function scrollAnchors(e, respond = null) {
   //returns the distance from the top of specified element 
   const distanceToTop = el => Math.floor(el.getBoundingClientRect().top);
   
-	e.preventDefault();
-	var targetID = (respond) ? respond.getAttribute('href') : this.getAttribute('href');
+  e.preventDefault();
+  //Gets href of the nav item selected. Matches to an id of a section on the page
+  var targetID = (respond) ? respond.getAttribute('href') : this.getAttribute('href');
+  //Find item on page with matching id
   const targetAnchor = document.querySelector(targetID);
-  //checks to make sure element with id referenced in anchor tag href exists
+  //checks to make sure element with id referenced in anchor tag href exists. If not, returns and nothing happens
 	if (!targetAnchor) return;
-	const originalTop = distanceToTop(targetAnchor);
-	window.scrollBy({ top: originalTop, left: 0, behavior: 'smooth' });
+	const originalTop = distanceToTop(targetAnchor); //distance to element with selected id
+  //Amount window should scroll and how (smooth)
+  window.scrollBy({ top: originalTop, left: 0, behavior: 'smooth' });
 	const checkIfDone = setInterval(function() {
-		const atBottom = window.innerHeight + window.pageYOffset >= document.body.offsetHeight - 2;
+    const atBottom = window.innerHeight + window.pageYOffset >= document.body.offsetHeight - 2;
+    //If target element is reached or you've reached bottom of the page, focus on that element. Add history for that location to the window.
 		if (distanceToTop(targetAnchor) === 0 || atBottom) {
 			targetAnchor.tabIndex = '-1';
 			targetAnchor.focus();
@@ -62,64 +54,61 @@ function scrollAnchors(e, respond = null) {
 	}, 100);
 }
 
-const elementInViewport = (element) => {
-  //Gets position of element
-  const bounding = element.getBoundingClientRect()
-  console.log(bounding)
-
-  // If in the viewport, position from the top and left >= 0,
-  //  distance from the right <= total width of the viewport
-  // and it’s distance from the bottom <= height of the viewport.
-  if (
-    bounding.top >= 0 &&
-    bounding.left >= 0 &&
-    bounding.right <=
-      (window.innerWidth || document.documentElement.clientWidth) &&
-    bounding.bottom <=
-      (window.innerHeight || document.documentElement.clientHeight)
-  ) {
-    console.log("In the viewport!")
-    return true
-  } else {
-    console.log("Not in the viewport")
-    return false
-  }
-}
-
-const toggleClass = (element, removeClass, addClass) => {
-  element.classList.add(addClass)
-  element.classList.remove(removeClass)
-}
-
 const submitForm = (event) => {
   event.preventDefault()
   console.log("submitted")
 
+  //get form data and paragraph that will display confirmation/error
   const name = document.getElementsByName("name")[0].value
   const email = document.getElementsByName("email")[0].value
   const message = document.getElementsByName("message")[0].value
+  const feedback = document.getElementsByClassName("form__feedback")[0]
+  
+  //clear any previous messages
+  feedback.textContent = ""
+  const { validateInput } = data
+  //add additional validation
+  if(!validateInput("email", email)) {
+    feedback.textContent="Please provide a valid email address between 1 and 100 characters."
+    return;
+  }
 
-  //grab data from form
+  if(!validateInput("name", name)) {
+    feedback.textContent="Please provide a name between 1 and 100 characters"
+    return;
+  }
+
+  if(!validateInput("message", message)) {
+    feedback.textContent="Please provide a message between 1 and 1000 characters"
+    return;
+  }
+
+  
   //send request to /contact
   const xhr = new XMLHttpRequest()
   xhr.open("POST", "/contact", true)
   xhr.setRequestHeader("Content-Type", "application/x-www-form-urlencoded")
 
   const formData = `name=${name}&email=${email}&message=${message}`
-  console.log(formData)
-
+  
   xhr.onreadystatechange = function () {
     console.log("state changed")
     if (xhr.readyState === XMLHttpRequest.DONE) {
       console.log("response received")
       var status = xhr.status
       console.log(status)
+      if (status >=200 && status <= 299){
+        feedback.textContent = `Your message was sent! I will get back to you at ${email} as soon as possible.`
+        name="";
+        email="";
+        message="";
+        
+        
+      } else {
+        feedback.textContent = "Uh oh! There was a problem sending your message. Please try again or send an email to contact@lisavinson.com."
+      }
     }
   }
 
   xhr.send(formData)
-
-  //when response is received
-  //:display success message
-  //display error message
 }

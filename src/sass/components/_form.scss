@@ -4,36 +4,42 @@
     display:flex;
     flex-wrap:wrap;
     //to have space between inputs that sit on the same line
-    justify-content:center;
+    justify-content:space-between;
+    align-items: start;
 
     //div that contains input and label
     &__group {
       font-size: 1.5rem;
       font-family: $font-text;
-      padding: 0 1rem 0 1rem;
+      // padding: 0 1rem 0 1rem;
 
       //form group that contains simple input only use half of form by default to allow 2/line
       &--input {
-        width: 50%;     
+        width: 48%;     
       }  
       
-      &--text,
-      &--btn {
+      &--text
+       {
         width: 100%;
+      }
+      &--btn {
+        width: 25%;
       }
     }
 
+    //form elements. Fits entire form group
     &__input,
-    &__textarea {
+    &__textarea
+     {
       font-size: 1.5rem;
       font-family: $font-text;
       width: 100%;      
       padding:1rem;
       border:none;
      
-      //If placeholder is shown (e.g. input is empty) select it's label, move it up into the input and hide it
+      //If placeholder of form element is shown (e.g. input is empty) select it's label, move it up into the input and hide it
       &:placeholder-shown + label {
-        opacity:0;
+        opacity:0;        
         transform: translateY(-3px);
       }
     }
@@ -44,15 +50,28 @@
     //'ending'position of label is below input. Transitions when input has content
     &__label {
       display: block;
-      padding:1rem;
+      padding:.7rem;
       transform: translateY(0);
       transition: all .3s;
       color: $color-primary;
     }
   
+    &__feedback {
+      width: 70%;
+      font-size:2rem;
+    }
+
     &__submit {
-      width:25%;
-      margin-left:75%;
+      width:100%;
+      display:flex;
+      align-items:center;
+      justify-content:center;
+      &-logo{
+        height:2.5rem;
+        width:2.5rem;
+        fill:currentColor;
+        margin-left:1rem;
+      }
     }
 
   }
