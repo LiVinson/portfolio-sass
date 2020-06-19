@@ -22,19 +22,14 @@ section {
     &__about {
         margin: 0 auto;
         width: 85rem;
+        max-width:100%;
     }
-
-    &__skills {
-        margin: 0 auto;
-        width: 90rem;
-        display:flex;
-        flex-wrap:wrap;
-        justify-content:space-between;
-    }
+   
 
     &__contact {
         margin: 0 auto;
         width: 80rem;
+        max-width: 100%;
     }
    
 }

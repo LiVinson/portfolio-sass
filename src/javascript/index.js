@@ -16,6 +16,18 @@ window.addEventListener("load", function () {
   scrollTo()
   const submitBtn = document.querySelector(".form__submit")
   submitBtn.addEventListener("click", submitForm)
+
+  const hamburger = document.querySelector(".hamburger__container")
+  hamburger.addEventListener("click", function() {
+    
+    if(this.dataset.status === "closed") {
+      hamburger.setAttribute("data-status", "open")
+      console.log("clicked", this.dataset.status)
+    } else {
+      hamburger.setAttribute("data-status", "closed")
+      console.log("clicked", this.dataset.status)
+    }
+  })
 })
 
 //Grabs all elements with scroll class (nav links). Attach a scrollAnchors click event
@@ -52,7 +64,16 @@ function scrollAnchors(e, respond = null) {
       clearInterval(checkIfDone)
     }
   }, 100)
+
+  //After scrolling to a section, if this was done via open hamburger menu, close it.
+  const hamburger = document.querySelector(".hamburger__container")
+  //Once scroll is complete, determine if nav has class of "open" (mobile only) and change it to status of closed
+  if(hamburger.dataset.status === "open") {
+    hamburger.setAttribute("data-status", "closed")
+  }
 }
+
+
 
 const submitForm = (event) => {
   event.preventDefault()
@@ -112,3 +133,5 @@ const submitForm = (event) => {
 
   xhr.send(formData)
 }
+
+

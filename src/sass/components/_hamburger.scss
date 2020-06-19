@@ -1,0 +1,65 @@
+//Creates a line that is hidden by default but displays on smaller screens
+.hamburger__container {
+  position: fixed;
+  top: 2rem;
+  left: 2rem;
+  //By default, hamburger menu does not display
+  display: none;
+  z-index: 100;
+  width: 25px;
+
+  //Creates lines that sit just above and below container for three lines total (hamburger).
+  &::before,
+  &::after {
+    content: "";
+    height: 2px;
+    width: 100%;
+    background-color: $color-accent-4;
+    position: relative;
+    display: inline-block;
+  }
+
+  //Once on small enough screen, display hamburger menu
+  @include responsive(phone-land) {
+    display: inline-block;
+    //when hamburger is open
+    //select the navbar: sibbling header> child nav
+  }
+
+  //When the hamburger icon is selected, js will toggle data-status between open and close
+  //When open, styling is applied to nav to make it visible
+  &[data-status="open"] {
+    //add animation
+    //Select the header that is next to current element, and select it's direct navbar descendent
+    & + header > nav {
+      height: 20%;
+      opacity: 1;
+      display: block;
+      transition: height 0.4s ease-in;
+      z-index: 10;
+    }
+  }
+
+  //When the hamburger is toggled (by JS) to closed, reset height and opacity to
+  //hide navbar smoothly.
+  &[data-status="closed"] {
+    & + header > nav {
+      height: 0;
+      z-index: -20;
+      opacity: 0;
+      
+      transition-property: height, opacity, z-index;
+      transition-duration: 0.5s, .25s, .5s;
+      transition-delay: 0s, .1s, .1s;
+      transition-timing-function: ease-in, ease-in,linear;
+    }
+  }
+}
+
+//span inside of hamburger container. Is the center line.
+.hamburger-icon {
+  height: 2px;
+  width: 100%;
+  background-color: $color-accent-4;
+  display: inline-block;
+}

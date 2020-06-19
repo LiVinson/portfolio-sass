@@ -7,28 +7,43 @@
 
 /*-----------------------Media Query Manager -------------------------
 
-Phone               0-600px 
-Tablet Portrait     600-900px
+Phone Portrait      <= 400px 
+Phone Landscape     400-650px 
+Tablet Portrait     650-900px
 Tablet Landscape    900-1200px
 Desktop (Default)   1200-1800px
 Big Desktop         1800px+: 
 
 $breakpoint arguments:
-- phone
+- phone port
+- phone land
 - tab-port
 - tab-land
 - big-desktop
+
+Order: Base + Typography > General layout + grid> page layout> components
+
+1em-16px
 */
 @mixin responsive($breakpoint) {
   //if directive. If breakpoint matches, apply media stylings as long as width <= 600px
-  @if $breakpoint == phone {
-    @media (max-width: 37.5em) {    //600px/16px
+  
+  //phone port
+  @if $breakpoint == phone-port {
+    @media (max-width: 25em) {    // 400px/16px
+      @content;
+    }
+  }
+
+  //phone land   
+  @if $breakpoint == phone-land {
+    @media (max-width: 40.625em) {    // 650px/16px
       @content;
     }
   }
 
   @if $breakpoint == tab-port {
-    @media (max-width: 56.25em) {  //900px/16px
+    @media (max-width: 56.25em) {  // 900px/16px
       @content;
     }
   }
@@ -38,7 +53,6 @@ $breakpoint arguments:
       @content;
     }
   }
-
       // 1200-1800: default styles
 
   @if $breakpoint == big-desktop {

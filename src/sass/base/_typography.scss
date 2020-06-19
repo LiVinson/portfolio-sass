@@ -6,6 +6,18 @@
   color: $color-accent-4;
   text-shadow:0 0.7rem 0.8rem rgba($color-gray-2, .5);
   margin-bottom:-1.5rem;
+  padding:1rem 1rem 0rem 1rem;
+  @include responsive(tab-port){
+    font-size:17rem;
+  }
+
+  @include responsive(phone-land){
+    font-size:14rem;
+  }
+
+  @include responsive(phone-port){
+    font-size:12rem;
+  }
 }
 
 .heading-2 {
@@ -31,6 +43,12 @@
   line-height: 1.5;  
   font-weight: 400;
 
+  @include responsive(phone-land){
+    font-size:3rem;
+  }
+  @include responsive(phone-port){
+    font-size:2.2rem;
+  }
   &--light { color: $color-accent-2};       
   &--dark-1 { color: $color-primary};   
   &--dark-2 { color: $color-secondary};   
@@ -156,5 +174,10 @@
       border-right:solid 2px currentColor;
     }
   }  
+
+
+  
+
+
 }
 

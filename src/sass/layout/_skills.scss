@@ -1,9 +1,8 @@
 
-//ENtire skills section
+//Entire skills section
 .skills {
     padding: 9rem 10rem;
     background-image: linear-gradient(to bottom right, $color-secondary-light, $color-secondary-dark);      
-
 
 h4 {
     font-weight:300;
@@ -15,4 +14,15 @@ h4 {
     }
 } 
 
+}
+
+//Holds 3 card components
+container__skills {
+    margin: 0 auto;
+    width: 90rem;
+    //In case screen is less than 90 rem
+    max-width:100%;
+    display:flex;
+    flex-wrap:wrap;
+    justify-content:space-between;
 }
