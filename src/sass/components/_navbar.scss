@@ -31,7 +31,7 @@ nav {
     //ul element: Fill navbar and list nav items vertically with space. Extra space on top to account for mobile screens
     .inline-list {
       height: 100%;
-      padding: 2.5rem 1rem 1rem 1rem;
+      padding: 2.5rem 1rem;
       flex-direction: column;
       justify-content: space-between;
     }
@@ -75,7 +75,7 @@ nav {
       
       //Select the header that is next to current element, and select it's direct navbar descendent
       & + header > nav {
-        height: 27rem;
+        height: 30rem;
         //expands height of nav to make visible.
         transition: height 0.3s cubic-bezier(0.58, 0.07, 0.53, 0.87);
       }

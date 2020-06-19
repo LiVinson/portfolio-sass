@@ -2,12 +2,7 @@
     background-color: #f7f7f7;
 }
 
-section {  
-
-    
-    
-    
-
+section {   
     &.section__contact {
         padding: 7rem 10rem;
         background-image: linear-gradient(to bottom right, $color-accent-2 0%, $color-accent-2 40%, $color-accent-3 100%);
@@ -19,11 +14,6 @@ section {
 
 .container {
 
-    &__about {
-        margin: 0 auto;
-        width: 85rem;
-        max-width:100%;
-    }
    
 
     &__contact {

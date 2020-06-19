@@ -13,6 +13,10 @@
 
 .u-margin-bottom-sm {
   margin-bottom: 4rem;
+
+  @include responsive(tab-port) {
+    margin-bottom:2rem;
+  }
 }
 
 .u-margin-bottom-xs {
