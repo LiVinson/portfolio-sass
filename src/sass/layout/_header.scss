@@ -27,38 +27,5 @@
       margin-bottom: 2rem;
     }
   }
-
-  //Takes up all remaining space between element above and edge of container
-  &__nav {
-    margin-top: auto;
-
-    a {
-      padding: 0.2rem 0.4rem;
-
-      @include responsive(phone-land) {
-        padding: 0.2rem 0.6rem;
-      }
-    }
-
-    @include responsive(phone-land) {
-    //navbar on mobile is hidden by default.
-    // Displays when the hamburger menu is selected
-      display:block; 
-      position: fixed;
-      top: 0;
-      width: 100%;
-      background-color: gray;
-      //Used instead of display none in order to allow transitions
-      // height:0;
-      // opacity:0;
-      // //Prevents hidden links from being selected.
-      // z-index:-20;
-      ul {
-        display: block;
-      }   
-    }
-  }
+  
 }
-
-
-

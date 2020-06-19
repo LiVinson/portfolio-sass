@@ -1,0 +1,127 @@
+//Default position (desktop): In a column at the bottom of header
+nav {
+  //Takes up all remaining space between element above and edge of container
+  margin-top: auto;
+  //anchor tags inside list item.
+  .btn-link {
+    padding: 0.2rem 0.4rem;
+
+    //Make text light due to dark nav background on mobile.
+    @include responsive(phone-land) {
+      padding: 0.5rem;
+      color: $color-accent-3;
+    }
+  }
+
+  /*
+  Mobile Navbar
+  add background and fix to top of header at full width with additional padding.
+  Make list vertical. and hide by default*/
+  @include responsive(phone-land) {
+    display: block;
+    position: fixed;
+    top: 0;
+    width: 100%;
+    background-color: rgba($color-accent-4, 1);
+    //Prevents ul from being visible when nav is closed. 
+    //Also allows header to expand height on open without content 'leaking' out during transition
+    overflow-y: hidden;
+    z-index: 10;
+
+    //ul element: Fill navbar and list nav items vertically with space. Extra space on top to account for mobile screens
+    .inline-list {
+      height: 100%;
+      padding: 2.5rem 1rem 1rem 1rem;
+      flex-direction: column;
+      justify-content: space-between;
+    }
+  }
+}
+
+/* HAMBURGER MENU 
+  Contains a span that is center of hamburger menu.
+  Hidden by default until screen is small enough. Fixed to top left of viewport 
+  above everything
+ */
+
+.hamburger__container {
+  position: fixed;
+  top: 2rem;
+  left: 2rem;
+  //By default, hamburger menu does not display
+  display: none;
+  z-index: 100;
+  width: 25px;
+
+  //Creates lines that sit just above and below container for three lines total (hamburger).
+  &::before,
+  &::after {
+    content: "";
+    height: 2px;
+    width: 100%;
+    background-color: $color-gray-2;
+    display: inline-block;
+    //Need initial transformation to allow for transitioning smoothly on open/close
+    transform: translateY(0) rotate(0);
+  }
+
+  //Once on small enough screen, display hamburger menu and style surrounding elements according to open/close status
+  @include responsive(phone-land) {
+    display: inline-block;
+
+    //When the hamburger icon is selected, js will toggle data-status between open and closed
+    //When open, styling is applied to nav to make it visible
+    &[data-status="open"] {
+      
+      //Select the header that is next to current element, and select it's direct navbar descendent
+      & + header > nav {
+        height: 27rem;
+        //expands height of nav to make visible.
+        transition: height 0.3s cubic-bezier(0.58, 0.07, 0.53, 0.87);
+      }
+
+      //Change hamburger color when open to make icon visible on dark nav background.
+      .hamburger-icon,
+      &::before,
+      &::after {
+        background-color: $color-accent-3;
+        transition: all 0.3s ease-in;
+      }
+
+      //Forms X shape when nav is open that is selected to close. Middle 'bar' of hamburger disappears
+      &::before {
+        transform: translateY(1.3rem) rotate(45deg);
+      }
+
+      &::after {
+        transform: translateY(-1.3rem) rotate(-45deg);
+      }
+
+      .hamburger-icon {
+        opacity: 0;
+      }
+    }
+
+    //When the hamburger is toggled (by JS) to closed, reset height to 0 and transition to close smoothly.
+       &[data-status="closed"] {
+      & + header > nav {
+        height: 0;
+        transition: height 0.3s cubic-bezier(0.58, 0.07, 0.53, 0.87);
+      }
+
+      //Transition back from 'X' to 3 lines.
+      &::before,
+      &::after {
+        transition: all 0.3s ease-in;
+      }
+    }
+  }
+}
+
+//span inside of hamburger container. The center line of the hamburger.
+.hamburger-icon {
+  height: 2px;
+  width: 100%;
+  background-color: $color-gray-2;
+  display: inline-block;
+}

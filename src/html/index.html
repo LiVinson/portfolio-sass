@@ -10,19 +10,18 @@
 </head>
 
 <body>
-    <!-------------------- HEADER - flexbox w/ image background. nav top right, h1 centered ---------------------->
+    <!-- Hamburger icon that appears on smaller devices. Fixed to top left of viewport -->
     <div class="hamburger__container" data-status="closed">
         <span class="hamburger-icon"></span>
     </div>
+    <!-------------------- HEADER - flexbox w/ image background. nav top right, h1 centered ---------------------->
+
     <header class="header" id="top">
-        <!-- Add mobile nav -->
-   
         <h1 class="heading-1">Lisa Vinson</h1>
         <h3 class="heading-3 heading-3--dark-3"> software developer</h3>
 
+        <!-- Default location. Moves to be fixed to top of header on mobile -->
         <nav class="header__nav">
-            
-            
             <ul class="inline-list">
                 <li><a class="btn-link scroll" href="#about">about</a></li>
                 <li><a class="btn-link scroll" href="#skills">skills</a></li>
@@ -128,11 +127,11 @@
     </section>
     <!------------------------ PORTFOLIO SECTION  --------------------------->
 
-    <section class="portfolio">
+    <section class="portfolio" id="portfolio">
         <!------------ Project 1 of 5: Contains section header, image, h4, ul of technology, p or description, button group with svg and text ----------------->
 
         <section class="project--bg-1 light">
-            <h2 class="heading-2 heading-2--light center-text u-margin-bottom-sm" id="portfolio">
+            <h2 class="heading-2 heading-2--light center-text u-margin-bottom-sm" >
                 Portfolio
             </h2>
 
@@ -331,7 +330,7 @@
                 contact@lisavinson.com
             </p>
             <form action="#" class="form">
-                
+
                 <div class="form__group form__group--input">
                     <input type="text" class="form__input" placeholder="Name" name="name" required>
                     <label for="name" class="form__label">Name</label>
