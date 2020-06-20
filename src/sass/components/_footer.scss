@@ -1,40 +1,62 @@
 .footer {
-    background-color: $color-accent-4;
-    display:flex;
-    justify-content:space-evenly;    
-    color: $color-accent-1;
-    padding: 3rem 20rem;
-    // border-top: .5rem solid $color-primary;
+  background-color: $color-accent-4;
+  display: flex;
+  justify-content: space-evenly;
+  color: $color-accent-1;
+  padding: 3rem 20rem;
 
-    &__text {
-      font-size:1.6rem;
-    }
+  @include responsive(tab-land) {
+    padding: 3rem 15rem;
+  }
 
-    &__links {
-      list-style-type: none;  
-      font-size:1.5rem;          
-    }
+  @include responsive(tab-port) {
+    padding: 2.5rem 15rem;
+    flex-direction: column;
+    align-items: center;
+    align-content: center;
+  }
 
-    
-    &__link {
-      display: inline-block;      
-      
-      a {
-        text-decoration: none;
-        color: $color-accent-1;
-      }
-    }
-    
-    //Creates a vertical line between each list item
-    // :not(:last-child)::after {
-    &__link:not(:last-child)::after {
-      content:"";
-      display:inline-block;
-      height: 1.5rem;
-      width:2px;
-      background-color: $color-accent-1;
-      margin-left:2rem;
-      margin-right:2rem;
+  @include responsive(phone-land) {
+    padding: 2.5rem 8rem;
+  }
+
+  @include responsive(phone-port) {
+    padding: 2.5rem 6rem;
+  }
+
+  &__text {
+    font-size: 1.4rem;
+
+    //Move text below the links
+    @include responsive(tab-port) {
+      order: 2;
     }
   }
-  
+
+  &__links {
+    list-style-type: none;
+
+    @include responsive(tab-port) {
+      margin-bottom: 0.3rem;
+    }
+  }
+
+  //Individual link within list
+  &__link {
+    display: inline-block;
+    padding-left: 1rem;
+    padding-right: 1rem;
+
+    a {
+      font-size: 1.4rem;
+
+      @include responsive(tab-port) {
+        font-size: 1.2rem;
+      }
+    }
+  }
+
+  &__link:not(:last-child) {
+    border-right: solid 2px $color-accent-1;
+  }
+}

@@ -46,6 +46,12 @@ app.get("/", (req, res, next) => {
 
 app.post("/contact", confirmInput, sendEmail)
 
+//Temporary: Any 'other' routes - redirect back to the main page. Will add 404 later.
+app.get("*", (req,res) => {
+  console.log("wrong route")
+  res.redirect("/")
+})
+
 //verifies that all form data is valid before calling sendEmail
 function confirmInput(req, res, next){
   try {
