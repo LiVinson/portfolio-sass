@@ -1,22 +1,22 @@
-.heading-1{
+.heading-1 {
   font-family: $font-title;
   font-weight: 100;
-  font-size:18rem;
-  line-height: 1;  
+  font-size: 18rem;
+  line-height: 1;
   color: $color-accent-4;
-  text-shadow:0 0.7rem 0.8rem rgba($color-gray-2, .5);
-  margin-bottom:-1.5rem;
-  padding:1rem 1rem 0rem 1rem;
-  @include responsive(tab-port){
-    font-size:17rem;
+  text-shadow: 0 0.7rem 0.8rem rgba($color-gray-2, 0.5);
+  margin-bottom: -1.5rem;
+  padding: 1rem 1rem 0rem 1rem;
+  @include responsive(tab-port) {
+    font-size: 17rem;
   }
 
-  @include responsive(phone-land){
-    font-size:14rem;
+  @include responsive(phone-land) {
+    font-size: 14rem;
   }
 
-  @include responsive(phone-port){
-    font-size:12rem;
+  @include responsive(phone-port) {
+    font-size: 12rem;
   }
 }
 
@@ -24,89 +24,132 @@
   font-family: $font-title;
   font-size: 12rem;
   font-weight: 300;
-  line-height:1;
+  line-height: 1;
+
+  @include responsive(phone-port) {
+    font-size: 10rem;
+  }
+
   //Used for 'about' header sentence
-  &--plain { 
+  &--plain {
     font-family: $font-text;
-    font-size:6rem;
-    line-height:1.3;
+    font-size: 6rem;
+    line-height: 1.3;
 
     @include responsive(tab-port) {
-      font-size:5rem;
-      line-height:1.2;
+      font-size: 5rem;
+      line-height: 1.2;
     }
 
     @include responsive(phone-land) {
-      font-size:4rem
+      font-size: 4rem;
     }
   }
-  &--light { color: $color-accent-2};       
-  &--dark-1 { color: $color-primary};   
-  &--dark-2 { color: $color-secondary};   
-  &--dark-3 { color: $color-tertiary};
-  &--dark-4 { color: $color-accent-4};     
+  &--light {
+    color: $color-accent-2;
+  }
+  &--dark-1 {
+    color: $color-primary;
+  }
+  &--dark-2 {
+    color: $color-secondary;
+  }
+  &--dark-3 {
+    color: $color-tertiary;
+  }
+  &--dark-4 {
+    color: $color-accent-4;
+  }
 }
 
 .heading-3 {
   font-family: $font-text;
   font-size: 3.5rem;
-  line-height: 1.5;  
+  line-height: 1.5;
   font-weight: 400;
 
-  @include responsive(phone-land){
-    font-size:3rem;
+  @include responsive(phone-land) {
+    font-size: 3rem;
   }
-  @include responsive(phone-port){
-    font-size:2.2rem;
+  @include responsive(phone-port) {
+    font-size: 2.2rem;
   }
-  &--light { color: $color-accent-2};       
-  &--dark-1 { color: $color-primary};   
-  &--dark-2 { color: $color-secondary};   
-  &--dark-3 { color: $color-tertiary};
-  &--dark-4 { color: $color-accent-4};   
-   
+  &--light {
+    color: $color-accent-2;
+  }
+  &--dark-1 {
+    color: $color-primary;
+  }
+  &--dark-2 {
+    color: $color-secondary;
+  }
+  &--dark-3 {
+    color: $color-tertiary;
+  }
+  &--dark-4 {
+    color: $color-accent-4;
+  }
 }
 
 .heading-4 {
   font-family: $font-text;
-  line-height:1.3;
+  line-height: 1.3;
   font-weight: 400;
   font-size: 3rem;
-  &--light { color: $color-accent-2};       
-  &--light-2 { color: $color-accent-3};   
-  &--dark-1 { color: $color-primary};   
-  &--dark-2 { color: $color-secondary};   
-  &--dark-3 { color: $color-tertiary};    
-  &--dark-4 { color: $color-accent-4};   
+  &--light {
+    color: $color-accent-2;
+  }
+  &--light-2 {
+    color: $color-accent-3;
+  }
+  &--dark-1 {
+    color: $color-primary;
+  }
+  &--dark-2 {
+    color: $color-secondary;
+  }
+  &--dark-3 {
+    color: $color-tertiary;
+  }
+  &--dark-4 {
+    color: $color-accent-4;
+  }
 }
 
 .paragraph {
-  line-height:1.5;
+  line-height: 1.5;
   margin-bottom: 1rem;
-  font-size: 2rem; 
-  font-weight: 300;  
+  font-size: 2rem;
+  font-weight: 300;
 }
 
 /* ---------------- BUTTONS ------------  */
 .btn {
   border: none;
   display: inline-block;
-  padding:1.2rem .5rem;
-  width:18rem;
-  font-size:2rem;
+  padding: 1.2rem 0.5rem;
+  width: 18rem;
+  font-size: 2rem;
   color: $color-accent-2;
-  box-shadow: 0 .2rem 1rem rgba(0,0,0,.2);
-  transition: all .2s;
+  box-shadow: 0 0.2rem 1rem rgba(0, 0, 0, 0.2);
+  transition: all 0.2s;
   text-align: center;
   text-decoration: none;
-  font-weight:300;
+  font-weight: 300;
 
-  &:hover{
-    filter:brightness(90%);
+  @include responsive(phone-port) {
+    width: 32rem;
+    padding: 1.5rem 0.5rem;
+    font-size: 2.25rem;
+
   }
 
-  &:active{
-    transform:translateY(3px);
+  &:hover {
+    filter: brightness(90%);
+  }
+
+  &:active {
+    transform: translateY(3px);
   }
 
   &:focus {
@@ -137,57 +180,88 @@
   &--color-5 {
     background-color: $color-accent-3;
   }
-
-
 }
 
 //Nav elements
 .btn-link {
   //required for transition to work
-  display:inline-block;
-  font-size:2rem;  
+  display: inline-block;
+  font-size: 2rem;
   font-family: $font-text;
-  font-weight:400;
-  color:$color-tertiary;  
+  font-weight: 400;
+  color: $color-tertiary;
   text-decoration: none;
-  transition: all .3s;
+  transition: all 0.3s;
 
-  &:hover {     
-    filter:brightness(120%);  
+  &:hover {
+    filter: brightness(120%);
   }
 
-  &:active{
-    transform:translateY(3px);
+  &:active {
+    transform: translateY(3px);
   }
 
   &:focus {
-    outline:none;
+    outline: none;
     border-bottom: 2px solid currentColor;
   }
 }
-
 
 /* ---------------- LISTS ------------  */
 
 .inline-list {
   list-style-type: none;
   padding: 0 1.2rem;
-  display:flex;
-  font-size:2rem;
-//Used for nav bar - no border so closer to gether
+  display: flex;
+  font-size: 2rem;
+  //Used for nav bar - no border so closer to gether
   li {
-    padding:0rem .75rem;
+    padding: 0rem 0.75rem;
+    padding: 0rem 1.75rem;
   }
-  &--border li {    
+  &--border li {
+    //By default: all inline list items are on the same row until phone-land
     &:not(:last-child) {
-      padding:0rem 1.75rem;
-      border-right:solid 2px currentColor;
+      border-right: solid 2px currentColor;
+      @include responsive(phone-land) {
+        border: none;
+      }
     }
-  }  
 
+    /*Once the screen is too small to accomadate all on one row. list items are split 
+    into two rows with divider as the 4th child. 
+    
+     1 | 2 | 3 - 5 children: put borders around 2 and 5
+    ---------
+      | 5 | 
 
-  
+    1 | 2 | 3   - 6 children, put borders around 2 and 6
+    ---------
+    5 | 6 | 7
+    */
 
+    @include responsive(phone-land) {
+      //to override all previous borders
+      border:none;
+      // Select the second list item (middle in a row of 3) and give it a border
+      &:nth-child(2) {
+        border-left: solid 2px currentColor;
+        border-right: solid 2px currentColor;
+      }
 
+      //Select the 5th child. When it is 1 from the end (e.g. 3 items on top, 4.divider, 5.last item), give it a border
+      &:nth-child(5):nth-last-child(1) {
+        border-left: solid 2px currentColor;
+        border-right: solid 2px currentColor;
+      }
+
+      //Select the 6th child. When it is 2 from the end (e.g. 3 items on top, 4.divider, 5-7 pn the bottom, give it a border
+      &:nth-child(6):nth-last-child(2) {
+        border-left: solid 2px currentColor;
+        border-right: solid 2px currentColor;
+      }
+    }
+
+   
+  }
 }
-
