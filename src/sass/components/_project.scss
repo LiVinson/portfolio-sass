@@ -126,6 +126,11 @@
       padding:0;
     }
 
+    @include responsive(phone-land) {
+        width: 100%;
+
+      }
+
     &-line {
         display:none;
         @include responsive(phone-land) {
@@ -149,6 +154,11 @@
   }
   &__image {
     width: 100%;
+    
+    @include responsive(big-desktop) {
+      width: 85%;
+    }
+
   }
 
   &__btn-group {

@@ -6,27 +6,84 @@
   justify-content: space-between;
   align-items: flex-start;
 
+  @include responsive(phone-port) {
+    padding: 0rem;
+    margin-top:5rem;
+  }
+
   //div that contains input and label
   &__group {
     font-size: 1.5rem;
     font-family: $font-text;
-    // padding: 0 1rem 0 1rem;
+
+    //Used to change the order of label and input
+    display:flex;
+    flex-direction: column;
+    // margin-top:1.5rem;
+    
+
+    // @include responsive(phone-port) {
+    //   margin-bottom:1.5rem;
+    // }
 
     //form group that contains simple input only use half of form by default to allow 2/line
     &--input {
       width: 48%;
+
+      @include responsive(phone-land) {
+        width: 100%;
+      }
     }
 
+    //Second form group. Add additional margin to the label
+    &:nth-child(2) label {
+    
+      @include responsive(phone-land) {
+        margin-top: 1.5rem;
+       }
+      
+
+    }
     &--text {
       width: 100%;
+      margin-bottom: 2rem;
+
+      @include responsive(tab-port) {
+        margin-bottom: 1rem;
+        
+      }
     }
+
     &--btn {
       width: 25%;
 
+      @include responsive(phone-land) {
+       width:35%;
+       min-width:20rem;
+      }
 
+      @include responsive(phone-port) {
+        width:100%;
+        margin: 0 3rem;
+        
+      }
+  
     }
   }
 
+   //'ending'position of label is below input. Transitions when input has content
+   &__label {
+    display: inline-block;
+    padding: 0rem 1.5rem ;    
+    color: $color-primary;
+    opacity: 1;
+    transform:translateY(-.8rem);
+    transition: all 0.4s;
+
+    @include responsive(phone-port) {
+      padding-left:1.5rem;
+    }
+  }
   //form elements. Fits entire form group
   &__input,
   &__textarea {
@@ -34,30 +91,55 @@
     font-family: $font-text;
     width: 100%;
     padding: 1rem;
-    border: none;
+    border: none; 
+    //Moves label above input since unable to select label directly if placed before input in html
+    order:2;
+
+     @include responsive(phone-land) {
+      padding: 1.5rem;      
+    }
+
+    @include responsive(phone-port) {
+      padding-right: 1.5rem 1rem;
+    }
 
     //If placeholder of form element is shown (e.g. input is empty) select it's label, move it up into the input and hide it
     &:placeholder-shown + label {
       opacity: 0;
-      transform: translateY(-3px);
+      // transform: translateY(4rem);
+      transform: translateY(.6rem);
+      padding: 0rem 1.5rem;    
     }
   }
 
   &__textarea {
     min-height: 20rem;
-  }
-  //'ending'position of label is below input. Transitions when input has content
-  &__label {
-    display: block;
-    padding: 0.7rem;
-    transform: translateY(0);
-    transition: all 0.3s;
-    color: $color-primary;
+
+    & ~ label {
+      margin-top:1.5rem;
+    }
   }
 
   &__feedback {
     width: 70%;
     font-size: 2rem;
+
+    @include responsive(phone-land) {
+      // width: 60%;
+      font-size:1.6rem;
+      width: 100%;
+    }
+
+    @include responsive(phone-port) {      
+      width: 100%;
+      margin: .5rem 2rem;
+      font-size:1.8rem;
+      margin-top: .5rem;
+      order: 2;
+      text-align:center;
+
+    }
+
   }
 
   //submit button
@@ -66,6 +148,10 @@
     display: flex;
     align-items: center;
     justify-content: center;
+
+    @include responsive(phone-land) {
+      padding: 1.5rem .5rem;
+    }
 
     //disabled once email is sent
     &:disabled {

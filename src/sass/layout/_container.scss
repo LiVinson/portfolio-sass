@@ -2,27 +2,7 @@
     background-color: #f7f7f7;
 }
 
-section {   
-    &.section__contact {
-        padding: 7rem 10rem;
-        background-image: linear-gradient(to bottom right, $color-accent-2 0%, $color-accent-2 40%, $color-accent-3 100%);
-    }
-}
 
-
-// SECTION CONTAINERS
-
-.container {
-
-   
-
-    &__contact {
-        margin: 0 auto;
-        width: 80rem;
-        max-width: 100%;
-    }
-   
-}
 
 
 

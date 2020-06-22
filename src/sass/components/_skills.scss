@@ -20,6 +20,12 @@
       padding-bottom: 5rem;
     }
 
+    @include responsive(phone-land) {
+
+      min-width: 100%;
+ 
+    }
+
     //middle skills block:
     &--center {
       @include responsive(tab-land) {

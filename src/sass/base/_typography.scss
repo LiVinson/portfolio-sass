@@ -24,7 +24,7 @@
   font-family: $font-title;
   font-size: 12rem;
   font-weight: 300;
-  line-height: 1;
+  line-height: .75;
 
   @include responsive(phone-port) {
     font-size: 10rem;
@@ -128,7 +128,7 @@
   border: none;
   display: inline-block;
   padding: 1.2rem 0.5rem;
-  width: 18rem;
+  width: 20rem;
   font-size: 2rem;
   color: $color-accent-2;
   box-shadow: 0 0.2rem 1rem rgba(0, 0, 0, 0.2);

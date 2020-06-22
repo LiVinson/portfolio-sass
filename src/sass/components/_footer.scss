@@ -3,14 +3,13 @@
   display: flex;
   justify-content: space-evenly;
   color: $color-accent-1;
-  padding: 3rem 20rem;
+  padding: 3.5rem 20rem;
 
   @include responsive(tab-land) {
     padding: 3rem 15rem;
   }
 
   @include responsive(tab-port) {
-    padding: 2.5rem 15rem;
     flex-direction: column;
     align-items: center;
     align-content: center;
@@ -30,6 +29,8 @@
     //Move text below the links
     @include responsive(tab-port) {
       order: 2;
+      text-align: center;
+      font-size: 1.6rem;
     }
   }
 
@@ -38,6 +39,7 @@
 
     @include responsive(tab-port) {
       margin-bottom: 0.3rem;
+      
     }
   }
 
@@ -51,7 +53,7 @@
       font-size: 1.4rem;
 
       @include responsive(tab-port) {
-        font-size: 1.2rem;
+        font-size: 1.6rem;
       }
     }
   }

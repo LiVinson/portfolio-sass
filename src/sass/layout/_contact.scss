@@ -1,0 +1,45 @@
+
+// Entire contact section
+.section__contact {
+    padding: 7rem 10rem;
+    background-image: linear-gradient(to bottom right, $color-accent-2 0%, $color-accent-2 40%, $color-accent-3 100%);
+
+    @include responsive(phone-land) {
+        padding: 7rem 8%;
+      }
+
+      @include responsive(phone-port) {
+        padding: 7rem 0rem;
+      }
+}
+
+.container__contact {
+    margin: 0 auto;
+    width: 80rem;
+    max-width: 100%;
+
+    @include responsive(phone-land) {
+        width: 100%;
+    }
+
+    @include responsive(phone-port) {
+        margin-top: 3rem;
+    }
+
+    h4 {
+
+        @include responsive(phone-land) {
+            margin-bottom:1rem;
+        }
+
+        @include responsive(phone-port) {
+            padding: 0 3rem;
+        }
+    }
+
+    p {
+        @include responsive(phone-port) {
+            padding: 0 2rem;
+        }
+    }
+}
