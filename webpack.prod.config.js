@@ -4,6 +4,8 @@ const MiniCssExtractPlugin = require("mini-css-extract-plugin")
 const OptimizeCSSAssetsPlugin = require("optimize-css-assets-webpack-plugin")
 const SpriteLoaderPlugin = require("svg-sprite-loader/plugin")
 const TerserPlugin = require("terser-webpack-plugin")
+const FaviconsWebpackPlugin = require("favicons-webpack-plugin")
+
 module.exports = {
   entry: {
     main: "./src/javascript/index.js",
@@ -43,7 +45,7 @@ module.exports = {
           {
             loader: "html-loader",
             options: {
-              minimize: false,
+              minimize: true,
             },
           },
         ],
@@ -144,5 +146,20 @@ module.exports = {
       filename: "[name].css",
       chunkFilename: "[id].css",
     }),
+    new SpriteLoaderPlugin(),
+    new FaviconsWebpackPlugin({
+      logo: "./src/img/favicons/favicon.png",
+      inject: true,
+      icons: {
+        android: true,
+        appleIcon: true,
+        appleStartup: true,
+        coast: true,
+        favicons: true,
+        firefox: true,
+        windows: true,
+        yandex: true,
+      }
+    })
   ],
 }

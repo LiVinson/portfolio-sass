@@ -7,44 +7,39 @@ import validateInput from "../javascript/validation"
 
 const port = process.env.PORT || 3000
 
-const app = express(),
-            DIST_DIR = __dirname,
-            HTML_FILE = path.join(DIST_DIR, 'index.html')
+const app = express()
+const  DIST_DIR = __dirname
+//Sets initial index root directory
+const HTML_FILE = path.join(DIST_DIR, 'index.html')
             
 app.use(express.static(DIST_DIR));
 //required to parse req.body in post request
 app.use(bodyParser.urlencoded({ extended: true }))
 
-
-app.get("/", (req, res, next) => {
-    console.log("home");
+//On opening homepage, or requests to any other pages
+app.get("/", (req, res) => {   
     return res.sendFile(HTML_FILE)
 })
 
-
-//When user submits form
+//When user submits contact form, confirm data again, and send email
 app.post("/contact", confirmInput, sendEmail)
 
 //Temporary: Any 'other' routes - redirect back to the main page. Will add 404 later.
 app.get("*", (req,res) => {
-  console.log("wrong route")
   res.redirect("/")
 })
 
 //verifies that all form data is valid before calling sendEmail
 function confirmInput(req, res, next){
-  console.log("confirm input")
-  console.log(req.body)
+
   try {
     const { name, email, message } = req.body
     if(validateInput("name", name) && validateInput("email", email) && validateInput("message", message)){
-      console.log("input valid")
       next()
     } else {
       res.sendStatus(400)
     }
   } catch (error) {
-    console.log(error)
     res.sendStatus(error.responseCode || 500)    
   } 
 }
@@ -52,10 +47,8 @@ function confirmInput(req, res, next){
 
 //Called if form input is valid. Gets email and pw from .env and sends form data w/ nodemailer
 async function sendEmail(req, res) {
-  console.log("send email")
   try {
     //Create an instance of transporter object
-    console.log(req.body)
     const { name, email, message } = req.body
     const transporter = nodemailer.createTransport({
       service: "gmail",
@@ -74,17 +67,13 @@ async function sendEmail(req, res) {
 
     // send mail with defined transport object
     let info = await transporter.sendMail(mailOptions)
-    console.log("Message sent: %s", info.messageId)
     res.sendStatus(200)
   } catch (error) {
-    console.log("error")
-    console.log(error)
-    console.log(error.response)
+
     res.sendStatus(error.responseCode || 500)
   }
 }
 
-app.listen(port, () => {
-  console.log(`starting server on port: ${port}`)
+app.listen(port, () => { 
   console.log("mode: ", process.env.NODE_ENV)
 })

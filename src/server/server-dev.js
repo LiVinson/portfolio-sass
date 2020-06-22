@@ -16,6 +16,7 @@ const app = express(),
   HTML_FILE = path.join(DIST_DIR, "index.html"),
   compiler = webpack(config)
 
+
 app.use(
   webpackDevMiddleware(compiler, {
     publicPath: config.output.publicPath,
@@ -36,6 +37,7 @@ app.use(bodyParser.urlencoded({ extended: true }))
 app.get("/", (req, res, next) => {
   compiler.outputFileSystem.readFile(HTML_FILE, (err, result) => {
     if (err) {
+      console.log(err)
       return next(err)
     }
     res.set("content-type", "text/html")
@@ -48,7 +50,7 @@ app.post("/contact", confirmInput, sendEmail)
 
 //Temporary: Any 'other' routes - redirect back to the main page. Will add 404 later.
 app.get("*", (req,res) => {
-  console.log("wrong route")
+  console.log("wrong route-dev")
   res.redirect("/")
 })
 

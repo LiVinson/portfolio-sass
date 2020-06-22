@@ -3,6 +3,7 @@ const webpack = require("webpack")
 const HtmlWebPackPlugin = require("html-webpack-plugin")
 const MiniCssExtractPlugin = require("mini-css-extract-plugin")
 const SpriteLoaderPlugin = require("svg-sprite-loader/plugin")
+const FaviconsWebpackPlugin = require("favicons-webpack-plugin")
 
 module.exports = {
   entry: {
@@ -71,7 +72,7 @@ module.exports = {
       {
         test: /\.(png|jpg|gif|svg)$/,
         loader: "file-loader",
-        exclude: /_sprite.svg/,
+        exclude: [/_sprite.svg/],
         options: {
           outputPath: "images",
         },
@@ -110,13 +111,17 @@ module.exports = {
     new HtmlWebPackPlugin({
       template: "./src/html/index.html",
       filename: "./index.html",
-      excludeChunks: ["server"],
+      excludeChunks: ["server"]
+      
     }),
     new MiniCssExtractPlugin({
       filename: "bundle.css",
       chunkFilename: "[id].css",
     }),
     new SpriteLoaderPlugin(),
+    new FaviconsWebpackPlugin({
+      logo: "./src/img/favicons/favicon.png" 
+    }),
     new webpack.NoEmitOnErrorsPlugin(),
     new webpack.HotModuleReplacementPlugin(),
   ],
