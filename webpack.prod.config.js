@@ -54,8 +54,7 @@ module.exports = {
         test: /\.(sa|sc|c)ss$/,
         use: [
           {
-            // After all CSS loaders we use plugin to do his work.
-            // It gets all transformed CSS and extracts it into separate
+            // After all CSS loaders get all transformed CSS and extracts it into separate
             // single bundled file
             loader: MiniCssExtractPlugin.loader,
           },
@@ -84,7 +83,7 @@ module.exports = {
           outputPath: "files",
         },
       },
-
+      //Used to create responsive images.
       {
         test: /\.(png|jpg|gif)$/,
         use: {
