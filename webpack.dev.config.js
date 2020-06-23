@@ -74,6 +74,7 @@ module.exports = {
         loader: "file-loader",
         exclude: [/_sprite.svg/],
         options: {
+          name: "[name].[ext]",
           outputPath: "images",
         },
       },
