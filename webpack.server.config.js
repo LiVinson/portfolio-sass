@@ -3,7 +3,7 @@ const webpack = require("webpack")
 const nodeExternals = require("webpack-node-externals")
 
 module.exports = (env, argv) => {
-  console.log(argv.mode)
+  // console.log(argv.mode)
   const SERVER_PATH =
     argv.mode === "production"
       ? "./src/server/server-prod.js"
