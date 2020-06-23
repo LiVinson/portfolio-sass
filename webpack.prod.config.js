@@ -85,19 +85,7 @@ module.exports = {
           outputPath: "files",
         },
       },
-      //Used to create responsive images.
-      {
-        test: /\.(png|jpg|gif)$/,
-        use: {
-          loader: "responsive-loader",
-          options: {
-            adapter: require("responsive-loader/sharp"),
-            sizes: [2500, 2000, 1600, 1400, 1050, 800, 700, 500, 300],
-            name: "images/[hash]-[width].[ext]",
-          },
-        },
-      },
-
+     
       {
         test: /\.(svg)$/,
         loader: "file-loader",

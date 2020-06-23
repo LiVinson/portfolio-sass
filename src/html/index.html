@@ -140,7 +140,21 @@
             </h2>
 
             <div class="project__container">
-                <img src="../img/edited/hacker.png" alt="Hacker News Clone" class="project__image">
+                <div class="project__image-container">
+
+                    <img srcset="../img/hacker-1500.png 1500w, ../img/hacker-1250.png 1250w, 
+                                ../img/hacker-850.png 850w, ../img/hacker-700.png 700w,
+                                ../img/hacker-650.png 650w, ../img/hacker-400.png 400w"
+                                sizes="(min-width: 1800px) 45vw, (max-width:1500px) 55vw, 
+                                        (max-width: 1200px) 60vw, (max-width:900px) 85vw, 
+                                        (max-width: 650px) 95vw, (max-width: 400px) 95vw"                              
+                                        alt="Hacker News Clone" class="project__image"
+                                
+                                >
+
+                    <!-- <img src="../img/hacker-1500.png" alt="Hacker News Clone" class="project__image"> -->
+
+                </div>
                 <h4 class="heading-4 heading-4--light-2 u-margin-bottom-xs project__title">Hacker News Clone</h4>
                 <ul class="project__skills inline-list inline-list--border u-margin-bottom-xs">
                     <li class="list-item project__tech">html</li>
@@ -178,8 +192,10 @@
         <section class="project--bg-2 secondary-dark-2">
 
             <div class="project__container">
+                <div class="project__image-container">
 
-                <img src="../img/edited/natours.png" alt="Nature Tour website" class="project__image">
+                    <img src="../img/natours.png" alt="Nature Tour website" class="project__image">
+                </div>
                 <h4 class="heading-4 heading-4--dark-1 u-margin-bottom-xs project__title">Natours</h4>
 
                 <ul class="project__skills inline-list inline-list--border u-margin-bottom-xs">
@@ -212,8 +228,10 @@
         <section class="project--bg-3 secondary-dark-2">
 
             <div class="project__container">
+                <div class="project__image-container">
 
-                <img src="../img/edited/trillo.png" alt="Trillo Travel website" class="project__image">
+                    <img src="../img/trillo.png" alt="Trillo Travel website" class="project__image">
+                </div>
                 <h4 class="heading-4 u-margin-bottom-xs tertiary project__title">Trillo Travels</h4>
 
                 <ul class="project__skills inline-list inline-list--border u-margin-bottom-xs light">
@@ -247,8 +265,10 @@
         <section class="project--bg-4">
             <!------------ Project 4 of 5: Contains image, h4, ul of technology, p or description, button group with svg and text ----------------->
             <div class="project__container">
+                <div class="project__image-container">
 
-                <img src="../img/edited/study.png" alt="Study Smart website" class="project__image">
+                    <img src="../img/study.png" alt="Study Smart website" class="project__image">
+                </div>
                 <h4 class="heading-4 heading-4--dark-4 u-margin-bottom-xs project__title">Study Smart</h4>
 
                 <ul class="project__skills inline-list inline-list--border u-margin-bottom-xs">
@@ -286,8 +306,10 @@
         <section class="project--bg-5 light">
 
             <div class="project__container">
-                <img src="../img/edited/lion-king.png" alt="Lion king Click application" class="project__image">
+                <div class="project__image-container">
 
+                    <img src="../img/lion-king.png" alt="Lion king Click application" class="project__image">
+                </div>
                 <h4 class="heading-4 heading-4--dark-2 u-margin-bottom-xs project__title">Lion King Click</h4>
 
                 <ul class="project__skills inline-list inline-list--border u-margin-bottom-xs">
@@ -353,7 +375,7 @@
                 </div>
                 <!-- Contains success or error message on form submission -->
                 <p class="paragraph form__feedback">
-                 </p>
+                </p>
                 <div class="form__group form__group--btn">
                     <button class="btn btn--color-2-dark form__submit" type="submit">
                         Send
@@ -381,9 +403,6 @@
                     download="Vinson_Lisa_Resume.pdf">Resume</a></li>
         </ul>
     </footer>
-    <!-- </div> -->
-
-    <!-- <script src="assets/javascript/app.js" type="module"></script> -->
 </body>
 
 </html>
