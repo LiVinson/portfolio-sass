@@ -4,12 +4,8 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Lisa Vinson | Developer</title>
-    <!-- <link rel="apple-touch-icon" sizes="180x180" href="../img/favicons/apple-touch-icon.png">
-    <link rel="icon" type="image/png" sizes="32x32" href="../img/favicons/favicon-32x32.png">
-    <link rel="icon" type="image/png" sizes="16x16" href="../img/favicons/favicon-16x16.png">
-    <link rel="manifest" href="../img/favicons/site.webmanifest"> -->
 
+    <title>Lisa Vinson | Developer</title>
 </head>
 
 <body>
@@ -79,7 +75,6 @@
             Skills
         </h2>
 
-
         <div class="container__skills">
             <h4 class="heading-4 heading-4--light center-text u-margin-bottom-sm">&quot;The beautiful
                 thing about learning is nobody can take it away from you.&quot;<div>- B.B. King</div>
@@ -138,16 +133,20 @@
             <h2 class="heading-2 heading-2--light center-text u-margin-bottom-sm">
                 Portfolio
             </h2>
-
-            <div class="project__container">
+            <div class="project__container">           
                 <div class="project__image-container">
+                    <picture>
+                        <!-- Up to 650px:- use ipad only -->
+                        <source srcset="../img/hacker-ipad.webp" type="image/webp" media="(max-width: 650px)">
+                        <!-- Larger than 650px:- use ipad and phone -->
+                        <source srcset="../img/hacker.webp" type="image/webp">
 
-                    <img srcset="../img/hacker-1500.png 1500w, 
-                                ../img/hacker-900.png 900w"
-                                sizes="(max-width: 1200px) 60vw, (max-width:900px) 85vw, 
-                                        (max-width: 650px) 95vw, (max-width: 400px) 95vw, 1500px"                              
-                                        alt="Hacker News Clone" class="project__image"                                
-                                >
+                        <!-- Fallback: pngs based on screen size -->
+                        <img src="../img/hacker-comp.png"
+                            srcset="../img/hacker-comp.png 1560w, ../img/hacker-ipad-comp.png 1350w"
+                            sizes="(max-width: 650px) 1000w"
+                            alt="Hacker News Clone website displayed in ipad and iphone" class="project__image">
+                    </picture>
                 </div>
                 <h4 class="heading-4 heading-4--light-2 u-margin-bottom-xs project__title">Hacker News Clone</h4>
                 <ul class="project__skills inline-list inline-list--border u-margin-bottom-xs">
@@ -182,13 +181,23 @@
                 </div>
             </div>
         </section>
+        
         <!------------ Project 2 of 5: Contains image, h4, ul of technology, p or description, button group with svg and text ----------------->
         <section class="project--bg-2 secondary-dark-2">
-
             <div class="project__container">
                 <div class="project__image-container">
+                    <picture>
+                        <!-- Up to 650px:- use ipad only -->
+                        <source srcset="../img/natours-ipad.webp" type="image/webp" media="(max-width: 650px)">
+                        <!-- Larger than 650px:- use ipad and phone -->
+                        <source srcset="../img/natours.webp" type="image/webp">
 
-                    <img src="../img/natours.png" alt="Nature Tour website" class="project__image">
+                        <!-- Fallback: pngs based on screen size -->
+                        <img src="../img/natours-comp.png"
+                            srcset="../img/natours-comp.png 1615w, ../img/natours-ipad-comp.png 1580w"
+                            sizes="(max-width: 650px) 1500w" alt="Natours website displayed in ipad and iphone"
+                            class="project__image">
+                    </picture>
                 </div>
                 <h4 class="heading-4 heading-4--dark-1 u-margin-bottom-xs project__title">Natours</h4>
 
@@ -220,11 +229,20 @@
         </section>
         <!------------ Project 3 of 5: Contains image, h4, ul of technology, p or description, button group with svg and text ----------------->
         <section class="project--bg-3 secondary-dark-2">
-
             <div class="project__container">
                 <div class="project__image-container">
+                    <picture>
+                        <!-- Up to 650px:- use ipad only -->
+                        <source srcset="../img/trillo-ipad.webp" type="image/webp" media="(max-width: 650px)">
+                        <!-- Larger than 650px:- use ipad and phone -->
+                        <source srcset="../img/trillo.webp" type="image/webp">
 
-                    <img src="../img/trillo.png" alt="Trillo Travel website" class="project__image">
+                        <!-- Fallback: pngs based on screen size -->
+                        <img src="../img/trillo-comp.png"
+                            srcset="../img/trillo-comp.png 1700w, ../img/trillo-ipad-comp.png 1580w"
+                            sizes="(max-width: 650px) 1500w" alt="Trillo travels website displayed in ipad and iphone"
+                            class="project__image">
+                    </picture>
                 </div>
                 <h4 class="heading-4 u-margin-bottom-xs tertiary project__title">Trillo Travels</h4>
 
@@ -260,8 +278,13 @@
             <!------------ Project 4 of 5: Contains image, h4, ul of technology, p or description, button group with svg and text ----------------->
             <div class="project__container">
                 <div class="project__image-container">
+                    <picture>
+                        <source srcset="../img/study.webp" type="image/webp">
 
-                    <img src="../img/study.png" alt="Study Smart website" class="project__image">
+                        <!-- Fallback: pngs based on screen size -->
+                        <img src="../img/study-comp.png" alt="Study Smart application displayed in ipad"
+                            class="project__image">
+                    </picture>
                 </div>
                 <h4 class="heading-4 heading-4--dark-4 u-margin-bottom-xs project__title">Study Smart</h4>
 
@@ -301,8 +324,18 @@
 
             <div class="project__container">
                 <div class="project__image-container">
+                    <picture>
+                        <!-- Up to 650px:- use ipad only -->
+                        <source srcset="../img/lion-king-ipad.webp" type="image/webp" media="(max-width: 650px)">
+                        <!-- Larger than 650px:- use ipad and phone -->
+                        <source srcset="../img/lion-king.webp" type="image/webp">
 
-                    <img src="../img/lion-king.png" alt="Lion king Click application" class="project__image">
+                        <!-- Fallback: pngs based on screen size -->
+                        <img src="../img/lion-king-comp.png"
+                            srcset="../img/lion-king-comp.png 1650w, ../img/lion-king-ipad-comp.png 1350w"
+                            sizes="(max-width: 650px) 1000w"
+                            alt="Lion King Click application displayed in ipad and iphone" class="project__image">
+                    </picture>
                 </div>
                 <h4 class="heading-4 heading-4--dark-2 u-margin-bottom-xs project__title">Lion King Click</h4>
 

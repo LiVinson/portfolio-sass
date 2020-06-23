@@ -70,7 +70,7 @@ module.exports = {
         },
       },
       {
-        test: /\.(png|jpg|gif|svg)$/,
+        test: /\.(png|jpg|gif|svg|webp)$/,
         loader: "file-loader",
         exclude: [/_sprite.svg/],
         options: {
