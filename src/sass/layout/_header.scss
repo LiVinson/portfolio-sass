@@ -5,17 +5,78 @@
   display: flex;
   flex-direction: column;
   padding: 2rem;
-  // justify-content: center;
+  
   align-items: center;
   position: relative;
   text-align: center;
-  background-image: url("../img/header-bg.jpg");
+  //default size. Load larger only if needed based on screen size/resolution
+  background-image: url("../img/header-bg-1200.jpg");
   background-size: cover;
   background-position: top;
+
+  /*
+  If screen is < 650 and low res: 1200px - already loaded
+  OR
+  If screen is > 650 and < 900 and low res: 1200px - already loaded
+
+
+  If screen is >400 and <650 and high res: 1800px 
+  OR
+  If screen is > 900 and < 1200 and low res: 1800px
+*/
+
+  @media (min-width: 25em) and (max-width: 40.625em) and (min-resolution: 192dpi),
+    (min-width: 56.25) and (max-width: 75em) and (max-resolution: 191dpi) {
+    background-image: url("../img/header-bg-1800.jpg");
+
+  }
+
+  /*
+  If screen is > 650 and < 900 and high res: 2500px
+  OR
+  If screen is > 1200 and < 1800 and low res: 2500px
+  OR
+  If screen is > 1800 and low res: 2500px
+
+  */
+  @media (min-width: 40.625em) and (max-width: 56.25em) and (min-resolution: 192dpi),
+    (min-width: 75em) and (max-width: 112.5) and (max-resolution: 191dpi),
+    (min-width: 112.5em) and (max-resolution: 191dpi) {
+    background-image: url("../img/header-bg-2500.jpg");
+
+  }
+
+  /*
+  If screen is > 900 and < 1200 and high res: 3000px
+  OR  If screen is > 1800 and low res: 3000px
+  */
+  @media (min-resolution: 192dpi) and (min-width: 56.25) and (max-width: 75em),
+  (max-resolution: 191dpi) and (min-width: 112.5) {
+    background-image: url("../img/header-bg-3000.jpg");
+
+  }
+
+  /*
+  BLACK
+  If screen is > 1200 and < 1800 and high res: 4000px
+  OR
+  If screen is > 1800 and high res: 4000px
+*/
+
+  @media (min-resolution: 192dpi) and (min-width: 75em) and (max-width: 112.5em),
+    (min-width: 112.5em) and (max-resolution: 191dpi) {
+    background-image: url("../img/header-bg-4000.jpg");
+
+  }
 
   @include responsive(tab-port) {
     //keeps image 'swirl' in frame
     background-position: right;
+  }
+
+  @include responsive(phone-land) {
+    //nav disappears - need to center header and remove margin auto
+    justify-content: center;
   }
 
   //Takes up all remaining spave above header, centering it
@@ -27,5 +88,4 @@
       margin-bottom: 2rem;
     }
   }
-  
 }
