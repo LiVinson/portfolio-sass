@@ -16,7 +16,8 @@
 
     @include responsive(phone-land) {
       width: 100%;
-      padding: 0rem 8rem;
+      max-width:100rem;
+      padding: 0rem 10rem;
     }
 
     @include responsive(phone-port) {

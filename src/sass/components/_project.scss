@@ -24,6 +24,13 @@
     flex-direction: column;
     align-items: center;
     padding-top: 10rem;
+
+    &  .project__container {
+      @include responsive(tab-port) {
+        margin-top:2rem;
+      }
+      
+    }
   }
 
   &--bg-2 {
