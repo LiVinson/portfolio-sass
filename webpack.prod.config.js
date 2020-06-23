@@ -87,10 +87,11 @@ module.exports = {
       },
      
       {
-        test: /\.(svg)$/,
+        test: /\.(png|jpg|gif|svg)$/,
         loader: "file-loader",
         exclude: /_sprite.svg/,
         options: {
+          
           outputPath: "images",
         },
       },
@@ -103,10 +104,8 @@ module.exports = {
         include: /.*_sprite\.svg/,
         use: [
           {
-            loader: "svg-sprite-loader",
-            options: {
-              publicPath: "",
-            },
+            loader: "svg-sprite-loader"
+
           },
         ],
       },

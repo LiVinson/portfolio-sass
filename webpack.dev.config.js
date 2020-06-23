@@ -33,7 +33,7 @@ module.exports = {
         use: [
           {
             loader: "html-loader",
-            // options: { minimize: true }
+
           },
         ],
       },
@@ -86,10 +86,8 @@ module.exports = {
 
         use: [
           {
-            loader: "svg-sprite-loader",
-            options: {
-              publicPath: "",
-            },
+            loader: "svg-sprite-loader"
+
           },
         ],
       },
