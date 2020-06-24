@@ -150,7 +150,7 @@ module.exports = {
       }
     }),  
     new webpack.DefinePlugin({
-      "process.env.CONTACT_URL": JSON.stringify("https://lv-portfolio-api.herokuapp.com/")
+      "process.env.CONTACT_URL": JSON.stringify("https://lv-portfolio-api.herokuapp.com")
     }),  
   ],
 }
