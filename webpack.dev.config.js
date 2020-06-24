@@ -108,8 +108,8 @@ module.exports = {
   plugins: [
     new HtmlWebPackPlugin({
       template: "./src/html/index.html",
-      filename: "./index.html",
-      excludeChunks: ["server"]
+      filename: "./index.html"
+      // excludeChunks: ["server"]
       
     }),
     new MiniCssExtractPlugin({

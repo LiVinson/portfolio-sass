@@ -5,7 +5,6 @@ const OptimizeCSSAssetsPlugin = require("optimize-css-assets-webpack-plugin")
 const SpriteLoaderPlugin = require("svg-sprite-loader/plugin")
 const TerserPlugin = require("terser-webpack-plugin")
 const FaviconsWebpackPlugin = require("favicons-webpack-plugin")
-const CopyPlugin = require("copy-webpack-plugin");
 
 module.exports = {
   entry: {
@@ -148,11 +147,6 @@ module.exports = {
         windows: true,
         yandex: true,
       }
-    }),
-    new CopyPlugin({
-      patterns: [
-        {from: "./src/api", to: path.join(__dirname, "dist/api"),}
-      ]
-    })
+    })    
   ],
 }

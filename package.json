@@ -5,8 +5,8 @@
   "main": "index.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
-    "buildDev": "rm -rf dist && webpack --mode development --config webpack.server.config.js && webpack --mode development --config webpack.dev.config.js",
-    "buildProd": "rm -rf dist && webpack --mode production --config webpack.server.config.js && webpack --mode production --config webpack.prod.config.js",
+    "buildDev": "rm -rf dist && webpack --mode development --config webpack.dev.config.js",
+    "buildProd": "rm -rf dist && webpack --mode production --config webpack.prod.config.js",
     "start": "node ./dist/server.js",
     "heroku-postbuild": "npm run buildProd"
   },
@@ -23,9 +23,7 @@
     "@babel/preset-env": "^7.10.2",
     "autoprefixer": "^9.7.6",
     "babel-loader": "^8.1.0",
-    "copy-webpack-plugin": "^6.0.2",
     "css-loader": "^3.5.3",
-    "cssnano": "^4.1.10",
     "favicons-webpack-plugin": "^3.0.1",
     "file-loader": "^6.0.0",
     "html-loader": "^1.1.0",
@@ -35,10 +33,8 @@
     "optimize-css-assets-webpack-plugin": "^5.0.3",
     "postcss-cli": "^7.1.1",
     "postcss-loader": "^3.0.0",
-    "responsive-loader": "^1.2.0",
     "sass": "^1.26.8",
     "sass-loader": "^8.0.2",
-    "sharp": "^0.25.4",
     "style-loader": "^1.2.1",
     "svg-sprite-loader": "^5.0.0",
     "terser-webpack-plugin": "^3.0.5",
@@ -47,8 +43,8 @@
     "webpack-cli": "^3.3.11",
     "webpack-dev-middleware": "^3.7.2",
     "webpack-dev-server": "^3.11.0",
-    "webpack-hot-middleware": "^2.25.0",
-    "webpack-node-externals": "^1.7.2"
+    "webpack-hot-middleware": "^2.25.0"
+
   },
   "dependencies": {
     "dotenv": "^8.2.0",
