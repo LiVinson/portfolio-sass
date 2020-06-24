@@ -53,11 +53,9 @@ function scrollAnchors(e, respond = null) {
   const checkIfDone = setInterval(function () {
     const atBottom =
       window.innerHeight + window.pageYOffset >= document.body.offsetHeight - 2
-    //If target element is reached or you've reached bottom of the page, focus on that element. Add history for that location to the window.
+    //If target element is reached or you've reached bottom of the page, focus on that element. 
     if (distanceToTop(targetAnchor) === 0 || atBottom) {
-      targetAnchor.tabIndex = "-1"
-
-      window.history.pushState("", "", targetID)
+      targetAnchor.tabIndex = "-1" //Makes it so you cannot 'tab' to focus on the linked item
       clearInterval(checkIfDone)
     }
   }, 100)
@@ -104,7 +102,7 @@ const submitForm = (event) => {
 
   //send request to /contact
   const xhr = new XMLHttpRequest()
-  xhr.open("POST", "/contact", true)
+  xhr.open("POST", `${process.env.CONTACT_URL}/contact`, true)
   xhr.setRequestHeader("Content-Type", "application/x-www-form-urlencoded")
 
   const formData = `name=${name}&email=${email}&message=${message}`

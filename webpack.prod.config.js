@@ -147,6 +147,9 @@ module.exports = {
         windows: true,
         yandex: true,
       }
-    })    
+    }),  
+    new webpack.DefinePlugin({
+      "process.env.CONTACT_URL": JSON.stringify("https://www.backendapi.com")
+    }),  
   ],
 }

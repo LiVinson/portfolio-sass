@@ -108,8 +108,8 @@ module.exports = {
   plugins: [
     new HtmlWebPackPlugin({
       template: "./src/html/index.html",
-      filename: "./index.html"
-      // excludeChunks: ["server"]
+      filename: "./index.html",
+      excludeChunks: ["server"]
       
     }),
     new MiniCssExtractPlugin({
@@ -119,6 +119,9 @@ module.exports = {
     new SpriteLoaderPlugin(),
     new FaviconsWebpackPlugin({
       logo: "./src/img/favicons/favicon.png" 
+    }),
+    new webpack.DefinePlugin({
+      "process.env.CONTACT_URL": JSON.stringify("http://localhost:3000")
     }),
     new webpack.NoEmitOnErrorsPlugin(),
     new webpack.HotModuleReplacementPlugin(),
