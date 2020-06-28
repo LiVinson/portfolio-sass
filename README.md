@@ -55,6 +55,6 @@ As much as possible, I wanted to go back to the basics with this project. As muc
 
 I am not open to contributions to the code at this time, but I am always happy to hear feedback and suggestions. Feel free to reach out to me at contact@lisavinson.
 
-## License 
+## License 🔓
 
 This project is licensed under the [MIT license](https://github.com/LiVinson/portfolio-sass/blob/master/LICENSE).
