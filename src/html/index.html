@@ -26,7 +26,7 @@
                 <li><a class="btn-link scroll" href="#skills">skills</a></li>
                 <li><a class="btn-link scroll" href="#portfolio">portfolio</a></li>
                 <li><a class="btn-link scroll" href="#contact">contact</a></li>
-                <li><a class="btn-link" href="./files/Vinson_Lisa_Resume.pdf"
+                <li><a class="btn-link" href="./files/Vinson,Lisa_Resume.pdf"
                         download="Vinson_Lisa_Resume.pdf">resume</a></li>
             </ul>
         </nav>
@@ -94,9 +94,10 @@
                 <ul class="skills__list">
                     <li class="list__item skill">react</li>
                     <li class="list__item skill">redux</li>
+                    <li class="list__item skill">styled components</li>
                     <li class="list__item skill">node.js</li>
                     <li class="list__item skill">C#/.net</li>
-                    <li class="list__item skill">unit testing</li>
+
                 </ul>
             </div>
 
@@ -111,7 +112,7 @@
                     <li class="list__item skill">firebase</li>
                     <li class="list__item skill">sql</li>
                     <li class="list__item skill">mongodb</li>
-                    <li class="list__item skill">webpack</li>
+                    <li class="list__item skill">jest & enzyme</li>
                 </ul>
             </div>
         </div>
@@ -180,37 +181,43 @@
                 <div class="project__image-container">
                     <picture>
                         <!-- Up to 650px:- use ipad only -->
-                        <source srcset="../img/natours-ipad.webp" type="image/webp" media="(max-width: 650px)">
+                        <source srcset="../img/taboo_ipad.webp" type="image/webp" media="(max-width: 650px)">
                         <!-- Larger than 650px:- use ipad and phone -->
-                        <source srcset="../img/natours.webp" type="image/webp">
+                        <source srcset="../img/taboo_ipad_iphone.webp" type="image/webp">
 
                         <!-- Fallback: pngs based on screen size -->
-                        <img src="../img/natours-comp.png"
-                            srcset="../img/natours-comp.png 1615w, ../img/natours-ipad-comp.png 1580w"
-                            sizes="(max-width: 650px) 1500w" alt="Natours website displayed in ipad and iphone"
-                            class="project__image">
-                    </picture>
+                        <img src="../img/taboo_ipad_iphone_comp.png"
+                                srcset="../img/taboo_ipad_iphone_comp.png 1560w, ../img/taboo_ipad_comp.png 1350w"
+                                sized="((max-width: 650px) 1000w)"
+                                alt="Taboo application displayed in ipad and iphone" class="project__image">
+
+                        </picture>
                 </div>
-                <h4 class="heading-4 heading-4--dark-1 u-margin-bottom-xs project__title">Natours</h4>
+                <h4 class="heading-4 heading-4--dark-4 u-margin-bottom-xs project__title">Taboo!</h4>
 
                 <ul class="project__skills inline-list inline-list--border u-margin-bottom-xs">
-                    <li class="list-item project__tech">html</li>
-                    <li class="list-item project__tech">css</li>
-                    <li class="list-item project__tech">sass</li>
+
+                    <li class="list-item project__tech">react</li>
+                    <li class="list-item project__tech">redux</li>
+                    <li class="list-item project__tech">styled components</li>
+                    <span class="project__skills-line"></span>
+                    <li class="list-item project__tech">firebase</li>
+                    <li class="list-item project__tech">node</li>
+                    <li class="list-item project__tech">jest</li>
 
                 </ul>
                 <p class="paragraph justify-text">
-                    A fully responsive nature tour website with smooth animations, image and video backgrounds, and form
-                    with custom inputs. Built using floats to ensure cross browser compatibility
+                    The multiplayer team game that's all about what you say, and what you don't! Players see real
+                    time updates and play rounds with a synchronized timer. Play while together or virtually.
                 </p>
                 <div class="project__btn-group light">
-                    <a href="https://natoursadventures.netlify.app/" class="btn btn--color-1" target="_blank">
+                    <a href="https://playtaboo.app" class="btn btn--color-2-dark" target="_blank">
                         <svg class="project__link-logo">
                             <use xlink:href="#_sprite_icon-link"></use>
                         </svg>
                         View Site</a>
-                    <a href="https://github.com/LiVinson/natours" class="btn btn--color-4 primary" target="_blank">
-
+                    <a href="https://github.com/LiVinson/taboo-game" class="btn btn--color-4 secondary-dark-2"
+                        target="_blank">
                         <svg class="project__code-logo">
                             <use xlink:href="#_sprite_icon-embed2"></use>
                         </svg>
@@ -268,41 +275,42 @@
 
         <section class="project--bg-4">
             <!------------ Project 4 of 5: Contains image, h4, ul of technology, p or description, button group with svg and text ----------------->
+
             <div class="project__container">
                 <div class="project__image-container">
                     <picture>
-                        <source srcset="../img/study.webp" type="image/webp">
+                        <!-- Up to 650px:- use ipad only -->
+                        <source srcset="../img/natours-ipad.webp" type="image/webp" media="(max-width: 650px)">
+                        <!-- Larger than 650px:- use ipad and phone -->
+                        <source srcset="../img/natours.webp" type="image/webp">
 
                         <!-- Fallback: pngs based on screen size -->
-                        <img src="../img/study-comp.png" alt="Study Smart application displayed in ipad"
+                        <img src="../img/natours-comp.png"
+                            srcset="../img/natours-comp.png 1615w, ../img/natours-ipad-comp.png 1580w"
+                            sizes="(max-width: 650px) 1500w" alt="Natours website displayed in ipad and iphone"
                             class="project__image">
                     </picture>
                 </div>
-                <h4 class="heading-4 heading-4--dark-4 u-margin-bottom-xs project__title">Study Smart</h4>
+                <h4 class="heading-4 heading-4--dark-1 u-margin-bottom-xs project__title">Natours</h4>
 
                 <ul class="project__skills inline-list inline-list--border u-margin-bottom-xs">
-                    <li class="list-item project__tech">javascript</li>
-                    <li class="list-item project__tech">bootstrap</li>
-                    <li class="list-item project__tech">react</li>
-                    <span class="project__skills-line"></span>
-                    <li class="list-item project__tech">node</li>
-                    <li class="list-item project__tech">express</li>
-                    <li class="list-item project__tech">mongodb</li>
+                    <li class="list-item project__tech">html</li>
+                    <li class="list-item project__tech">css</li>
+                    <li class="list-item project__tech">sass</li>
 
                 </ul>
                 <p class="paragraph justify-text">
-                    A full stack application that allows users to create and save detailed learning goals, schedule and
-                    view study
-                    sessions in a monthly calendar, and add resources for later review.
+                    A fully responsive nature tour website with smooth animations, image and video backgrounds, and form
+                    with custom inputs. Built using floats to ensure cross browser compatibility
                 </p>
                 <div class="project__btn-group light">
-                    <a href="https://study-smart-app.herokuapp.com/" class="btn btn--color-2-dark" target="_blank">
+                    <a href="https://natoursadventures.netlify.app/" class="btn btn--color-1" target="_blank">
                         <svg class="project__link-logo">
                             <use xlink:href="#_sprite_icon-link"></use>
                         </svg>
                         View Site</a>
-                    <a href="https://github.com/LiVinson/study-smart" class="btn btn--color-4 secondary-dark-2"
-                        target="_blank">
+                    <a href="https://github.com/LiVinson/natours" class="btn btn--color-4 primary" target="_blank">
+
                         <svg class="project__code-logo">
                             <use xlink:href="#_sprite_icon-embed2"></use>
                         </svg>
@@ -348,7 +356,7 @@
                             <use xlink:href="#_sprite_icon-link"></use>
                         </svg>
                         View Site</a>
-                    <a href="https://github.com/LiVinson/study-smart" class="btn btn--color-4 secondary-dark-2"
+                    <a href="https://github.com/LiVinson/lion-king-click" class="btn btn--color-4 secondary-dark-2"
                         target="_blank">
                         <svg class="project__code-logo">
                             <use xlink:href="#_sprite_icon-embed2"></use>
@@ -418,8 +426,8 @@
             <li class="footer__link"><a class="btn-link light-2" href="https://www.linkedin.com/in/lisavinson1/"
                     target="_blank">LinkedIn</a>
             </li>
-            <li class="footer__link"><a class="btn-link light-2" href="./files/Vinson_Lisa_Resume.pdf"
-                    download="Vinson_Lisa_Resume.pdf">Resume</a></li>
+            <li class="footer__link"><a class="btn-link light-2" href="./files/Vinson,Lisa_Resume.pdf"
+                    download="Vinson,Lisa_Resume.pdf">Resume</a></li>
         </ul>
     </footer>
 </body>
