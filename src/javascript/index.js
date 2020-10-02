@@ -1,5 +1,5 @@
 import "../sass/main.scss"
-import "../files/Vinson_Lisa_Resume.pdf"
+import "../files/Vinson,Lisa_Resume.pdf"
 import "../img/_sprite.svg"
 import validateInput from "./validation.js"
 
