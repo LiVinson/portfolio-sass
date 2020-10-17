@@ -41,15 +41,11 @@
 			$color-accent-2 40%,
 			$color-accent-3 100%
 		);
-		// background-color: $color-tertiary;
 	}
 
 	&--bg-3 {
 		@extend %project;
-		// background-color:$color-secondary-light
 		background-image: linear-gradient(to bottom right, #2579b6 0%, $color-accent-4 40%, $color-accent-4 100%);
-
-		// background-color: $color-tertiary;
 	}
 
 	&--bg-4 {
@@ -60,7 +56,6 @@
 			$color-accent-2 40%,
 			$color-accent-3 100%
 		);
-		// background-image: linear-gradient(to bottom right, $color-secondary-light 0%, $color-accent-4 40%, $color-secondary-light 100%);
 	}
 
 	&--bg-5 {
@@ -71,17 +66,17 @@
 			$color-primary 40%,
 			$color-primary 100%
 		);
+		//add additional bottom padding just on last project
 		padding-bottom: 10rem;
 	}
 
-	//inside each project section. contains image, h4,  ul, p, and btn group
+	//Nested inside each project section. Contains image, h4,  ul, p, and btn group
 	&__container {
 		display: flex;
 		flex-direction: column;
 		align-items: center;
 		width: 55%;
 		margin: 0 auto;
-		// padding-top:5rem;
 
 		@include responsive(tab-land) {
 			width: 70%;
@@ -90,7 +85,6 @@
 		@include responsive(tab-port) {
 			width: 85%;
 		}
-
 		@include responsive(phone-land) {
 			width: 100%;
 		}
@@ -116,6 +110,7 @@
 			width: 85%;
 		}
 	}
+
 	&__image {
 		width: 100%;
 	}
@@ -134,7 +129,7 @@
 			justify-content: center;
 			align-content: space-between;
 
-			//stack lists
+			//stacks skill lists
 			@include responsive(phone-land) {
 				flex-direction: column;
 				width: 100%;
@@ -142,6 +137,7 @@
 			}
 		}
 
+		//1 -2 ul separated by span on smaller screens
 		&__list {
 			@include responsive(phone-land) {
 				width: 80%;
@@ -157,6 +153,7 @@
 
 		&__line {
 			display: none;
+			//only display once skill lists will be stacked.
 			@include responsive(phone-land) {
 				display: inline-block;
 				width: 80%;
@@ -171,7 +168,7 @@
 		}
 	}
 
-	//individual li contains skills
+	//individual li contains technology used
 	&__tech {
 		@include responsive(phone-land) {
 			font-size: 2rem;
@@ -181,6 +178,7 @@
 		}
 	}
 
+	//container for code and web page buttons
 	&__btn-group {
 		margin-top: 2rem;
 		display: flex;
@@ -210,7 +208,7 @@
 		}
 	}
 
-	//styles the svgs within the link
+	//styles the svgs within the buttons
 	&__link-logo {
 		height: 2.5rem;
 		width: 2.5rem;
