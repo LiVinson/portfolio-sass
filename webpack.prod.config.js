@@ -136,20 +136,20 @@ module.exports = {
     }),
     new SpriteLoaderPlugin(),
     new FaviconsWebpackPlugin({
-      logo: "./src/img/favicons/favicon.png",
-      cache:false,
-      inject: true,
+      logo: "./src/img/favicons/favicon.png", 
+      favicons: {
+        icons: {
+          android: true,
+          appleIcon: true,
+          appleStartup: false,
+          coast: true,
+          favicons: true,
+          firefox: true,
+          windows: true,
+          yandex: false,
+        }
+      } 
       
-      icons: {
-        android: false,
-        appleIcon: false,
-        appleStartup: false,
-        coast: true,
-        favicons: true,
-        firefox: true,
-        windows: true,
-        yandex: true,
-      }
     }),  
     new webpack.DefinePlugin({
       "process.env.CONTACT_URL": JSON.stringify("https://lv-portfolio-api.herokuapp.com")
