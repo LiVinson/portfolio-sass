@@ -30,7 +30,6 @@
                         download="Vinson_Lisa_Resume.pdf">resume</a></li>
             </ul>
         </nav>
-        </div>
     </header>
 
     <!------------------------ ABOUT SECTION  --------------------------->
@@ -69,7 +68,7 @@
 
         <div class="container__skills">
             <h4 class="heading-4 heading-4--light center-text u-margin-bottom-sm">&quot;The beautiful
-                thing about learning is nobody can take it away from you.&quot;<div>- B.B. King</div>
+                thing about learning is nobody can take it away from you.&quot;<span>- B.B. King</span>
             </h4>
             <!-- Skills Block 1 of 3 -->
             <div class="skills__block">
@@ -135,9 +134,8 @@
                         <source srcset="../img/hacker.webp" type="image/webp">
 
                         <!-- Fallback: pngs based on screen size -->
-                        <img src="../img/hacker-comp.png"
-                            srcset="../img/hacker-comp.png 1560w, ../img/hacker-ipad-comp.png 1350w"
-                            sizes="(max-width: 650px) 1000w"
+                        <img src="../img/hacker-comp.png" srcset="../img/hacker-comp.png 1560w,
+                                ../img/hacker-ipad-comp.png 1350w" sizes="(max-width: 650px) 600px"
                             alt="Hacker News Clone website displayed in ipad and iphone" class="project__image">
                     </picture>
                 </div>
@@ -146,7 +144,7 @@
                     <li class="list-item project__tech">html</li>
                     <li class="list-item project__tech">css</li>
                     <li class="list-item project__tech">javascript</li>
-                    <span class="project__skills-line"></span>
+                    <!-- <span class="project__skills-line"></span> -->
                     <li class="list-item project__tech">react</li>
                     <li class="list-item project__tech">babel</li>
                     <li class="list-item project__tech">webpack</li>
@@ -187,25 +185,33 @@
 
                         <!-- Fallback: pngs based on screen size -->
                         <img src="../img/taboo_ipad_iphone_comp.png"
-                                srcset="../img/taboo_ipad_iphone_comp.png 1560w, ../img/taboo_ipad_comp.png 1350w"
-                                sized="((max-width: 650px) 1000w)"
-                                alt="Taboo application displayed in ipad and iphone" class="project__image">
+                            srcset="../img/taboo_ipad_iphone_comp.png 1560w, ../img/taboo_ipad_comp.png 1350w"
+                            sizes="(max-width: 650px) 600px" alt="Taboo application displayed in ipad and iphone"
+                            class="project__image">
 
-                        </picture>
+                    </picture>
                 </div>
                 <h4 class="heading-4 heading-4--dark-4 u-margin-bottom-xs project__title">Taboo!</h4>
+               
+               <!--PICKLE: Make container flex. Update lists to be a 'top' 'bottom' 
+                 style list items to always have border on top, and not on last one when bottom
+                 Make div flex wrap at certain screen size so list drop.            
+            
+            -->
+                <div class="project__skills__container">
+                    <ul class="project__skills inline-list inline-list--border u-margin-bottom-xs">
 
-                <ul class="project__skills inline-list inline-list--border u-margin-bottom-xs">
-
-                    <li class="list-item project__tech">react</li>
-                    <li class="list-item project__tech">redux</li>
-                    <li class="list-item project__tech">styled components</li>
+                        <li class="list-item project__tech">react</li>
+                        <li class="list-item project__tech">redux</li>
+                        <li class="list-item project__tech">styled components</li>
+                    </ul>
                     <span class="project__skills-line"></span>
-                    <li class="list-item project__tech">firebase</li>
-                    <li class="list-item project__tech">node</li>
-                    <li class="list-item project__tech">jest</li>
-
-                </ul>
+                    <ul class="project__skills inline-list inline-list--border u-margin-bottom-xs">
+                        <li class="list-item project__tech">firebase</li>
+                        <li class="list-item project__tech">node</li>
+                        <li class="list-item project__tech">jest</li>
+                    </ul>
+                </div>
                 <p class="paragraph justify-text">
                     The multiplayer team game that's all about what you say, and what you don't! Players see real
                     time updates and play rounds with a synchronized timer. Play while together or virtually.
@@ -239,7 +245,7 @@
                         <!-- Fallback: pngs based on screen size -->
                         <img src="../img/trillo-comp.png"
                             srcset="../img/trillo-comp.png 1700w, ../img/trillo-ipad-comp.png 1580w"
-                            sizes="(max-width: 650px) 1500w" alt="Trillo travels website displayed in ipad and iphone"
+                            sizes="(max-width: 650px) 600px" alt="Trillo travels website displayed in ipad and iphone"
                             class="project__image">
                     </picture>
                 </div>
@@ -287,7 +293,7 @@
                         <!-- Fallback: pngs based on screen size -->
                         <img src="../img/natours-comp.png"
                             srcset="../img/natours-comp.png 1615w, ../img/natours-ipad-comp.png 1580w"
-                            sizes="(max-width: 650px) 1500w" alt="Natours website displayed in ipad and iphone"
+                            sizes="(max-width: 650px) 600px" alt="Natours website displayed in ipad and iphone"
                             class="project__image">
                     </picture>
                 </div>
@@ -333,7 +339,7 @@
                         <!-- Fallback: pngs based on screen size -->
                         <img src="../img/lion-king-comp.png"
                             srcset="../img/lion-king-comp.png 1650w, ../img/lion-king-ipad-comp.png 1350w"
-                            sizes="(max-width: 650px) 1000w"
+                            sizes="(max-width: 650px) 600px"
                             alt="Lion King Click application displayed in ipad and iphone" class="project__image">
                     </picture>
                 </div>
@@ -343,7 +349,7 @@
                     <li class="list-item project__tech">html</li>
                     <li class="list-item project__tech">css</li>
                     <li class="list-item project__tech">bootstrap</li>
-                    <span class="project__skills-line"></span>
+                    <!-- <span class="project__skills-line"></span> -->
                     <li class="list-item project__tech">react</li>
                 </ul>
                 <p class="paragraph justify-text">
@@ -388,15 +394,15 @@
             <form action="#" class="form">
                 <!-- Labels will appear above input -->
                 <div class="form__group form__group--input">
-                    <input type="text" class="form__input" placeholder="Name" name="name" required>
+                    <input type="text" class="form__input" placeholder="Name" name="name" id="name" required>
                     <label for="name" class="form__label">Name</label>
                 </div>
                 <div class="form__group form__group--input">
-                    <input type="email" class="form__input" placeholder="Email" name="email" required>
+                    <input type="email" class="form__input" placeholder="Email" name="email" id="email" required>
                     <label for="email" class="form__label">Email</label>
                 </div>
                 <div class="form__group form__group--text">
-                    <textarea name="message" class="form__textarea"
+                    <textarea name="message" class="form__textarea" id="message"
                         placeholder="Enter a message of up to 1000 characters" required></textarea>
                     <label for="message" class="form__label">Your Message</label>
                 </div>

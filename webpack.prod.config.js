@@ -137,11 +137,13 @@ module.exports = {
     new SpriteLoaderPlugin(),
     new FaviconsWebpackPlugin({
       logo: "./src/img/favicons/favicon.png",
+      cache:false,
       inject: true,
+      
       icons: {
-        android: true,
-        appleIcon: true,
-        appleStartup: true,
+        android: false,
+        appleIcon: false,
+        appleStartup: false,
         coast: true,
         favicons: true,
         firefox: true,

@@ -131,7 +131,17 @@
       width: 85%;
       text-align: center;
       padding:0;
-    }
+
+      //Select the third li child 
+      //When phone-land, create an after elemene
+      // & > li:nth-child(-n+3)::after {
+      //   content:"";
+      //   display:inline-block;
+      //   width: 100%;
+      //   height:2px;
+      //   background-color: currentColor;
+      }
+    
 
     @include responsive(phone-port) {
         width: 100%;

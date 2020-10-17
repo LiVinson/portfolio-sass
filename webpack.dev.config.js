@@ -118,7 +118,12 @@ module.exports = {
     }),
     new SpriteLoaderPlugin(),
     new FaviconsWebpackPlugin({
-      logo: "./src/img/favicons/favicon.png" 
+      logo: "./src/img/favicons/favicon.png",
+      favicons: {
+        icons: {
+          appleStartup: false, 
+        }
+      } 
     }),
     new webpack.DefinePlugin({
       "process.env.CONTACT_URL": JSON.stringify("http://localhost:3000")
