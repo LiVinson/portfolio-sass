@@ -140,15 +140,20 @@
                     </picture>
                 </div>
                 <h4 class="heading-4 heading-4--light-2 u-margin-bottom-xs project__title">Hacker News Clone</h4>
-                <ul class="project__skills inline-list inline-list--border u-margin-bottom-xs">
-                    <li class="list-item project__tech">html</li>
-                    <li class="list-item project__tech">css</li>
-                    <li class="list-item project__tech">javascript</li>
-                    <!-- <span class="project__skills-line"></span> -->
-                    <li class="list-item project__tech">react</li>
-                    <li class="list-item project__tech">babel</li>
-                    <li class="list-item project__tech">webpack</li>
-                </ul>
+                <div class="project__skills__container u-margin-bottom-xs">
+
+                    <ul class="project__skills__list inline-list inline-list--border">
+                        <li class="list-item project__tech">html</li>
+                        <li class="list-item project__tech">css</li>
+                        <li class="list-item project__tech">javascript</li>
+                    </ul>
+                    <span class="project__skills__line"></span>
+                    <ul class="project__skills__list inline-list inline-list--border">
+                        <li class="list-item project__tech">react</li>
+                        <li class="list-item project__tech">babel</li>
+                        <li class="list-item project__tech">webpack</li>
+                    </ul>
+                </div>
                 <p class="paragraph justify-text">
                     A clone of the popular Hacker News website. Queries the Hacker News API and allows users to view the
                     top and most recent news, view user information, and comment details.
@@ -192,21 +197,15 @@
                     </picture>
                 </div>
                 <h4 class="heading-4 heading-4--dark-4 u-margin-bottom-xs project__title">Taboo!</h4>
-               
-               <!--PICKLE: Make container flex. Update lists to be a 'top' 'bottom' 
-                 style list items to always have border on top, and not on last one when bottom
-                 Make div flex wrap at certain screen size so list drop.            
-            
-            -->
-                <div class="project__skills__container">
-                    <ul class="project__skills inline-list inline-list--border u-margin-bottom-xs">
+                <div class="project__skills__container u-margin-bottom-xs">
+                    <ul class="project__skills__list inline-list inline-list--border">
 
                         <li class="list-item project__tech">react</li>
                         <li class="list-item project__tech">redux</li>
                         <li class="list-item project__tech">styled components</li>
                     </ul>
-                    <span class="project__skills-line"></span>
-                    <ul class="project__skills inline-list inline-list--border u-margin-bottom-xs">
+                    <span class="project__skills__line"></span>
+                    <ul class="project__skills__list inline-list inline-list--border">
                         <li class="list-item project__tech">firebase</li>
                         <li class="list-item project__tech">node</li>
                         <li class="list-item project__tech">jest</li>
@@ -250,13 +249,14 @@
                     </picture>
                 </div>
                 <h4 class="heading-4 u-margin-bottom-xs tertiary project__title">Trillo Travels</h4>
+                <div class="project__skills__container u-margin-bottom-xs">
 
-                <ul class="project__skills inline-list inline-list--border u-margin-bottom-xs light">
-                    <li class="list-item project__tech">html</li>
-                    <li class="list-item project__tech">css</li>
-                    <li class="list-item project__tech">sass</li>
-                </ul>
-
+                    <ul class="project__skills__list inline-list inline-list--border light">
+                        <li class="list-item project__tech">html</li>
+                        <li class="list-item project__tech">css</li>
+                        <li class="list-item project__tech">sass</li>
+                    </ul>
+                </div>
                 <p class="paragraph justify-text light">
                     A fully responsive hotel landing page for an elegant travel website. Layout is created using flexbox
                     and includes hover animations, svgs, and use of gradients.
@@ -298,15 +298,16 @@
                     </picture>
                 </div>
                 <h4 class="heading-4 heading-4--dark-1 u-margin-bottom-xs project__title">Natours</h4>
-
-                <ul class="project__skills inline-list inline-list--border u-margin-bottom-xs">
-                    <li class="list-item project__tech">html</li>
-                    <li class="list-item project__tech">css</li>
-                    <li class="list-item project__tech">sass</li>
-
-                </ul>
+                <div class="project__skills__container u-margin-bottom-xs">
+                    <ul class="project__skills__list inline-list inline-list--border">
+                        <li class="list-item project__tech">html</li>
+                        <li class="list-item project__tech">css</li>
+                        <li class="list-item project__tech">sass</li>
+                    </ul>
+                </div>
                 <p class="paragraph justify-text">
-                    A fully responsive nature tour website with smooth animations, image and video backgrounds, and form
+                    A fully responsive nature tour website with smooth animations, image and video backgrounds, and
+                    form
                     with custom inputs. Built using floats to ensure cross browser compatibility
                 </p>
                 <div class="project__btn-group light">
@@ -345,13 +346,17 @@
                 </div>
                 <h4 class="heading-4 heading-4--dark-2 u-margin-bottom-xs project__title">Lion King Click</h4>
 
-                <ul class="project__skills inline-list inline-list--border u-margin-bottom-xs">
-                    <li class="list-item project__tech">html</li>
-                    <li class="list-item project__tech">css</li>
-                    <li class="list-item project__tech">bootstrap</li>
-                    <!-- <span class="project__skills-line"></span> -->
-                    <li class="list-item project__tech">react</li>
-                </ul>
+                <div class="project__skills__container u-margin-bottom-xs">
+                    <ul class="project__skills__list inline-list inline-list--border">
+                        <li class="list-item project__tech">html</li>
+                        <li class="list-item project__tech">css</li>
+                        <li class="list-item project__tech">bootstrap</li>
+                    </ul>
+                    <span class="project__skills__line"></span>
+                    <ul class="project__skills__list inline-list inline-list--border">
+                        <li class="list-item project__tech">react</li>
+                    </ul>
+                </div>
                 <p class="paragraph justify-text">
                     A fun mini-game built with React.js to test your memory skills. Try to click on each Lion King
                     character without clicking the same image twice. Look carefully, the images move after each click!
@@ -372,8 +377,6 @@
                 </div>
             </div>
         </section>
-
-
     </section>
 
     <!------------------------ CONTACT SECTION: Contains h2, and container with form--------------------------->
