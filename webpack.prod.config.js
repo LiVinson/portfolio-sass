@@ -9,12 +9,13 @@ const FaviconsWebpackPlugin = require("favicons-webpack-plugin")
 
 module.exports = {
   entry: {
-    main: "./src/javascript/index.js",
+    index: "./src/javascript/index.js",
+    modernizr: "./modernizr.js"
   },
   output: {
     path: path.join(__dirname, "dist"),
     publicPath: "/",
-    filename: "index.js",
+    // filename: "index.js",
   },
   target: "web",
   devtool: "source-map",
@@ -129,6 +130,9 @@ module.exports = {
       template: "./src/html/index.html",
       filename: "./index.html",
       excludeChunks: ["server"],
+      inject: "head", //put script in head instead of before body closing tag
+      scriptLoading: "defer" //add defer so non-blocking
+
     }),
     new MiniCssExtractPlugin({
       filename: "[name].css",
