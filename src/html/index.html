@@ -30,7 +30,6 @@
                         download="Vinson_Lisa_Resume.pdf">resume</a></li>
             </ul>
         </nav>
-        </div>
     </header>
 
     <!------------------------ ABOUT SECTION  --------------------------->
@@ -69,7 +68,7 @@
 
         <div class="container__skills">
             <h4 class="heading-4 heading-4--light center-text u-margin-bottom-sm">&quot;The beautiful
-                thing about learning is nobody can take it away from you.&quot;<div>- B.B. King</div>
+                thing about learning is nobody can take it away from you.&quot;<span>- B.B. King</span>
             </h4>
             <!-- Skills Block 1 of 3 -->
             <div class="skills__block">
@@ -135,22 +134,26 @@
                         <source srcset="../img/hacker.webp" type="image/webp">
 
                         <!-- Fallback: pngs based on screen size -->
-                        <img src="../img/hacker-comp.png"
-                            srcset="../img/hacker-comp.png 1560w, ../img/hacker-ipad-comp.png 1350w"
-                            sizes="(max-width: 650px) 1000w"
+                        <img src="../img/hacker-comp.png" srcset="../img/hacker-comp.png 1560w,
+                                ../img/hacker-ipad-comp.png 1350w" sizes="(max-width: 650px) 600px"
                             alt="Hacker News Clone website displayed in ipad and iphone" class="project__image">
                     </picture>
                 </div>
                 <h4 class="heading-4 heading-4--light-2 u-margin-bottom-xs project__title">Hacker News Clone</h4>
-                <ul class="project__skills inline-list inline-list--border u-margin-bottom-xs">
-                    <li class="list-item project__tech">html</li>
-                    <li class="list-item project__tech">css</li>
-                    <li class="list-item project__tech">javascript</li>
-                    <span class="project__skills-line"></span>
-                    <li class="list-item project__tech">react</li>
-                    <li class="list-item project__tech">babel</li>
-                    <li class="list-item project__tech">webpack</li>
-                </ul>
+                <div class="project__skills__container u-margin-bottom-xs">
+
+                    <ul class="project__skills__list inline-list inline-list--border">
+                        <li class="list-item project__tech">html</li>
+                        <li class="list-item project__tech">css</li>
+                        <li class="list-item project__tech">javascript</li>
+                    </ul>
+                    <span class="project__skills__line"></span>
+                    <ul class="project__skills__list inline-list inline-list--border">
+                        <li class="list-item project__tech">react</li>
+                        <li class="list-item project__tech">babel</li>
+                        <li class="list-item project__tech">webpack</li>
+                    </ul>
+                </div>
                 <p class="paragraph justify-text">
                     A clone of the popular Hacker News website. Queries the Hacker News API and allows users to view the
                     top and most recent news, view user information, and comment details.
@@ -187,25 +190,27 @@
 
                         <!-- Fallback: pngs based on screen size -->
                         <img src="../img/taboo_ipad_iphone_comp.png"
-                                srcset="../img/taboo_ipad_iphone_comp.png 1560w, ../img/taboo_ipad_comp.png 1350w"
-                                sized="((max-width: 650px) 1000w)"
-                                alt="Taboo application displayed in ipad and iphone" class="project__image">
+                            srcset="../img/taboo_ipad_iphone_comp.png 1560w, ../img/taboo_ipad_comp.png 1350w"
+                            sizes="(max-width: 650px) 600px" alt="Taboo application displayed in ipad and iphone"
+                            class="project__image">
 
-                        </picture>
+                    </picture>
                 </div>
                 <h4 class="heading-4 heading-4--dark-4 u-margin-bottom-xs project__title">Taboo!</h4>
+                <div class="project__skills__container u-margin-bottom-xs">
+                    <ul class="project__skills__list inline-list inline-list--border">
 
-                <ul class="project__skills inline-list inline-list--border u-margin-bottom-xs">
-
-                    <li class="list-item project__tech">react</li>
-                    <li class="list-item project__tech">redux</li>
-                    <li class="list-item project__tech">styled components</li>
-                    <span class="project__skills-line"></span>
-                    <li class="list-item project__tech">firebase</li>
-                    <li class="list-item project__tech">node</li>
-                    <li class="list-item project__tech">jest</li>
-
-                </ul>
+                        <li class="list-item project__tech">react</li>
+                        <li class="list-item project__tech">redux</li>
+                        <li class="list-item project__tech">styled components</li>
+                    </ul>
+                    <span class="project__skills__line"></span>
+                    <ul class="project__skills__list inline-list inline-list--border">
+                        <li class="list-item project__tech">firebase</li>
+                        <li class="list-item project__tech">node</li>
+                        <li class="list-item project__tech">jest</li>
+                    </ul>
+                </div>
                 <p class="paragraph justify-text">
                     The multiplayer team game that's all about what you say, and what you don't! Players see real
                     time updates and play rounds with a synchronized timer. Play while together or virtually.
@@ -239,18 +244,19 @@
                         <!-- Fallback: pngs based on screen size -->
                         <img src="../img/trillo-comp.png"
                             srcset="../img/trillo-comp.png 1700w, ../img/trillo-ipad-comp.png 1580w"
-                            sizes="(max-width: 650px) 1500w" alt="Trillo travels website displayed in ipad and iphone"
+                            sizes="(max-width: 650px) 600px" alt="Trillo travels website displayed in ipad and iphone"
                             class="project__image">
                     </picture>
                 </div>
                 <h4 class="heading-4 u-margin-bottom-xs tertiary project__title">Trillo Travels</h4>
+                <div class="project__skills__container u-margin-bottom-xs">
 
-                <ul class="project__skills inline-list inline-list--border u-margin-bottom-xs light">
-                    <li class="list-item project__tech">html</li>
-                    <li class="list-item project__tech">css</li>
-                    <li class="list-item project__tech">sass</li>
-                </ul>
-
+                    <ul class="project__skills__list inline-list inline-list--border light">
+                        <li class="list-item project__tech">html</li>
+                        <li class="list-item project__tech">css</li>
+                        <li class="list-item project__tech">sass</li>
+                    </ul>
+                </div>
                 <p class="paragraph justify-text light">
                     A fully responsive hotel landing page for an elegant travel website. Layout is created using flexbox
                     and includes hover animations, svgs, and use of gradients.
@@ -287,20 +293,21 @@
                         <!-- Fallback: pngs based on screen size -->
                         <img src="../img/natours-comp.png"
                             srcset="../img/natours-comp.png 1615w, ../img/natours-ipad-comp.png 1580w"
-                            sizes="(max-width: 650px) 1500w" alt="Natours website displayed in ipad and iphone"
+                            sizes="(max-width: 650px) 600px" alt="Natours website displayed in ipad and iphone"
                             class="project__image">
                     </picture>
                 </div>
                 <h4 class="heading-4 heading-4--dark-1 u-margin-bottom-xs project__title">Natours</h4>
-
-                <ul class="project__skills inline-list inline-list--border u-margin-bottom-xs">
-                    <li class="list-item project__tech">html</li>
-                    <li class="list-item project__tech">css</li>
-                    <li class="list-item project__tech">sass</li>
-
-                </ul>
+                <div class="project__skills__container u-margin-bottom-xs">
+                    <ul class="project__skills__list inline-list inline-list--border">
+                        <li class="list-item project__tech">html</li>
+                        <li class="list-item project__tech">css</li>
+                        <li class="list-item project__tech">sass</li>
+                    </ul>
+                </div>
                 <p class="paragraph justify-text">
-                    A fully responsive nature tour website with smooth animations, image and video backgrounds, and form
+                    A fully responsive nature tour website with smooth animations, image and video backgrounds, and
+                    form
                     with custom inputs. Built using floats to ensure cross browser compatibility
                 </p>
                 <div class="project__btn-group light">
@@ -333,19 +340,23 @@
                         <!-- Fallback: pngs based on screen size -->
                         <img src="../img/lion-king-comp.png"
                             srcset="../img/lion-king-comp.png 1650w, ../img/lion-king-ipad-comp.png 1350w"
-                            sizes="(max-width: 650px) 1000w"
+                            sizes="(max-width: 650px) 600px"
                             alt="Lion King Click application displayed in ipad and iphone" class="project__image">
                     </picture>
                 </div>
                 <h4 class="heading-4 heading-4--dark-2 u-margin-bottom-xs project__title">Lion King Click</h4>
 
-                <ul class="project__skills inline-list inline-list--border u-margin-bottom-xs">
-                    <li class="list-item project__tech">html</li>
-                    <li class="list-item project__tech">css</li>
-                    <li class="list-item project__tech">bootstrap</li>
-                    <span class="project__skills-line"></span>
-                    <li class="list-item project__tech">react</li>
-                </ul>
+                <div class="project__skills__container u-margin-bottom-xs">
+                    <ul class="project__skills__list inline-list inline-list--border">
+                        <li class="list-item project__tech">html</li>
+                        <li class="list-item project__tech">css</li>
+                        <li class="list-item project__tech">bootstrap</li>
+                    </ul>
+                    <span class="project__skills__line"></span>
+                    <ul class="project__skills__list inline-list inline-list--border">
+                        <li class="list-item project__tech">react</li>
+                    </ul>
+                </div>
                 <p class="paragraph justify-text">
                     A fun mini-game built with React.js to test your memory skills. Try to click on each Lion King
                     character without clicking the same image twice. Look carefully, the images move after each click!
@@ -366,8 +377,6 @@
                 </div>
             </div>
         </section>
-
-
     </section>
 
     <!------------------------ CONTACT SECTION: Contains h2, and container with form--------------------------->
@@ -388,15 +397,15 @@
             <form action="#" class="form">
                 <!-- Labels will appear above input -->
                 <div class="form__group form__group--input">
-                    <input type="text" class="form__input" placeholder="Name" name="name" required>
+                    <input type="text" class="form__input" placeholder="Name" name="name" id="name" required>
                     <label for="name" class="form__label">Name</label>
                 </div>
                 <div class="form__group form__group--input">
-                    <input type="email" class="form__input" placeholder="Email" name="email" required>
+                    <input type="email" class="form__input" placeholder="Email" name="email" id="email" required>
                     <label for="email" class="form__label">Email</label>
                 </div>
                 <div class="form__group form__group--text">
-                    <textarea name="message" class="form__textarea"
+                    <textarea name="message" class="form__textarea" id="message"
                         placeholder="Enter a message of up to 1000 characters" required></textarea>
                     <label for="message" class="form__label">Your Message</label>
                 </div>

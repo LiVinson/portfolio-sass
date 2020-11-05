@@ -1,20 +1,76 @@
 // 2 panel jumbotron
-.header {
-  width: 100%;
-  height: 95vh;
-  display: flex;
-  flex-direction: column;
-  padding: 2rem;
-  
-  align-items: center;
-  position: relative;
-  text-align: center;
-  //default size. Load larger only if needed based on screen size/resolution
-  background-image: url("../img/header-bg-1200.jpg");
-  background-size: cover;
-  background-position: top;
 
-  /*
+.no-webp .header {
+	//default size
+	background-image: url('../img/header-bg-1200.jpg');
+
+	@media (min-width: 25em) and (max-width: 40.625em) and (min-resolution: 192dpi),
+		(min-width: 56.25) and (max-width: 75em) and (max-resolution: 191dpi) {
+		background-image: url('../img/header-bg-1800.jpg');
+
+		/*
+  If screen is > 900 and < 1200 and high res: 3000px
+  OR  If screen is > 1800 and low res: 3000px
+  */
+		@media (min-resolution: 192dpi) and (min-width: 56.25) and (max-width: 75em),
+			(max-resolution: 191dpi) and (min-width: 112.5) {
+			background-image: url('../img/header-bg-3000.jpg');
+		}
+
+		/* 
+  If screen is > 1200 and < 1800 and high res: 4000px
+  OR If screen is > 1800 and high res: 4000px
+*/
+
+		@media (min-resolution: 192dpi) and (min-width: 75em) and (max-width: 112.5em),
+			(min-width: 112.5em) and (max-resolution: 191dpi) {
+			background-image: url('../img/header-bg-4000.jpg');
+		}
+	}
+}
+.webp .header {
+	//default size
+	background-image: url('../img/header-bg-1200.webp');
+
+	@media (min-width: 25em) and (max-width: 40.625em) and (min-resolution: 192dpi),
+		(min-width: 56.25) and (max-width: 75em) and (max-resolution: 191dpi) {
+		background-image: url('../img/header-bg-1800.webp');
+	}
+	/*
+  If screen is > 900 and < 1200 and high res: 3000px
+  OR  If screen is > 1800 and low res: 3000px
+  */
+	@media (min-resolution: 192dpi) and (min-width: 56.25) and (max-width: 75em),
+		(max-resolution: 191dpi) and (min-width: 112.5) {
+		background-image: url('../img/header-bg-3000.webp');
+	}
+
+	/* 
+  If screen is > 1200 and < 1800 and high res: 4000px
+  OR If screen is > 1800 and high res: 4000px
+*/
+
+	@media (min-resolution: 192dpi) and (min-width: 75em) and (max-width: 112.5em),
+		(min-width: 112.5em) and (max-resolution: 191dpi) {
+		background-image: url('../img/header-bg-4000.webp');
+	}
+}
+
+.header {
+	width: 100%;
+	height: 95vh;
+	display: flex;
+	flex-direction: column;
+	padding: 2rem;
+	align-items: center;
+	position: relative;
+	text-align: center;
+	//default size. Load larger only if needed based on screen size/resolution
+	// background-image: url("../img/header-bg-1200.jpg");
+	background-size: cover;
+	background-position: top;
+
+	/*
   If screen is < 650 and low res: 1200px - already loaded
   OR
   If screen is > 650 and < 900 and low res: 1200px - already loaded
@@ -25,13 +81,13 @@
   If screen is > 900 and < 1200 and low res: 1800px
 */
 
-  @media (min-width: 25em) and (max-width: 40.625em) and (min-resolution: 192dpi),
-    (min-width: 56.25) and (max-width: 75em) and (max-resolution: 191dpi) {
-    background-image: url("../img/header-bg-1800.jpg");
+	// @media (min-width: 25em) and (max-width: 40.625em) and (min-resolution: 192dpi),
+	//   (min-width: 56.25) and (max-width: 75em) and (max-resolution: 191dpi) {
+	//   background-image: url("../img/header-bg-1800.jpg");
 
-  }
+	// }
 
-  /*
+	/*
   If screen is > 650 and < 900 and high res: 2500px
   OR
   If screen is > 1200 and < 1800 and low res: 2500px
@@ -39,53 +95,53 @@
   If screen is > 1800 and low res: 2500px
 
   */
-  @media (min-width: 40.625em) and (max-width: 56.25em) and (min-resolution: 192dpi),
-    (min-width: 75em) and (max-width: 112.5) and (max-resolution: 191dpi),
-    (min-width: 112.5em) and (max-resolution: 191dpi) {
-    background-image: url("../img/header-bg-2500.jpg");
+	// @media (min-width: 40.625em) and (max-width: 56.25em) and (min-resolution: 192dpi),
+	//   (min-width: 75em) and (max-width: 112.5) and (max-resolution: 191dpi),
+	//   (min-width: 112.5em) and (max-resolution: 191dpi) {
+	//   background-image: url("../img/header-bg-2500.jpg");
 
-  }
+	// }
 
-  /*
+	/*
   If screen is > 900 and < 1200 and high res: 3000px
   OR  If screen is > 1800 and low res: 3000px
   */
-  @media (min-resolution: 192dpi) and (min-width: 56.25) and (max-width: 75em),
-  (max-resolution: 191dpi) and (min-width: 112.5) {
-    background-image: url("../img/header-bg-3000.jpg");
+	// @media (min-resolution: 192dpi) and (min-width: 56.25) and (max-width: 75em),
+	// (max-resolution: 191dpi) and (min-width: 112.5) {
+	//   background-image: url("../img/header-bg-3000.jpg");
 
-  }
+	// }
 
-  /*
+	/*
   BLACK
   If screen is > 1200 and < 1800 and high res: 4000px
   OR
   If screen is > 1800 and high res: 4000px
 */
 
-  @media (min-resolution: 192dpi) and (min-width: 75em) and (max-width: 112.5em),
-    (min-width: 112.5em) and (max-resolution: 191dpi) {
-    background-image: url("../img/header-bg-4000.jpg");
+	// @media (min-resolution: 192dpi) and (min-width: 75em) and (max-width: 112.5em),
+	//   (min-width: 112.5em) and (max-resolution: 191dpi) {
+	//   background-image: url("../img/header-bg-4000.jpg");
 
-  }
+	// }
 
-  @include responsive(tab-port) {
-    //keeps image 'swirl' in frame
-    background-position: right;
-  }
+	@include responsive(tab-port) {
+		//keeps image 'swirl' in frame
+		background-position: right;
+	}
 
-  @include responsive(phone-land) {
-    //nav disappears - need to center header and remove margin auto
-    justify-content: center;
-  }
+	@include responsive(phone-land) {
+		//nav disappears - need to center header and remove margin auto
+		justify-content: center;
+	}
 
-  //Takes up all remaining spave above header, centering it
-  h1 {
-    margin-top: auto;
-    @include responsive(phone-land) {
-      //keeps image 'swirl' in frame
-      margin-top: 0rem;
-      margin-bottom: 2rem;
-    }
-  }
+	//Takes up all remaining space above header, centering it
+	h1 {
+		margin-top: auto;
+		@include responsive(phone-land) {
+			//keeps image 'swirl' in frame
+			margin-top: 0rem;
+			margin-bottom: 2rem;
+		}
+	}
 }
