@@ -47,7 +47,7 @@
   },
   "dependencies": {
     "dotenv": "^8.2.0",
-    "express": "^4.17.1",
+    "express": "^4.17.3",
     "modernizr": "^3.11.3",
     "modernizr-webpack-plugin": "^1.0.7",
     "nodemailer": "^6.4.8"
