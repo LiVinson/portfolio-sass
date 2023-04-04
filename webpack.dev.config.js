@@ -4,6 +4,7 @@ const HtmlWebPackPlugin = require('html-webpack-plugin')
 const MiniCssExtractPlugin = require('mini-css-extract-plugin')
 const SpriteLoaderPlugin = require('svg-sprite-loader/plugin')
 const FaviconsWebpackPlugin = require('favicons-webpack-plugin')
+const CssMinimizerPlugin = require("css-minimizer-webpack-plugin");
 
 module.exports = {
 	entry: {
@@ -48,7 +49,7 @@ module.exports = {
 						loader: MiniCssExtractPlugin.loader,
 					},
 					{
-						// This loader resolves url() and @imports inside CSS
+						//  This loader resolves url() and @imports inside CSS
 						loader: 'css-loader',
 					},
 					{
@@ -59,6 +60,7 @@ module.exports = {
 						},
 					},
 				],
+				type: 'javascript/auto'
 			},
 			{
 				test: /\.pdf$/,

@@ -2,10 +2,12 @@ const path = require("path")
 const webpack = require("webpack")
 const HtmlWebPackPlugin = require("html-webpack-plugin")
 const MiniCssExtractPlugin = require("mini-css-extract-plugin")
-const OptimizeCSSAssetsPlugin = require("optimize-css-assets-webpack-plugin")
+// const OptimizeCSSAssetsPlugin = require("optimize-css-assets-webpack-plugin")
 const SpriteLoaderPlugin = require("svg-sprite-loader/plugin")
 const TerserPlugin = require("terser-webpack-plugin")
 const FaviconsWebpackPlugin = require("favicons-webpack-plugin")
+
+const CssMinimizerPlugin = require("css-minimizer-webpack-plugin");
 
 module.exports = {
   entry: {
@@ -29,7 +31,7 @@ module.exports = {
           ecma: 6,
         },
       }),
-      new OptimizeCSSAssetsPlugin({}),
+      new CssMinimizerPlugin({}),
     ],
   },
   module: {

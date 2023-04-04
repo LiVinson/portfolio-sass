@@ -6,7 +6,7 @@
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
     "buildDev": "rm -rf dist && webpack --mode development --config webpack.server.config.js && webpack --mode development --config webpack.dev.config.js",
-    "buildProd": "rm -rf dist && webpack --mode production --config webpack.server.config.js && webpack --mode production --config webpack.prod.config.js --openssl-legacy-provider",
+    "buildProd": "rm -rf dist && webpack --mode production --config webpack.server.config.js && webpack --mode production --config webpack.prod.config.js",
     "start": "node ./dist/server.js"
   },
   "keywords": [
@@ -21,26 +21,26 @@
     "@babel/core": "^7.10.2",
     "@babel/preset-env": "^7.10.2",
     "autoprefixer": "^9.7.6",
-    "babel-loader": "^8.1.0",
-    "css-loader": "^3.5.3",
-    "favicons-webpack-plugin": "^4.2.0",
+    "babel-loader": "8.2.2",
+    "css-loader": "^6.7.3",
+    "css-minimizer-webpack-plugin": "^4.2.2",
+    "favicons-webpack-plugin": "^6.0.0",
     "file-loader": "^6.0.0",
     "html-loader": "^1.1.0",
-    "html-webpack-plugin": "^4.3.0",
-    "mini-css-extract-plugin": "^0.9.0",
-    "optimize-css-assets-webpack-plugin": "^5.0.3",
+    "html-webpack-plugin": "^5.5.0",
+    "mini-css-extract-plugin": "^2.7.2",
     "postcss-cli": "^7.1.1",
-    "postcss-loader": "^3.0.0",
+    "postcss-loader": "^7.0.2",
     "sass": "^1.49.9",
-    "sass-loader": "^8.0.2",
+    "sass-loader": "^13.2.0",
     "style-loader": "^1.2.1",
-    "svg-sprite-loader": "^5.0.0",
+    "svg-sprite-loader": "^6.0.11",
     "terser-webpack-plugin": "^3.0.5",
     "url-loader": "^4.1.0",
-    "webpack": "^4.43.0",
-    "webpack-cli": "^3.3.11",
+    "webpack": "^5.75.0",
+    "webpack-cli": "^5.0.1",
     "webpack-dev-middleware": "^3.7.2",
-    "webpack-dev-server": "^3.11.0",
+    "webpack-dev-server": "^4.11.1",
     "webpack-hot-middleware": "^2.25.0",
     "webpack-node-externals": "^1.7.2"
   },
@@ -48,10 +48,10 @@
     "dotenv": "^8.2.0",
     "express": "^4.17.1",
     "modernizr": "^3.11.3",
-    "modernizr-webpack-plugin": "^1.0.7",
+    "modernizr-webpack-plugin": "^0.0.2",
     "nodemailer": "^6.4.8"
   },
   "engines": {
-    "node": "18.x"
+    "node": "16.x"
   }
 }
