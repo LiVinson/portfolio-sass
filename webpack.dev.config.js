@@ -4,6 +4,7 @@ const HtmlWebPackPlugin = require('html-webpack-plugin')
 const MiniCssExtractPlugin = require('mini-css-extract-plugin')
 const SpriteLoaderPlugin = require('svg-sprite-loader/plugin')
 const FaviconsWebpackPlugin = require('favicons-webpack-plugin')
+const CssMinimizerPlugin = require("css-minimizer-webpack-plugin");
 
 module.exports = {
 	entry: {
@@ -17,6 +18,7 @@ module.exports = {
 		path: path.join(__dirname, 'dist'),
 		publicPath: '/',
 		filename: 'index.js',
+		assetModuleFilename: 'images/[hash][ext][query]'
 	},
 	target: 'web',
 	devtool: 'source-map',
@@ -48,8 +50,9 @@ module.exports = {
 						loader: MiniCssExtractPlugin.loader,
 					},
 					{
-						// This loader resolves url() and @imports inside CSS
+						//  This loader resolves url() and @imports inside CSS
 						loader: 'css-loader',
+				
 					},
 					{
 						// Transform SASS to standard CSS
@@ -58,7 +61,7 @@ module.exports = {
 							implementation: require('sass'),
 						},
 					},
-				],
+				]
 			},
 			{
 				test: /\.pdf$/,
@@ -68,6 +71,8 @@ module.exports = {
 					outputPath: 'files',
 				},
 			},
+			/*
+				replaced by default type: asset/resource in Webpack5
 			{
 				test: /\.(png|jpg|gif|svg|webp)$/,
 				loader: 'file-loader',
@@ -76,6 +81,11 @@ module.exports = {
 					name: '[name].[ext]',
 					outputPath: 'images',
 				},
+			},*/
+			{
+				test: /\.(png|jpg|gif|svg|webp)$/,
+				exclude: [/_sprite.svg/],
+				type: "asset/resource"
 			},
 			{
 				test: /\.svg$/i,
