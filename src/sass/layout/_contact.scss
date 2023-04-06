@@ -14,7 +14,7 @@
 }
 
 .container__contact {
-    margin: 0 auto;
+    margin: 5rem auto;
     width: 80rem;
     max-width: 100%;
 
@@ -42,4 +42,10 @@
             padding: 0 2rem;
         }
     }
+
+    .email__contact {
+        font-weight:400;
+    }
+
+
 }

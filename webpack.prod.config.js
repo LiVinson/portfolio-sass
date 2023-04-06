@@ -6,7 +6,6 @@ const MiniCssExtractPlugin = require("mini-css-extract-plugin")
 const SpriteLoaderPlugin = require("svg-sprite-loader/plugin")
 const TerserPlugin = require("terser-webpack-plugin")
 const FaviconsWebpackPlugin = require("favicons-webpack-plugin")
-
 const CssMinimizerPlugin = require("css-minimizer-webpack-plugin");
 
 module.exports = {
@@ -18,6 +17,8 @@ module.exports = {
     path: path.join(__dirname, "dist"),
     publicPath: "/",
     // filename: "index.js",
+    assetModuleFilename: 'images/[hash][ext][query]'
+
   },
   target: "web",
   devtool: "source-map",
@@ -89,7 +90,9 @@ module.exports = {
           outputPath: "files",
         },
       },
-     
+     /*
+     				replaced by default type: asset/resource in Webpack5
+
       {
         test: /\.(png|jpg|gif|svg|webp)$/,
         loader: "file-loader",
@@ -98,8 +101,12 @@ module.exports = {
           
           outputPath: "images",
         },
-      },
-
+      },*/
+			{
+				test: /\.(png|jpg|gif|svg|webp)$/,
+				exclude: [/_sprite.svg/],
+				type: "asset/resource"
+			},
       {
         test: /\.svg$/i,
 
@@ -148,9 +155,7 @@ module.exports = {
           android: true,
           appleIcon: true,
           appleStartup: false,
-          coast: true,
           favicons: true,
-          firefox: true,
           windows: true,
           yandex: false,
         }

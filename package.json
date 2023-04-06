@@ -24,6 +24,7 @@
     "babel-loader": "8.2.2",
     "css-loader": "^6.7.3",
     "css-minimizer-webpack-plugin": "^4.2.2",
+    "cssnano": "^6.0.0",
     "favicons-webpack-plugin": "^6.0.0",
     "file-loader": "^6.0.0",
     "html-loader": "^1.1.0",

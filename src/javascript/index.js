@@ -14,9 +14,10 @@ window.addEventListener("load", function () {
 
   //Attach scroll click events to nav
   scrollTo()
+  /* disabling form
   const submitBtn = document.querySelector(".form__submit")
   submitBtn.addEventListener("click", submitForm)
-
+*/
   const hamburger = document.querySelector(".hamburger__container")
   hamburger.addEventListener("click", function () {
     if (this.dataset.status === "closed") {
